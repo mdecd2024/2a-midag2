@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2A-MIDAG2協同產品設計實習 - w5</title><link href="./" rel="alternate"></link><link href="./feeds/w5.atom.xml" rel="self"></link><id>./</id><updated>2024-04-12T18:25:24+08:00</updated><entry><title>w5 課程</title><link href="./2024-Spring-w5-blog-tutorial.html" rel="alternate"></link><published>2024-03-29T15:00:00+08:00</published><updated>2024-04-12T18:25:24+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-03-29:./2024-Spring-w5-blog-tutorial.html</id><summary type="html">&lt;p&gt;2024 Spring 網際內容管理與協同產品設計實習課程教學導引.&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;2024 Spring 網際內容管理與協同產品設計實習課程教學導引.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2A-MIDAG2協同產品設計實習 - w5</title><link href="./" rel="alternate"></link><link href="./feeds/w5.atom.xml" rel="self"></link><id>./</id><updated>2024-04-12T18:32:08+08:00</updated><entry><title>W5</title><link href="./41123145-W5.html" rel="alternate"></link><published>2024-03-22T17:00:00+08:00</published><updated>2024-04-12T18:32:08+08:00</updated><author><name>41123145</name></author><id>tag:None,2024-03-22:./41123145-W5.html</id><summary type="html">&lt;p&gt;W5內容&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;W5內容&lt;/p&gt;
+
+&lt;h1&gt;將上字幕影片上傳到小組倉儲&lt;/h1&gt;
+&lt;p&gt;各組自行搜尋前面已經發布的教學影片上字幕
+&lt;a href="https://drive.google.com/file/d/110Z_ZOz3gKbFb_Rvw6_pUSkVQTGwMn87/view?usp=sharing"&gt;wcm2024_1a_w3_2_將組員的個人倉儲納為分組倉儲的子模組&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;說明如何將組員的個人倉儲納入分組倉儲成為子模組&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/file/d/1QPYG2gUfQ9MOSGNInlEkQyyhuCktkxo_/view?usp=sharing"&gt;影片逐字稿&lt;/a&gt;&lt;/p&gt;</content><category term="w5"></category><category term="網誌編寫"></category><category term="pelican"></category></entry><entry><title>2024 Spring 課程 w5 41123123</title><link href="./2024-Spring-w5-blog-tutorial%2041123123.html" rel="alternate"></link><published>2024-03-22T15:00:00+08:00</published><updated>2024-04-12T18:32:08+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-03-22:./2024-Spring-w5-blog-tutorial 41123123.html</id><summary type="html">&lt;p&gt;2024 Spring 網際內容管理與協同產品設計實習w5課程.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;2024 Spring 網際內容管理與協同產品設計實習w5課程.&lt;/p&gt;
 
 
-&lt;h1&gt;第五週&lt;/h1&gt;
-&lt;p&gt;教學內容為先前影片整理、分組網誌的統整與 NX 零組件繪圖.&lt;/p&gt;</content><category term="w5"></category><category term="網誌編寫"></category></entry></feed>
+&lt;p&gt;將個人網誌上的影片新增到分組網頁上&lt;/p&gt;</content><category term="w5"></category><category term="網誌編寫 pelican"></category></entry><entry><title>2024 w5</title><link href="./41123119-w5.html" rel="alternate"></link><published>2024-03-15T17:00:00+08:00</published><updated>2024-04-12T18:32:08+08:00</updated><author><name>41123119</name></author><id>tag:None,2024-03-15:./41123119-w5.html</id><summary type="html">&lt;p&gt;2024 w5課程.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;2024 w5課程.&lt;/p&gt;
+
+
+&lt;h1&gt;今完成事項&lt;/h1&gt;
+&lt;p&gt;在分組倉儲的w4 blog新增自己的字評與影片 字幕&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="
+https://nfuedu-my.sharepoint.com/:v:/g/personal/41123119_nfu_edu_tw/EeGW7m9iY5tJkDUgzzq3fH4B83ETe0vDPqSYLORW6I3B5g?e=58uh5Q"&gt;影片&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;及 &lt;/p&gt;
+&lt;p&gt;&lt;a href=" https://nfuedu-my.sharepoint.com/:t:/g/personal/41123119_nfu_edu_tw/EVJQRrVtylVKtuM7_F2ElKABxKFPszDOjyckey4MCZCTjw?e=RFxfP1"&gt;逐字稿&lt;/a&gt;&lt;/p&gt;</content><category term="w5"></category><category term="網誌編寫"></category><category term="pelican"></category><category term="字幕"></category><category term="影片"></category></entry></feed>
