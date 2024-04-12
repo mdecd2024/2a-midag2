@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2A-MIDAG2協同產品設計實習 - w1</title><link href="./" rel="alternate"></link><link href="./feeds/w1.atom.xml" rel="self"></link><id>./</id><updated>2024-04-12T15:42:34+08:00</updated><entry><title>2A-MIDAG2 W1</title><link href="./2a-midag2_2024-Spring-w1-blog-tutorial.html" rel="alternate"></link><published>2024-02-18T11:00:00+08:00</published><updated>2024-04-12T15:42:34+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-02-18:./2a-midag2_2024-Spring-w1-blog-tutorial.html</id><summary type="html">&lt;p&gt;2024 Spring 網際內容管理與協同產品設計實習課程教學導引.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2A-MIDAG2協同產品設計實習 - w1</title><link href="./" rel="alternate"></link><link href="./feeds/w1.atom.xml" rel="self"></link><id>./</id><updated>2024-04-12T17:47:46+08:00</updated><entry><title>w1 課程</title><link href="./2024-Spring-w1-blog-tutorial.html" rel="alternate"></link><published>2024-02-18T11:00:00+08:00</published><updated>2024-04-12T17:47:46+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-02-18:./2024-Spring-w1-blog-tutorial.html</id><summary type="html">&lt;p&gt;2024 Spring 網際內容管理與協同產品設計實習課程教學導引.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2024 Spring 網際內容管理與協同產品設計實習課程教學導引.&lt;/p&gt;
 
 
-&lt;h1&gt;內容管理系統&lt;/h1&gt;
+&lt;h1&gt;協同產品設計實習&lt;/h1&gt;
 &lt;p&gt;使用者可以自行利用 &lt;a href="https://github.com/mdecycu/cmsimde_site"&gt;cmsimde_site&lt;/a&gt; 倉儲作為 Template, 建立自己的網站內容管理系統.&lt;/p&gt;
 &lt;p&gt;引用網站網址連結的方法:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/mdecycu/cmsimde_site"&gt;cmsimde_site&lt;/a&gt; - 在文章中多次引用同一個網站連結時, 可以使用此種方法.&lt;/p&gt;
