@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2A-MIDAG2協同產品設計實習 - 41123119 w1</title><link href="./" rel="alternate"></link><link href="./feeds/41123119-w1.atom.xml" rel="self"></link><id>./</id><updated>2024-05-12T00:50:52+08:00</updated><entry><title>41123119 w1</title><link href="./41123119-w1.html" rel="alternate"></link><published>2024-02-23T17:00:00+08:00</published><updated>2024-05-12T00:50:52+08:00</updated><author><name>41123119</name></author><id>tag:None,2024-02-23:./41123119-w1.html</id><summary type="html">&lt;p&gt;2024 w1課程.&lt;/p&gt;
+&lt;p&gt;建立個人倉儲&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;2024 w1課程.&lt;/p&gt;
+&lt;p&gt;建立個人倉儲&lt;/p&gt;
+
+
+&lt;p&gt;任務:個人 cd2024 與分組倉儲的建立及維護.&lt;/p&gt;
+&lt;p&gt;1.&lt;span&gt;個人 cd2024&lt;a href="https://github.com/QIU0908/cd2024"&gt;倉儲&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;2.分組&lt;a href="https://github.com/mdecd2024/2a-midag2"&gt;倉儲&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;3.建立方法&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; a.利用&lt;a href="https://github.com/mdecycu/cmsimde_site"&gt;此倉儲&lt;/a&gt;作為 Template&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; b.新增一個名稱為 cd2024 的倉儲&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;4.維護方法&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span&gt;&amp;nbsp;a.利用Codespaces&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; b.git add . // git commit // git push 等進行維護&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;</content><category term="41123119 w1"></category><category term="網誌編寫"></category><category term="pelican"></category></entry></feed>
