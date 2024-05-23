@@ -1,0 +1,280 @@
+\documentclass{article}
+\usepackage{CJK}
+\usepackage{fontspec}
+\usepackage{graphicx}  
+\setmainfont{Noto Serif CJK SC}
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm, a4paper]{geometry}
+
+
+\begin{document}
+
+The production of a prototype mold by 3D printing follows the same standard procedure
+for prototyping used for the product. So far, the mold is considered a product like any other,
+this reveals another small weakness regarding Odoo ability to represent the totality of the
+process. The reader will notice that although the mold is been treated as a product (because
+it is been manufactured) it should in fact be considered a tool or piece of equipment as well.
+通過 3D 打印生產原型模具遵循與產品原型相同的標準流程。到目前為止,\\模具被視
+為與其他產品一樣的產品,這揭示了 Odoo 在表示整個過程方面的另一個小弱點。讀者
+將\\注意到,雖然模具被視為產品(因為它正在製造),但實際上它也應該被視為一種工
+具或設備。
+Although Odoo does makes this distinction between equipment and products, it has no
+integration regarding the situations where one is both. In addition, as explained before, there
+is no way of uploading CAD files to an equipment item or linking an equipment to a range
+of tools. I.e. Odoo does not consider a vertical drill with x number of drill bits to make
+different size holes. The closest it can do from the perspective of equipment/maintenance is
+consider the vertical drill a workstation and each drill size a separate equipment within the
+station with an assigned set up time. This is ok if you ignore that the drill bit is a product.
+儘管 Odoo 確實對設備和產品進行了區分,但對於同時屬於兩者的情況,它並沒
+有相應的整合。\\此外,如前所述,無法將 CAD 文件上傳到設備項目,也無法將設備
+與一系列工具進行關聯。換句話說,\\Odoo 並不考慮具有 x 個鑽頭的立式鑽床可以鑽
+不同尺寸的孔。從設備/維護的角度來看,它所能做\\的最接近的做法是將立式鑽床視
+為工作站,然後將每個鑽頭尺寸視為該站點內的單獨設備,並分配設\\置時間。如果
+忽略鑽頭是產品的事實,這是可以接受的。
+All of this is reasonable from the perspective of an ERP system but not ideal from the
+perspective of PLM because it shows gaps in between items that should represent the same
+thing. In production from the manufacturing application what is set is the work center station
+not the equipment (see Figure 41). In the maintenance app there is no connection to the fact
+that the tool is a consumable product, you can consider a maintenance schedule and even
+make a useful life parameters but because it is an equipment you can’t have reserve tools
+like drill bits in inventory like consumables.
+從 ERP 系統的角度來看,這一切都是合理的,但從 PLM 的角度來看,並不理想,
+因為它顯示了應該代表相同事物的項目之間存在差距。在製造應用程序的生\\產過程
+中,設定的是工作中心站,而不是設備(見圖 41)。在維護應用程式中,與工具是消
+
+耗性產品的事實之間沒有任何聯繫,您可以考慮維護計劃,甚至可以設置使用壽命
+參數,但由於它\\是設備,您無法像消耗品那樣在庫存中保留備用工具,比如鑽頭。
+The result is that it becomes very difficult to represent testing with a prototype mold. If
+you do as the software is designed for you need to create a separate ECO to apply every
+operation for each different iteration of the mold development to the necessary BOMs and
+make a test run (Figure 56). At this point, considering the maintenance aspect of the mold as
+a tool just does not make sense because it would entails filing in metadata in the maintenance
+App by hand for every prototype mold iteration all without causing any difference from the
+manufacturing perspective. The PROTO mold item ends up been used only for the sake of
+tracking material and holding files as the mold is improved.
+結果是要用原型模具進行測試變得非常困難。如果按\\照軟件的設計進行操作,您
+需要為每個模具開發的不同迭代創建單獨的工程變更訂單(ECO),並將其\\應用到必
+要的物料清單(BOM),然後進行測試運行(見圖 56)。在這一點上,考慮模具作為
+工具的維護\\方面就沒有意義了,因為這將意味著為每個原型模具迭代在維護應用程
+序中手動填寫元數據,而從製\\造角度來看並不會產生任何差異。PROTO 模具項目最
+終僅用於跟蹤材料並保存文件,以便改進模具。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-1.png}
+\end{center}
+Figure 56 ECO example of update procedure of BOM
+
+Taking this in consideration, in simulation it will be produced one 3D printed mold for
+each part of the alpha case. Then ECOs for the prototype parts of the case will be created to
+be applied to the parts BOMs updating the operation from 3D printing to injection molding
+test run with prototype molds.
+考慮到這一點,在模擬中,將為 Alpha 機殼的每個部分製\\作一個 3D 打印模具。然後,
+
+將為機殼原型部件創建工程變更訂單(ECOs),以應用於部件 BOM,從而將操作從
+3D 打印更新為\\注塑模具測試運行。
+At this point we could differentiate the product prototype from the test run prototype by
+making a new prototype product item, however considering our rapidly growing list of
+product items (Figure 57) it was concluded that it would be just better for depiction in this
+work to modify the previously produced product prototypes (made with 3D printing) and just
+use the same items. We can do this because those prototypes have already served their purpose
+.
+在這一點上,我們可以通過創建一個新的原型產品項目來區分產品\\原型和測試運
+行原型,但考慮到我們快速增長的產品項目清單(見圖 57),我們得出結論,更好的
+方法是\\在本文中修改先前製作的產品原型(使用 3D 打印),然後只使用相同的項目。
+我們之所以能夠這樣做,\\是因為這些原型已經完成了它們的任務。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-2.png}
+\end{center}
+Figure 57 Overview of product items at this stage of the simulation
+
+After the mold have been created and the BOMs for the prototypes are updated to include
+the injection stations and the proper operations (specifying the use of the molds) the next step
+is to do a production test run of prototype. Again that is done by emitting the MO completing
+the generated WOs (see Figure 46 and Figure 47 of previous section).
+在模具已經建立並且用於原型的 BOM 已更新以包括注射站和正確的操作(指定
+模具的使用)之後,\\下一步是進行原型的生產測試運行。再次透過發出 MO 來完成
+生成的 WO(參見前一部分的圖 46 和圖 47)。
+The result of the production is used to check for dimension and fitting, if correction is
+needed the ECOs would be emitted again as seen in Figure 56, and a new iteration of
+production and testing would be carried out. This process would repeat until the product is
+satisfactory enough to justify the production of the CNC machined molds that would be used
+in mass production.
+生產的結果用於檢查尺寸和配合度,如果需要進行更正,則再\\次發出ECOs,如圖
+56 所示,並進行新的生產和測試迭代。這個過程將重複進行,直到產品足夠滿意,
+可以正式進行 CNC 機加工模具的生產,以用於大批量生產。
+Since in this simulation it was chosen that the final mold (made of aluminum) would also
+be produced in house, this is the next step of development. Procedure is basically the same
+as before except that it is needed to create product items for both the raw material (aluminum
+block) and the CNC molds prior to their manufacturing. Creating BOMs and uploading
+relevant files.
+由於在此模擬中選擇了最終模具(由鋁製成)也將在公司內部生產,這是發展的
+下一步。程序基本上與\\之前相同,只是需要在其製造之前為原材料(鋁塊)和 CNC
+模具創建產品項目。創建 BOM 並上傳相關\\文件。
+Finally, the actual production on the new molds can begin. To represent that a
+manufacturing order of 100 Alpha Cases were created. This marks the end of the main path
+of development from idea to production (Figure 58).
+最後,可以開始對新模具進行實際生\\產。代表著製作了 100 個 Alpha 機殼的製造訂
+單。這標誌著從構想到生產的主要開發過程的結束(\\見圖 58)。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-3.png}
+\end{center}
+Figure 58 Main path of development from idea to production
+5.4.3. Process upgrade procedure
+The previous sections were about the procedure that would be necessary to use the Odoo
+software to track change during the main development of product. As such, most of what was
+described focused in the use of PLM and the standard procedure of creating and utilizing
+items like Products, BOMs, ECOs, MOs, WOs and Operations. This section will be different
+in the sense that now we have a production being carried out and the idea is to test Odoo in
+its capabilities of performing upgrades (Figure 59 and Figure 60). In other words,
+performance and feedback of information (and of course MES) becomes the main subject.
+前幾節談到了使用 Odoo 軟件來追蹤產品主要開發過程中所需的程序。因此,大部分
+描述的重點都集中在使用 PLM 和創建和利用產品、BOM、ECOs、MOs、WOs 和操
+作等項目的標\\準程序上。這一節將不同,因為現在正在進行生產,我們的想法是測
+試Odoo在進行升級方面的能力(見\\圖59和圖60)。換句話說,性能和信息反饋(當
+然還有 MES)成為主要的主題。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-4.png}
+\end{center}
+Figure 60 Sectioned diagram regarding Process development
+
+Change is always enacted using the ECO functionality even in this case. To remind the
+reader the situation in which this change will be applied (Figure 61) is the product overview
+of the relevant product items. Every product item in that list (that is not a raw material) poses
+at least one BOM and two ECOs already applied to them in order to signify the initial state
+of every product item (Figure 62). The first ECO of every item affects the product and it holds
+the initial related files, the second is applied to the BOM of the product in order to hold files
+related to the initial state of the process as well as record the initial state of the BOM. Without
+these ECOs (Figure 62), when we ever applied an improvement, the initial state of the product
+files or BOMs would be lost.
+即使在這種情況下,變更也始終使用 ECO 功能來實施。為了提醒讀者,這種變更將應
+用於的情況(見\\圖 61)是相關產品項目的產品概述。該列表中的每個產品項目(不是
+原材料)都至少具有一個 BOM 和兩個已應用的 ECO,以表示每個產品項目的初始狀態
+
+8
+(見圖 62)。每個項目的第一個 ECO 影響產品,它包含了初始相關文件,第二個應用於
+產品的 BOM,以保存與流程初始狀態相關的文件,並記錄 BOM 的初始狀態。如果沒有
+這些 ECO(見圖 62),\\當我們應用改進時,產品文件或 BOM 的初始狀態將會丟失。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-5.png}
+\end{center}
+Figure 61 Relevant product items overview
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-6.png}
+\end{center}
+Figure 62 Example of ECOs of a product item
+
+This time around the production duration and the estimated duration of the process is
+something that need to be taken in consideration so we can perceive how that applied change
+on the process affect production. To this end a MO of 50 units of Alpha Case will be created
+with each operation being estimated to take 30 seconds (15s for parts B/C because there is
+the need for 2 of them). Meaning that in an ideal situation the total length would be 50 minutes
+(25 of injection production being done in parallel and 25 for final assembly).
+
+這一次,生產持續時間和流程的預估持續時間是需要考慮的因素,這樣我們才能
+知道應用在流程\\上的變更如何影響生產。為此,將創建 50 個 Alpha 機殼的 MO,每
+個操作預估需要 30 秒(因為需要 2 個零件 B/C,所以每個零件預計需要 15 秒)。這
+意味著在理想情況下,總持續時間將為 50 分鐘(25 分鐘用於並行進行的注塑生產,
+25 分鐘用於最終組裝)。
+In this simulated manufacturing run it was chosen that the injection operations would take
+slightly more time to complete to be representative of a suboptimal performance. This is been
+done to see how Odoo reacts and informs in real time the situation in hand.
+在這次模擬的製造過程中,選擇讓注塑操作花費\\稍微更多的時間來完成,以代表
+不太理想的表現。這樣做是為了看看 Odoo 如何在實時情況下反應\\並提供信息。
+The first phase of the production in the injection process that is carried out in parallel for
+parts A and B/C on the injection stations 1 and 2. The following (Figure 64) shows how in
+the beginning of the process the overview of the productions stations indicate with green
+circles. These circulars signaling in known as Andon and although it is not always considered
+part of MES it is commonly an integrated feature in many MES systems. After the production
+process have been carried out with a little delay the circle turned gray and overall efficiency
+has been marked red on the station tabs (Figure 64).
+生產的第一階段是在注塑站 1 和 2 上進行的注塑過程,同時為零件 A 和 B/C 進
+行。下圖(見圖 64)顯示了在過程開始時,生產站的概覽以綠色圓圈標示。這些圓
+圈信號被稱為安敦,儘管它不總是\\被視為 MES 的一部分,但在許多 MES 系統中通常
+是一個集成功能。在生產過程稍微延遲後,圓圈變\\成了灰色,並且在站點標籤上標
+記了整體效率為紅色(見圖 64)。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-7.png}
+\end{center}
+Figure 63 Workcenter overview 1
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-8.png}
+\end{center}
+Figure 64 Workcenter overview 2
+
+The production was carried out twice before any improvement was applied. The first
+improvement to be carried out were on the production process on the operation and the raw
+materials used. More specifically, a new operation representative of an equipment upgrades
+on the injection machines and the replacement of the brand of plastic pellets use in the
+injection process (Figure 65).
+在進行任何改進之前,生產已經進行了兩次。要進行的\\第一項改進是在操作和使
+用的原材料的生產過程上進行的。更具體地說,是對注塑機進行設備升級\\的新操作,
+以及替換注塑過程中使用的塑料顆粒品牌(見圖 65)。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-9.png}
+\end{center}
+Figure 65 ECO applied to BOM
+
+These upgrades were applied to the BOMs of parts A and B of the Alpha case and
+production recommenced. After two other MOs producing 50 products each simulating an
+improvement to the process the following types of data were automatically made available
+by Odoo (Table 3):
+這些升級已應用於 Alpha 機殼的零件 A 和 B 的 BOM,並重新開始生產。\\在另外兩個製
+造 50 個產品的 MO 之後,模擬了對流程進行改進,Odoo 自動提供了以下類型的數據
+(見表 3):
+
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-10.png}
+\end{center}
+It should be commented that the data regarding MOs is unfortunately captured in a
+monthly basis as opposed to the other two categories that process data per order executed.
+This means that since this simulation is using a trial version of the software that lasts only 14
+days the graphical representation of that data offers an unimpressive view of a single point or
+a single column. In the long run this is a great way to display performance over time but in
+the case of this simulation not so much (Figure 66).
+應該注意到,關於 MO 的數據不幸地是以每月為基礎捕獲的,而不是其他兩個類
+別,它們以執行的每個訂單來處理數據。這\\意味著,由於這個模擬使用的是一個只
+持續 14 天的軟件試用版,該數據的圖形表示將提供一個單點\\或單列的不令人印象深
+刻的視圖。從長遠來看,這是一種很好的方法來顯示隨時間變化的性能,但在\\這個
+模擬案例中則不太適用(見圖 66)。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-11.png}
+\end{center}
+Figure 66 Total quantity regarding MO
+
+All the data available can be seen in the form of bar charts, line charts or pie charts
+automatically generated after the time performance is registered (which happens at any
+moment an action is performed in a work order). Figure 67, Figure 68 and Figure 69 are
+examples of the results of the 5 production runs:
+所有可用的數據都可以以條形圖、折線圖或餅\\圖的形式看到,這些圖表是在時間
+性能被記錄後自動生成的(這發生在對工作訂單執行任何操作時)。\\圖 67、圖 68 和
+圖 69 是 5 次生產運行的結果的示例:
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-12.png}
+\end{center}
+Figure 67 Real duration regarding work orders
+
+Something worth mentioning here is that whenever Odoo mentions quantity or duration
+it is referring to amount per workorder summed (the system does not care if the operations
+are being carried in parallel). So, on our simulation, making 50 units using 3 operations that
+should take 30 seconds each the estimated “duration” to be recorded ideally here is 75 minutes
+per MO.
+在這裡值得一提的是,每當 Odoo 提到數量或持續時間時,它指的是每\\個工作訂
+單加總的數量或持續時間(系統不會在意操作是否並行進行)。因此,在我們的模擬
+中,如果\\使用 3 個每個應該花費 30 秒的操作來製作 50 個單位,理想情況下應該記
+錄的“持續時間”為每個 MO 75 分鐘。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-13.png}
+\end{center}
+Figure 68 Duration variation regarding work orders
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-14.png}
+\end{center}
+Figure 69 Overall equipment effectiveness
+
+The astute reader will notice that all the data mentioned so far is derived from the time to
+completion of the operations been carried out, the related amount to the MO and the
+workcenter utilized. Even so it is impressive how much information can be drawn especially
+considering that it is all generated automatically.
+
+細心的讀者會注意到,到目前為止提到的所有數據都是從正在進行的操作完成所
+花費的時間、相\\關的 MO 數量以及使用的工作中心派生出來的。即便如此,令人印
+象深刻的是,可以獲得多少信息,特\\別是考慮到這一切都是自動生成的。
+\end{document}

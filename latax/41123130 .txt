@@ -1,0 +1,180 @@
+\documentclass[24pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{xeCJK} % 加入中日韓語
+\setCJKmainfont{Noto Serif CJK SC} % 設定文字樣式
+\usepackage{setspace}
+\onehalfspacing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   正文開始   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+\includegraphics[width=15cm]{1.png}\\
+\textbf{
+Figure 39 BOM diagrams for prototyping\\
+圖39 用於原型製作的BOM圖表}
+\end{center}
+
+Something worth mentioning is that Odoo used the kit option (Figure 40) on the item to infer that this product is a component of another product. This is very interesting because it automatically creates dependencies between the product items for production.\\
+值得一提的是，Odoo在该项上使用了套件选项（见图40），推断该产品是另一个产品的组成部分。这非常有趣，因为它会自动创建产品项目之间的生产依赖关系。
+
+\begin{center}
+\includegraphics[width=15cm]{2.png}\\
+\textbf{
+Figure 40 Image of the prototype product BOM (Part-A)\\
+圖40 原型產品BOM的圖像（Part-A）}
+\end{center}
+
+As the reader can see (Figure 41), while making the BOMs it is simple to create the specific operation items necessary for the manufacturing procedure and specify its work center. One of the best functionalities regarding MES in Odoo is the ability to track the time of operations based on default duration.This can be dynamically changed based on tracked time or set manually. It is also in the operation item that we can add instruction files for the operation. Even though it is limited to PDF text or a link to a google slides file, this is one of the few opportunities presented by Odoo for file management connected directly to an item.\\
+正如读者所见（见图41），制作BOM时，很容易创建制造过程所需的具体操作项目，并指定其工作中心。Odoo中关于MES的最佳功能之一是根据默认持续时间跟踪操作的时间。这可以根据跟踪的时间动态更改，也可以手动设置。在操作项目中，我们还可以添加操作的说明文件。尽管这仅限于PDF文本或链接到Google幻灯片文件，但这是Odoo为与项目直接连接的文件管理提供的少数机会之一。
+
+\begin{center}
+\includegraphics[width=15cm]{3.png}\\
+\textbf{
+Figure 41 Image of operation item as presented by Odoo (BOM Part-A)\\
+圖41 Odoo呈現的操作項目圖像（BOM Part-A）}
+\end{center}
+
+\begin{center}
+\includegraphics[width=15cm]{4.png}\\
+\textbf{
+Figure 42 Overview of BOMs created for prototyping\\
+圖42 原型制作的BOM概觀}
+\end{center}
+
+Speaking of this lack of upload opportunities, we can notice that while making the product item there was no way to directly upload files regarding the product to the item. In our case,we have the CAD files regarding the parts that we are prototyping, to not be able to upload these files in any way would be a complete failure from a PLM perspective. Thankfully there is a workaround. As explained in section 5.1.3.5, the ECO is an item that is linked to either product items or BOMs and allow uploaded files to be attached to it. It is a minor workaround but basically means that if we want to upload our CAD files to the items in any significative manner, we need to emit an ECO even if there is no “change” being made.\\
+谈到这种缺乏上传机会，我们可以注意到，在制作产品项时，没有直接上传与产品相关的文件的方法。在我们的情况下，我们有关于我们正在原型制作的零件的CAD文件，无法以任何方式上传这些文件将是从PLM角度完全失败的情况。幸运的是，有一个解决方法。正如在第5.1.3.5节中解释的那样，ECO是一个与产品项或BOM关联的项目，允许上传文件附加到它。这是一个小小的变通方法，但基本上意味着，如果我们想以任何有意义的方式上传我们的CAD文件到项目中，即使没有进行“更改”，我们也需要发出一个ECO。
+
+\begin{center}
+\includegraphics[width=15cm]{5.png}\\
+\textbf{
+Figure 43 ECO example\\
+圖43 ECO示例}
+\end{center}
+
+It can only be assumed that this was part of Odoo’s team strategy to implement PLM as an external application in its ERP base. It is reasonable, but still, this is one of the few aspects of this software interface that is not as straightforward. It is an extremely valuable feature,but it is somewhat hidden. The documents icon appears in the top right corner (Figure 43)only after the ECO is created and saved.\\
+只能假设这是Odoo团队实施将PLM作为其ERP基础的外部应用程序的策略的一部分。这是合理的，但仍然，这是该软件界面中少数几个不那么直接的方面之一。这是一个极其有价值的功能，但它有些隐藏。文档图标只有在创建并保存ECO后才会出现在右上角（见图43）。
+
+\begin{center}
+\includegraphics[width=15cm]{6.png}\\
+\textbf{
+Figure 44 Overview of attached files to ECO\\
+圖44 附加到ECO的文件概觀}
+\end{center}
+
+Since there is no direct integration between Odoo and the CAD software, uploading the file do not cause any automatic change to the product metadata. This is not ideal from the PLM perspective, still, it is a well implemented feature. By allowing product items to link directly to not only one existing ECO but to the list of all ECOs ever applied to the item, the software does well in tracking version control and development. Something interesting that can be done for the sake of process control is adding quality control points to operations. This allows the responsible personnel to give feedback during the production regarding concerning points to the engineering team. In our case, we are concerned about 3D printing warping. This is something that happens when temperature varies to much during the 3D printing procedure. To this end a Quality Control Point item will be created (Figure 45) that will enquire with the operator to check if there is warping in the piece and mark pass or fail.\\
+由于Odoo和CAD软件之间没有直接集成，因此上传文件不会导致产品元数据的任何自动更改。从PLM的角度来看，这并不理想，但这仍然是一个实现良好的功能。通过允许产品项目直接链接到不仅是一个现有的ECO，而且是应用于该项目的所有ECO的列表，软件在跟踪版本控制和开发方面表现良好。为了进行过程控制，可以做一些有趣的事情，例如在操作中添加质量控制点。这使得负责人员能够在生产过程中就工程团队关注的问题提供反馈。在我们的情况下，我们关注的是3D打印时的翘曲问题。这是在3D打印过程中温度变化过大时会发生的情况。为此，将创建一个质量控制点项目（见图45），询问操作员是否有翘曲现象，并标记合格或不合格。
+
+\begin{center}
+\includegraphics[width=15cm]{7.png}\\
+\textbf{
+Figure 45 Quality Control Point item for the prototype production\\
+圖45 原型生產的質量控制點項目}
+\end{center}
+
+The last step of a prototype cycle would be the production of prototypes for testing and evaluation. Production is something quite straightforward in Odoo and really the point where created allow us to start the Manufacturing Order (MO) (Figure 46). This, in turn, pull the necessary workorders from the operations and components listed in the BOM. The workorders appear for manufacturing operators and production can commence/be tracked.\\
+原型周期的最后一步将是为测试和评估而生产原型。在Odoo中，生产是非常直接的，也是创建开始制造订单（MO）的关键点（见图46）。然后，这将从在BOM中列出的操作和组件中提取必要的工单。工单将出现在制造操作员的界面上，生产可以开始/被跟踪。
+
+\begin{center}
+\includegraphics[width=15cm]{8.png}\\
+\textbf{
+Figure 46 Depiction of the manufacturing order\\
+圖46 生產訂單的描述}
+\end{center}
+
+For the most part this operation is very well automated and clear. There are however a few problems that are result of structural changes from Odoo V13 to Odoo V14. For a long time,the software ordered the operations to be carried out using an extra item class called ‘Route’. These were a fundamental part of how the product moved within the inventory and manufacturing, but for some reason, was dropped in the manufacturing aspect of the new version in favor of a simplified sequence data built into the BOM. As of the writing of this work, there have been reports of problems and confusions regarding how that works, which are aggravated by the fact that material explaining the use of this functionality are either nonexistent or still referencing old versions of the software (in which ‘routes’ are still in use). The avid reader will notice in Figure 47 that the order in which operations are being made available are not in the correct sequence. This is due to exactly this problem and for now the only solution is to count on the awareness of the operators regarding the order of production or manually scheduling the operations in the plan tab. During the period of research for this work (before Odoo V14) familiarization experiments were made in which there were no problem of this nature. In addition, there are examples online even from Odoo website demonstrating the use of routes and how they are useful for this exact situation. \\
+大多数情况下，这个操作是非常自动化和清晰的。然而，由于从Odoo V13到Odoo V14的结构性变化，出现了一些问题。很长一段时间，软件使用一个名为“Route”的额外项目类来执行操作。这些路线是产品在库存和制造过程中移动的基本部分，但出于某种原因，在新版本中，制造方面放弃了这些路线，转而采用了内置于BOM中的简化的顺序数据。截至撰写本文时，已经有关于该功能如何工作的问题和困惑的报告，这些问题加剧了材料的存在或仍在引用旧版本软件（其中仍在使用“路线”）的事实。热心的读者会注意到图47中操作被呈现的顺序不正确。这正是由于这个问题，目前唯一的解决办法是依靠操作员对生产顺序的意识或在计划选项卡中手动安排操作。在进行本研究之前（Odoo V14之前），已经进行了熟悉化实验，其中没有出现这种性质的问题。此外，甚至从Odoo网站上也有示例演示了路线的使用以及它们如何对这种情况有用。
+
+\begin{center}
+\includegraphics[width=15cm]{9.png}\\
+\textbf{
+Figure 47 Overview of the resulted Work Orders\\
+圖47 生產工作訂單結果概覽}
+\end{center}
+
+The problem has been reported by other people (Figure 48) to the Odoo company and is been and hopefully it will be resolved shortly (this is after all a extremelly recent version of the software). That been said, it is a problem even if it is a minor one.\\
+这个问题已经被其他人报告给了Odoo公司（见图48），并且希望很快会得到解决（毕竟这是一个非常新的软件版本）。话虽如此，即使是一个小问题，它也是一个问题。
+
+\begin{center}
+\includegraphics[width=15cm]{10.png}\\
+\textbf{
+Figure 48 Image of Odoo forum question regarding routes\\
+圖48 Odoo論壇關於路線的問題的圖像}
+\end{center}
+
+The manufacturing process was repeated 7 times (Figure 49) to simulate a small batch of prototypes for testing and tolerance checking. It is rare to get a perfect prototype in the first batch, for this reason it was chosen to represent correction through the simulation. In this simulation this problem was a fit problem that resulted in a change of dimension of PROTO Part A. \\
+制造过程被重复了7次（见图49），以模拟进行一小批原型的测试和容差检查。第一批原型很难做到完美，因此选择通过模拟来表示纠正。在这个模拟中，这个问题是一个适合问题，导致了PROTO Part A尺寸的变化。
+
+\begin{center}
+\includegraphics[width=15cm]{11.png}\\
+\textbf{
+Figure 49 Overview of the products after manufacturing\\
+圖49 生產後產品的概覽}
+\end{center}
+
+This give us the opportunity to use ECOs for their actual purpose, stablish and control a change to the product item. The changes to be carried out were on the CAD file regarding the product item. As before we can start the ECO and fill in the description, then the files are uploaded, and the ECO (Figure 50) goes through necessary validation before been made effective. \\
+这使我们有机会将ECO用于其实际目的，建立并控制对产品项的更改。需要进行的更改涉及产品项的CAD文件。与以前一样，我们可以开始执行ECO并填写描述，然后上传文件，ECO（见图50）在生效之前经过必要的验证。
+
+\begin{center}
+\includegraphics[width=15cm]{12.png}\\
+\textbf{
+Figure 50 Depiction of the validation of the ECO\\
+圖50 ECO驗證的描繪}
+\end{center}
+
+The validation procedure basically is set to ask for validation of someone with proper access permissions or specific personnel. In this case, the master account was used to validate and make effective as can be seen from the log in the right side of the image. Once the change is applied you can see that the product item version has been iterated to version 2 as well as a new ECO has been added to the list of ECOs linked to the item (Figure 51).\\
+验证过程基本上是设置为要求具有适当访问权限或特定人员的验证。在本例中，主账户被用来验证和生效，可以从图像右侧的日志中看到。一旦更改应用，您可以看到产品项版本已迭代为版本2，并且新的ECO已添加到与该项相关联的ECO列表中（见图51）。
+
+\begin{center}
+\includegraphics[width=15cm]{13.png}\\
+\textbf{
+Figure 51 Depiction of changes provoked by the ECO to product item\\
+圖 51 ECO對產品項目引起的變化的描繪}
+\end{center}
+
+That update is followed by another batch of prototypes, the cycle would continue until the prototypes produced satisfy the criteria stablished by the design team. In the case of this simulation it was assumed that one correction was representative enough of this process. This finalizes the development from idea to prototype. 
+\begin{center}
+\section{5.4.2. Process Plan - Production Test Run - Production}
+\end{center}
+Now that the prototype phase is complete the focus will shift to the process. As stablished before, it was decided to separate the prototype products from the final product item to isolate the product from the production process during the development. This way many aspects of development of the product could be evaluated in an ordered manner. Now that the process is been developed it seems reasonable to create the product items that will represent the final products since the product of a successful run of the process will be the production ready samples of it (Figure 52). \\
+随着这次更新，接着是另一批原型的生产，这个循环将持续进行，直到生产的原型满足设计团队设立的标准为止。在这个模拟中，假设一次修正足以代表这个过程。这标志着从构思到原型的开发已经完成。\\
+\begin{center}
+    5.4.2. 流程计划 - 生产测试 - 生产\\
+\end{center}
+现在，原型阶段已经完成，焦点将转移到流程上。正如之前所确定的，决定将原型产品与最终产品项分开，以在开发过程中将产品与生产过程隔离开来。这样可以有序地评估产品开发的许多方面。既然流程已经制定，那么创建代表最终产品的产品项似乎是合理的，因为成功运行流程的产品将是生产就绪的样品（见图52）。
+
+\begin{center}
+\includegraphics[width=15cm]{14.png}\\
+\textbf{
+Figure 52 Sectioned diagram regarding Process development\\
+圖 52 關於流程開發的分段圖}
+\end{center}
+
+Other product items that created were the raw materials for the injection molding (which are plastic pellets that are fed into the machine to be melted and injected). All that was done in identical manner to when we create the prototype products with the exception that the Alpha case (Figure 53) now is marked as sellable and its sale costs are now relevant (Figure 54). \\
+创建的其他产品项是用于注塑成型的原材料（这些原材料是塑料颗粒，被送入机器中进行熔化和注射）。所有这些都是以与创建原型产品相同的方式进行的，唯一的区别是Alpha盒（见图53）现在被标记为可销售，其销售成本现在是相关的（见图54）。
+
+\begin{center}
+\includegraphics[width=15cm]{15.png}\\
+\textbf{
+Figure 53 Render of how the final product should look like\\
+圖 53 最終產品應該是什麼樣子的渲染}
+\end{center}
+
+\begin{center}
+\includegraphics[width=15cm]{16.png}\\
+\textbf{
+Figure 54 Product Item of the Alpha Case\\
+圖 54 Alpha Case的產品項目}
+\end{center}
+
+Once the product items are taken care of, we need to go back to what aspect of the process will be tracked using Odoo in the context of this simulation. As it was hinted previously when talking about injection molding the key aspect of change regarding the process are the molds used by the machines to create the parts. For this simulation it was considered that the mold development will follow a very similar procedure of the development of the product, this should be more clear from the following diagram (Figure 55).\\
+一旦产品项目得到处理，我们需要回到使用Odoo在这个模拟的上下文中将跟踪的流程方面。如前所述，在谈论注塑时，关于流程的关键变化方面是机器用来创建零件的模具。对于这个模拟，考虑到模具的开发将遵循与产品开发非常相似的程序，这应该从下图（图55）更清楚。
+
+\begin{center}
+\includegraphics[width=15cm]{17.png}\\
+\textbf{
+Figure 55 Diagram regarding process development for mold\\
+圖 55 有關模具開發的流程發展圖}
+\end{center}
+
+\end{document}

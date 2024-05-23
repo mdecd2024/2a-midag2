@@ -1,0 +1,247 @@
+\documentclass[24pt]{article}
+\usepackage[top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{CJK} 
+
+
+\setmainfont{Noto Serif CJK SC}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%正文%%%%%%%%%%
+\begin{document}
+\begin{center}
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{tab1.png}
+\end{center}
+\Large
+\textbf{5. CHAPTER} \\
+\textbf{第五章} \\
+\textbf{THE ODOO SOFTWARE}\\
+\textbf{THE ODOO 軟體}\\
+\end{center}
+\section{5.1. Introduction to the Odoo software\\5.1. 對 Odoo 軟體的介紹}
+Odoo is a commercial business management softwarewith strong ties to the open source community. Initially started as open source ERP software becoming well received as an affordable and intuitive package that thrived on integration and expandability. Since then, as the company experienced accelerated growth, it shifted their business model to include an enterprise paid version as well as an online service. \\
+Odoo 是一款商業管理軟體，與開源社區有著緊密的聯繫。最初作為開源 ERP 軟體開始，逐漸受到認\\可，成為一個價格合理、操作直觀且擅長整合和擴展的軟體包。隨著公司經歷了加速增長，它調整了\\商業模式，包括了企業付費版本以及線上服務。\\
+As mentioned in the section 2.2, modern ERP systems are usually modular and, in the 
+case of Odoo, this modularity is particularly evident due to the incredible amount of 
+expansion provided by community developed modules as well as company developed 
+modules that are highly integrated. This extendibility is what makes this software so relevant 
+to the topic of PLM+MES integration since there are present modules for PLM as well as 
+noticeable MES functionalities within their manufacturing modules. \\
+正如第2.2節所述，現代 ERP 系統通常是模塊化的，在 Odoo 的情況下，由於由社區開發的模塊以及公\\司開發的高度集成的模塊提供的擴展性非常明顯。這種可擴展性使得這款軟體與 PLM+MES 整合的話\\題相關，因為在其製造模塊中存在用於 PLM 的模塊以及明顯的 MES 功能。\\
+Within the scope of this thesis, the objective is to utilize this software on the management 
+of the previously mentioned fictional company and draw conclusions regarding how effective 
+the integration of PLM and MES is already present within this system. \\
+在本論文的範圍內，目標是利用此軟體管理前述虛構公司，並就此系統中 PLM 和 MES 整合的效果進\\行結論。\\
+\section{5.1.1. How it works \\
+5.1.1. 它是如何運作的}
+The software can be installed in most x86 computers and it supports several operating sys-tems including windows and all the main Linux distributions. \\
+該軟體可以安裝在大多數 x86 電腦上，並支持幾種操作系統，包括 Windows 和所有主要的 Linux 發\\行版。\\
+Ideally, the Odoo software is installed in a computer connected to a local area network 
+and starts a SQL database that holds all the necessary information and files produced by the 
+business (Figure 16). Said computer works essentially as a server and accessed via a 
+browser by the other machines present in the network. This computer can be a dedicated 
+server or a working desktop in use, but it is important to remember that it must remain ON and con-nected throughout the entire time the software is required to function.\\
+理想情況下，Odoo 軟體安裝在連接到區域網絡的電腦上，並啟動一個 SQL 數據庫，其中包含業務生\\成的所有必要信息和文件（見圖16）。該電腦基本上充當伺服器，可通過網絡中其他設備的瀏覽器訪\\問。該電腦可以是專用伺服器或正在使用的桌面電腦，但重要的是要記住，它必須保持開啟狀態並連\\接，直到軟體需要運行的整個時間。
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig16.png}
+\end{center}
+Figure 16 Function Diagram of Odoo configuration A
+Another option is to use the hosting service provided by Odoo SA (Figure 17). In this case 
+the system would be hosted by them and data would be stored in their cloud. This is a good 
+fit for many small businesses specially if they are particularly fond of the website related 
+modules (used to build and manage web sites and e-stores). It is however network dependent 
+which may pose a problem in some instances.\\
+
+
+Figure 16：Odoo配置A的功能圖表另一個選擇是使用Odoo SA提供的主機服務（見圖17）。在這\\種情況下，系統將由他們主持，數據將存儲在他們的雲端中。
+對許多小型企業來說，這是一個很好的\\選擇，特別是如果他們特別喜歡與網站相關的模塊（用於構建和管理網站和電子商店）。然而，它依\\賴於網絡，這可能在某些情況下會帶來問題。\\
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig17.png}
+\end{center}
+Figure 17 Function Diagram of Odoo configuration B
+Users essentially interact with the system through the graphical user interface (GUI) and 
+use it to access the different modules available as need by a per user basis. This means that 
+restrictions can be applied to different users in order to maintain control over the different 
+aspects of the business activity, e.g., accountants would get access to accounting module, 
+sales module and inventory module but they would be restricted from the manufacturing 
+module. This sort of restriction guarantees control over the processes only to the proper 
+employees.\\
+
+Figure 17：Odoo配置B的功能圖表
+使用者基本上通過圖形用戶界面（GUI）與系統進行交互，並\\使用它按照每個使用者的需求訪問不同的模塊。
+這意味著可以對不同的使用者應用限制，以便對業務\\活動的不同方面進行控制，例如，會計人員將獲得訪問會計模塊、
+銷售模塊和庫存模塊的權限，但他\\們將被限制無法訪問製造模塊。這種類型的限制保證了只有合適的員工才能對流程進行控制。\\
+
+Within said GUI the different modules appear as app icons (Figure 18) and, from the getgo, the company has available a reasonable selection of well-integrated applications not to 
+mention a vast app store filled with community made modules.
+\\
+
+在該GUI中，不同的模塊顯示為應用程序圖標（見圖18），從一開始，公司就可以使用一個合理的\\、互相整合良好的應用程序選擇，更不用說還有一個充滿由社區製作的模塊的廣大應用商店了。\\
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig18.png}
+\end{center}
+
+\section{5.1.2. Odoo’s view on manufacturing\\5.1.2. Odoo對製造的觀點}
+Odoo considers that the responsibilities regarding manufacturing of anything is 
+distributed throughout different company departments, each of which is responsible for 
+specific file types and dealt with using specific apps (Table 2). From the perspective of PLM 
+this is very positive because as mentioned by (Saaksvuori and Immonen, 2008) about User 
+privilege management – the PLM system is used to define information access and 
+maintenance rights. The PLM system defines the people who can create new information or
+make, check and accept changes, and those who are allowed only to view the information or 
+documents in the system. user privilege management is usually a challenge when regarding 
+integration of PLM with other systems. \\
+Odoo認為，關於任何製造的責任都分佈在不同的公司部門中，每個部門負責特定的文件類型，並使用\\特定的應用程序進行處理（見表2）。從PLM的角度來看，這是非常積極的，因為如(Saaksvuori and Immonen, 2008)所述，關於用戶權限管理 – PLM系統用於定義信息訪問和維護權限。PLM系統定義\\了誰可以創建新信息或進行製作、檢查和接受更改，以及誰只被允許查看系統中的
+信息或文件。當涉\\及將PLM與其他系統集成時，用戶權限管理通常是一個挑戰。
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{tab2.png}
+\end{center}
+
+From Odoo’s perspective in the beginning of any usual manufacturing process, the first 
+step will be the engineers designing the product usually using a CAD software. Once that is 
+done, they will create a Bill of materials (BOM) this is a list of components or materials 
+necessary to produce the product. At this point the focus goes to the manufacturing process 
+itself. \\
+從Odoo的角度來看，在通常的製造過程的開始，第一步是工程師使用CAD軟件設計產品。一旦完成，\\他們將創建一個物料清單（BOM），這是生產產品所需的組件或材料的清單。在這一點上，重點轉\\移到了製造過程本身。\\
+The software view of process is focused on routings, worksheets and work centers this is 
+done by the manufacturing engineering team. A routing is a set of steps a product goes 
+through for production. Worksheets are the instructions for the manufacturing operator, and 
+work centers are the places where the production is being conducted. Odoo considers that 
+these are the requirements for putting engineers plans in motion 
+A procurement department will be responsible for requesting for quotations (RFQ) or 
+purchase orders (PO). Inventory operators take care of receipts based on those POs, which is 
+usually done using a barcode application within Odoo. 
+As explained in the first section of 
+this chapter Odoo is primarily an ERP system and it is at this point that it is possible to notice 
+some ERP centric characteristics like the focus on inventory and management of resources. 
+This will be further analyzed in the following sections, but it is fair to point out that those 
+RFQ and PO are considered items within the data base.\\
+ 軟體對流程的視角集中在路由、工作單和工作中心上，這是由製造工程團隊完成的。路由是產品生產\\的一組步驟。工作單是製造操作員的說明，而工作中心則是生產進行的地方。Odoo認為這些是將工程\\師計劃付諸行動的要求。
+採購部門將負責申請報價（RFQ）或採購訂單（PO）。庫存操作員根據這些\\PO進行收貨，通常使用Odoo中的條碼應用程序進行操作。
+正如本章的第一節所解釋的，Odoo主要是\\一個ERP系統，在這一點上，可以注意到一些ERP中心的特徵，如對庫存和資源管理的關注。
+這將在\\接下來的章節中進一步分析，但公平地指出，這些RFQ和PO被視為數據庫中的項目。\\
+Only when you have the design the process and the materials required Odoo considers 
+manufacturing possible. Then the manufacturing foreman will create a manufacturing order 
+(MO) and manage the planning of the manufacturing operators through work orders (WO) 
+and work centers. Then the manufacturing operators can start production following a work 
+order. After the products are produced, they automatically appear in the inventory database 
+which alongside packaging and delivery is managed by the Inventory department.\\
+ 只有在有了設計、流程和所需材料後，Odoo認為製造才是可能的。然後，製造主管將創建一個製造訂\\單（MO），並通過工單（WO）和工作中心管理製造操作員的計劃。然後，製造操作員可以根據工單\\開始生產。產品生產完成後，
+它們將自動出現在庫存數據庫中，並由庫存部門負責包裝和交付。\\
+Odoo considers that quality team is responsible for assign control/check points as well as 
+identify possible issues within the product or production. These quality control check points 
+are very interesting from the MES perspective because it represents valuable production data 
+that is collected in real time as production occurs, i.e., it is possible to assign a dimension 
+check after the production of every piece where the machinist will fill in the dimensions to 
+track quality over time.\\
+Odoo認為，質量團隊負責分配控制/檢查點，以及在產品或生產中識別可能存在的問題。這些質量控\\制檢查點從MES的角度來看非常有趣，因為它們代表著寶貴的生產數據，這些數據在生產過程中實時\\收集，即可以在每個零件生產後分配一個尺寸檢查，機械師將填寫尺寸以跟踪時間的質量。\\
+If it's a problem of design or if there is possibility for improvement an engineering change 
+order (ECO) can be issued. This falls back to the hands of the manufacturing engineering
+team and will focus on updating documents and the BOM. The ECO is the heart of how Odoo 
+deals with tracking change within the system. That is key when regarding PLM and in fact is 
+the focus of the Odoo application called PLM. To which lengths said application is capable 
+to perform is the subject of the next section.\\
+如果是設計問題或者存在改進的可能性，可以發出工程變更訂單（ECO）。這將返回製造工程團隊的\\手中，並將侧重於更新文件和BOM。 ECO是Odoo在跟踪系統內變更時如何處理的核心。這在涉及\\PLM時至關重要，
+實際上也是Odoo應用程序PLM的焦點。該應用程序能夠執行到何種程度是下一節\\的主題。\\
+\section{5.1.3. The information structure of Odoo \\5.1.3. Odoo的信息結構}
+Each module focuses in the manipulation of specific object-oriented classes that hold 
+metadata within the database. These are the virtual Items that are responsible for virtualizing 
+the aspects of the product lifecycle as referred by in (Section 3.1). Different types of items 
+have different types of accounts and hold different sorts of data, i.e., a product item is 
+representative of a certain product and holds metadata that is relevant to its interactions and 
+use as well as links to other possible items that are closely relevant like their responsible user 
+or the bill of materials necessary to its manufacturing. Odoo them makes all that information 
+accessible and interactable through its browser interface (Figure 19 and Figure 20). For the 
+sake of consistency this document will refer to specific item representations (E.g. Bolt) as 
+‘item’ and refer to a type of item (Product) as ‘item class’.\\
+每個模塊都專注於操作特定的面向對象的類，這些類在數據庫中保存元數據。這些是虛擬物品，負責\\將產品生命周期的各個方面虛擬化，正如第3.1節所述。不同類型的物品具有不同類型的帳戶，並保存\\不同類型的數據，例如，產品物品代表特定的產品，保存與其交互和使用相關的元數據，以及與其密\\切相關的其他可能物品的鏈接，例如負責使用者或其製造所需的物料清單。Odoo使所有這些信息通\\過其瀏覽器界面可訪問並可交互（見圖19和圖20）。為了保持一致，本文將具體的物品表示（例如，\\螺栓）稱為“物品”，將物品類型（產品）稱為“物
+品類”。\\
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig19.png}
+\end{center}
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig20.png}
+\end{center}
+Within Odoo, there are several types of those item classes (some holding a lot of metadata
+and some holding very little) all with a varying degree of relationships and integration. Since 
+the scope of this work is limited to the PLM and MES capabilities, the focus is on the items 
+that are related to it. The following sections will provide short explanations for the main 7 
+item classes of Odoo’s manufacturing process since its basic understanding is helpful for the 
+reader to follow the simulation. These are represented in the following diagram (Figure 21). 
+Other items that are external to the manufacturing procedure will be presented throughout 
+the simulation\\
+在Odoo中，有幾種類型的物品類（一些包含大量的元數據，一些則包含很少），它們之間存在著不\\同程度的關係和整合。由於本文的範圍僅限於PLM和MES的功能，因此重點放在與其相關的物品上\\。以下各節將為Odoo製造過程的主要7個物品類提供簡要解釋，
+因為基本理解有助於讀者理解模擬。\\這些在以下圖表中表示（見圖21）。與製造程序無關的其他物品將在整個模擬過程中介紹。\\
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig21.png}
+\end{center}
+\section{5.1.3.1. Product Item \\
+5.1.3.1. 產品項目}
+Every material, component or product is characterized by a PRODUCT type class that is 
+held and mainly managed within the Inventory application of Odoo. That means that within
+the system product production is dependent on the availability of other products that are 
+either bought as they are or manufactured from another products (Figure 22), i.e., raw 
+materials are considered products as well, more specifically products that are purchased and
+then included in the BOM’s to manufacture other products. This is considered the main item 
+class since it is both the source and the goal of manufacturing.\\
+每種材料、零件或產品都由一個PRODUCT類型類別來表徵，並主要在Odoo的庫存應用程序中持有和\\管理。
+這意味著在系統內，產品生產取決於其他產品的可用性，這些產品可以是現貨購買的，也可以\\是從其他產品製造而來的
+（見圖22），也就是說，原材料也被視為產品，更具體地說，是購買並包含\\在BOM中以製造其他產品的產品。這被認為是主要的物品類別
+，因為它既是製造的來源，也是目標。\\
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig22.png}
+\end{center}
+\section{5.1.3.2. Operation item class and workcenter item class\\5.1.3.2. 操作項目類和工作中心項目類}
+The operation item is representative of a manufacturing operation that is required to 
+transform components or raw materials into a product or new component while the 
+workcenter item represents the place at which the operation takes place, e.g., a sanding wood 
+will be carried out in a sanding station (Figure 23) that has the proper equipment. The 
+workcenter is eventually used in Odoo as a time/equipment management tool in its 
+production planning. Basically, when the production center is at full capacity it puts 
+following processes on hold or redirects the processes to an alternative workcenter. The 
+operation item is also responsible for holding the instruction files that are consulted during 
+production. \\操作項目代表需要將零件或原材料轉化為產品或新零件的製造操作，而工作中心項目則代表操作發生\\的地點，
+例如，對木材進行打磨將在具有適當設備的打磨站（見圖23）進行。工作中心最終在Odoo\\中用作生產計劃中的時間/設備管理工具。
+基本上，當生產中心達到最大容量時，它將暫停後續過程\\或將過程重定向到替代工作中心。操作項目還負責保存在生產過程中咨詢的指示文件。
+\\
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig23.png}
+\end{center}
+\section{5.1.3.3. The Bill of Materials item class\\5.1.3.3. 物料清單項目類}
+The Bill of Materials is a list of components necessary to build a product. In Odoo,
+however, the BOM is best described by what PLM would consider the virtual representation 
+of the production process. That might seem counter intuitive at first considering the 
+previously mentioned operation item class, but in fact since the BOM is a compound item it
+points directly to all item types necessary to produce the end product (Figure 24). For 
+example, let’s say that to build a product it is required 3 different parts and 4 different
+operations; the BOM of said product would list all of them as well as specify the order in 
+which these are utilized.\\
+物料清單是構建產品所需的零部件列表。然而，在Odoo中，BOM最好由PLM認為的生產過程的虛擬\\表示來描述。
+起初，這可能看起來有些反直覺，考慮到前面提到的操作項目類，但實際上，由於BOM\\是一個復合項目，
+它直接指向生產最終產品所需的所有項目類型（見圖24）。例如，假設為了製造產\\品需要3個不同的零件和4個不同的操作；
+該產品的BOM將列出所有這些，並指定它們的使用順序。
+\\
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig24.png}
+\end{center}
+\section{
+5.1.3.4. Manufacturing order item class and work order item class \\5.1.3.4. 製造訂單項目類和工作訂單項目類}
+ Manufacturing order item class and work order item class 
+Along the standard items that are considered within Odoo, orders are the ones that 
+represent commencement within the system. They are signaling that a change is taking place 
+somehow and somewhere. In the case of a manufacturing order it represents the order to 
+manufacture N number of specific products using it’s BOM as a base. It is as consequence 
+of that MO that work orders are automatically generated by Odoo (one for each necessary 
+operation listed in the BOM) and allocated throughout available necessary workcenters
+(Figure 25). 
+\\
+製造訂單項目類和工作訂單項目類
+除了Odoo中考慮的標準項目外，訂單是代表系統內開始的項目。\\它們表示某種變化正在某個地方發生。
+在製造訂單的情況下，它代表使用其BOM作為基礎製造N個特\\定產品的訂單。由於製造訂單，Odoo會自動生成工作訂單
+（每個BOM中列出的每個必要操作一個）\\並分配到可用的必要工作中心（見圖25）。
+
+\end{document}

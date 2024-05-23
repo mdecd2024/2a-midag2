@@ -1,0 +1,478 @@
+\documentclass{article}
+\usepackage{CJK}
+\usepackage{fontspec}
+\usepackage{graphicx}  
+\setmainfont{Noto Serif CJK SC}
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm, a4paper]{geometry}
+
+
+\begin{document}
+\begin{center}
+\textbf{6. CHAPTER  \\6. 章節 }
+\end{center}
+
+\textbf{ODOOS ACOMPLISHMENTS REGARDING PLM AND MES}\\
+
+\textbf{ODOO 在 PLM 和 MES 方面的成就}
+
+
+
+This chapter aims to summarize the strengths and weaknesses of the Odoo software 
+focusing on the questions raised on section 4.2. It will also comment Odoo functionalities or 
+lack thereof noticed throughout the simulation also taking the questions into account.\\
+\\
+
+本章旨在總結 Odoo 軟體的優勢和劣勢，重點關注第4.2節提出的問題。也將評論在模擬過程中注\\意到的 Odoo 功能或其缺失之處，同樣考慮這些問題。
+
+\begin{center}
+\textbf{6.1. How does the software deals with items?\\6.1. 軟體如何處理項目？}
+\end{center}
+
+Overall, the Odoo software presents the user with a wide variety of digital items that can 
+be used to represent several aspects of manufacturing as well as other aspects of business. 
+This is mainly due to the way the Odoo ERP functionality uses items to track the pull and 
+push actions throughout its use, that is also how automation is achieved in the software.\\
+\\
+
+總體而言，Odoo 軟體為用戶提供了各種數位項目，這些項目可以用來表示製造和業務的各個方面。\\這主要歸功於 Odoo ERP 功能使用項目來跟蹤其使用過程中的推動和拉動動作，這也是該軟體實現\\自動化的方式。
+
+\begin{center}
+\textbf{6.1.1. Are all aspects of the product lifecycle represented?
+\\6.1.1. 產品生命周期的所有方面是否都被表示？}
+\end{center}
+
+One of the disadvantages of being derived from a ERP system is that it focus on the 
+primary scope of ERP (Figure 2) ,that is, production and sales. The Items in Odoo reflect 
+that. For instance, the development part of the life cycle during the simulation, although the 
+representation was possible it certainly felt like a stretch of functionalities made for the 
+production phase rather than development is self (Figure 70). When developing prototypes 
+for instance many of the steps like creating an ECO just to carry files in the beginning and 
+going through many steps every time an adjustment in the prototype was made felt too 
+bureaucratic or too much of a workaround.\\
+\\
+
+由於來自 ERP 系統的缺點之一是它專注於 ERP 的主要範疇（圖2），即生產和銷售。在模擬過程\\中，雖然可以表示生命周期的開發部分，但感覺這更像是為生產階段而非開發本身設計的功能擴展。\\例如，在開發原型時，很多步驟如在開始時創建一個 ECO 來攜帶文件，以及每次調整原型時都要\\經過許多步驟，感覺過於繁瑣或過於曲折。
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{41123152-1.png}
+\end{center}
+\begin{center}
+\textbf{Figure 70 Diagram representing Odoo scope of ERP} 
+\end{center}
+\begin{center}
+\textbf{6.1.2. How well are each of those items represented?\\6.1.2 每個項目表示得如何？}
+\end{center}
+Representation levels of the items vary depending on how the item is used. A good 
+example of that is the material focus of product items. In the sense that everything is 
+considered a product with very little distinction between prototypes or raw materials.  The 
+representation of product items or BOM items is very high with a lot of metadata and useful 
+connections to other items. However, even within the manufacturing application there are 
+some items that lack attention. Operations for instance are items that could benefit greatly 
+from more upload capabilities like 3D printing or CNC files. As automation is becoming 
+more widespread in production it is no longer enough to have only PDF or slide instructions. 
+Additionally, other items do not have the ability of holding files not even with the use of 
+ECOs\\
+
+項目的表示水平取決於項目的使用方式。產品項目的材料焦點是一個很好的例\\子。就所有東西都被認為是產品而言，原型或原材料之間的區別很小。產品項目或BOM項目的表\\示非常高，具有大量元數據和與其他項目的有用連接。然而，即使在製造應用中，也有些項目缺乏\\關注。操作項目，例如，可以從更多的上傳功能（如3D打印或CNC文件）中受益。隨著自動化在\\生產中變得越來越普遍，僅有PDF或幻燈片說明已經不夠了。此外，其他項目即使使用ECO也無\\法攜帶文件。
+\begin{center}
+\textbf{6.2. How easy it is to create a brand-new product?
+\\6.2 創建全新產品有多容易？}
+\end{center}
+Product creation is one of the most straightforward procedures in Odoo, it really comes 
+down to using either the Inventory application or the Manufacturing application to create a 
+new Product and then fill in its metadata.\\
+在Odoo中，產品創建是最簡單的操作之一，基本上就是使用庫存應用或製造應用來創建新產品，\\然後填寫其元數據。
+\begin{center}
+\textbf{6.2.1. How is the product depicted? 
+\\6.2.1 產品如何被描述？}
+\end{center}
+The product depiction is clear and concise, the product item allows for an image to be 
+uploaded to the item and used as an icon. The ERP nature of the product items in Odoo means 
+that the metadata is reasonably bias toward information that is used to manage storage and 
+inventory (Weight, Volume, Quantity  etc.) but the item also allows for written description 
+as well as providing links to the BOMs and ECOs related to the product.\\
+
+產品描述清晰簡潔，產品項目允許上傳圖像並用作圖標。由於Odoo中的產品項目具有ERP性質，\\因此其元數據偏向於管理存儲和庫存的信息（如重量、體積、數量等），但該項目還允許撰寫描\\述，並提供與BOM和ECO相關的鏈接。
+\begin{center}
+\textbf{6.2.2. How does the product integrate and reference relevant files?
+\\6.2.2 產品如何整合和參考相關文件？}
+\end{center}
+There is surely a reasonable attempt in allowing the most valuable items (Product and 
+BOMs) to be able to manage and reference relevant files. However, Odoo does not implement 
+much more than the bare minimum as far as file management goes. The most it can do is 
+allow for files to be uploaded and download manually. This means that whenever someone 
+makes a change in a file it needs to be manually uploaded in ECO. Integration with most files 
+is inexistent except for operation items because the instruction files can be opened and 
+interacted within Odoo during the production.\\
+
+Odoo確實在允許最有價值的項目（產品和BOM）管理和參考相關文件方面做出了合理的嘗試。然\\而，Odoo在文件管理方面僅實現了基本功能，最多允許手動上傳和下載文件。這意味著每當有人\\更改文件時，都需要在ECO中手動上傳。除了操作項目可以在生產過程中打開和交互的指令文件外，\\與大多數文件的集成是不存在的。
+\begin{center}
+\textbf{6.2.3. Does changing one affects the other?
+\\6.2.3 更改一個會影響另一個嗎？}
+\end{center}
+It does not, files are mostly dealt by Odoo as paperwork for later reference. Anything 
+added file wise that could entail a change in the product or BOM metadata will require 
+someone to be aware of the change and update the information manually.\\
+
+不會，Odoo主要將文件視為供以後參考的文書工作。任何文件上的添加都可能涉及產品或BOM元\\數據的變更，這需要有人注意到變更並手動更新信息。\\
+\begin{center}
+\textbf{6.3. How easy it is to create a brand-new production process?
+\\6.3 創建全新生產過程有多容易？}
+\end{center}
+As mentioned before the item the best represents the process is the bill of materials. This 
+item class requires an existing product to be associated with, other that the BOM is no harder 
+to create than a product item.\\
+\\
+
+如前所述，最能代表過程的項目是物料清單（BOM）。此項目類別需要關聯一個現有產品，除此之\\外，創建BOM並不比創建產品項目難。
+\begin{center}
+\textbf{6.3.1. How the process is depicted? 
+\\6.3.1 過程如何被描述？}
+\end{center}
+The process is depicted in the BOM as a list of components (other product items) and 
+operations that are carried out in as specific order to produce a number of end products. This 
+representation seems to sit well with the production procedure. Metadata is kept to a 
+minimum but there is still the capability to offer a text description.\\
+\\
+
+過程在BOM中被描述為組成部分（其他產品項目）和按照特定順序執行的操作的列表，以生產一定\\數量的最終產品。這種表示似乎非常符合生產程序。元數據保持在最低限度，但仍有提供文本描述\\的能力。
+\begin{center}
+\textbf{6.3.2. How does the process integrate and reference the product it 
+produces?
+\\6.3.2 過程如何整合和參考其生產的產品？}
+\end{center}
+The integration between the BOM and the product items is by far the most well done in 
+Odoo. Changes made in the BOM affect production and are directly linked to the product. 
+Whenever metadata changes are possible and said aspect is represented in the product item 
+as well the change of one is inherited by the other.\\
+\\
+
+BOM和產品項目之間的集成在Odoo中做得最好。對BOM的更改會影響生產，並且與產品直接相關。\\只要元數據更改是可能的，而該方面在產品項目中也有表示，則一個的更改會被另一個繼承。
+\begin{center}
+\textbf{6.3.3. Does changing one affects the other?
+\\6.3.3 更改一個會影響另一個嗎？}
+\end{center}
+As far as inventory and manufacturing is concerned integration is and referencing is well 
+implemented. Production results flawlessly in the resulting changes in inventory and the 
+navigation path of the GUI is very well optimized.  It does not take more than 3 or 4 clicks 
+to get from one product to another or to navigate to other relevant items.\\
+\\
+
+就庫存和製造而言，集成和參考實現得非常好。生產結果會毫不費力地反映在庫存變化中，GUI的\\導航路徑也非常優化。從一個產品導航到另一個或導航到其他相關項目不需要超過3或4次點擊。
+\begin{center}
+\textbf{6.4. How easy is to improve an existing product/ production process?
+\\6.4 改進現有產品/生產過程有多容易？}
+\end{center}
+As mentioned previously, all improvements in Odoo are performed using engineering 
+change orders. These are applied to product items or bill of materials. Creating ECOs is quite 
+easy and organized, the ECO is an item on itself that symbolizes a signal given to create 
+change, once effective, it symbolizes an increment on the product or process.\\
+\\
+
+如前所述，所有改進在Odoo中都是通過工程變更單（ECO）進行的。這些應用於產品項目或物料\\清單。創建ECO相當容易且有條理，ECO本身是一個象徵著創建變更信號的項目，一旦生效，它\\象徵著產品或過程的增量。
+\begin{center}
+\textbf{6.4.1. How easy it is to update its metadata\\
+6.4.1 更新元數據有多容易？}
+\end{center}
+It is easy to update any metadata regarding any item in Odoo; however, it is wise to point 
+out that since the ECOs are separate items that are just point by products or BOMs many of
+the changes are not automatic and require manual intervention. I.e. an ECO will not change 
+the text description of the product for instance. If the new update were to require a change 
+on that description it would require a manual intervention from the user in the product item. 
+Doing that is easy, but it is an extra task that will not be tracked by the ECO.\\
+
+更新Odoo中任何項目的任何元數據都很容易；然而，值得指出的是，由於ECO是單獨的項目，只\\是指向產品或BOM，許多變更不是自動的，需要手動干預。例如，ECO不會更改產品的文本描述。\\如果新更新需要更改該描述，則需要用戶在產品項目中手動干預。這樣做很容易，但這是一個ECO\\不會跟踪的額外任務。
+\\
+\begin{center}
+\textbf{6.4.2. How easy it is to determine the effects of the change?\\
+6.4.2 確定變更效果有多容易？}
+\end{center}
+\\
+
+Odoo feedback of information is mainly done in a manufacturing order basis. The 
+information available is clear and ECOs do not affect MOs that are already under way so the 
+effects of an applied ECO would not be hard to notice. However, it is good to point out that 
+in the way the performance information is displayed there is no indication of the product 
+revision or the ECO applied. This means that the user would need to first figure when the 
+ECO was applied, then navigate to the equivalent MO in the data to draw its conclusions. 
+Although not a problem for recent changes this does becomes problematic if someone want 
+to analyze effects of old changes.\\
+
+Odoo中的變更管理主要通過ECO進行。對於每個ECO，都有詳細的記錄和追踪，以確保變更是可\\見的，並且其影響是可測量的。這使得確定變更的效果變得相對簡單，特別是在生產環境中。
+\\
+\begin{center}
+\textbf{6.4.3. How does the software deals with different product revisions?\\
+6.4.3 軟體如何處理不同的產品版本？}
+\end{center}
+\\
+
+Version control is something well covered by the 1 to N relation between product/BOM 
+and linked ECOs. Every product will have a tab containing all the ECOs applied to it in 
+chronological order effectively working as a timeline representing the item evolution.\\
+\\
+
+Odoo允許創建和管理多個產品版本，這些版本可以通過ECO進行變更和更新。每個版本都有其獨\\立的元數據和歷史記錄，這使得管理和追踪產品變更變得更加高效。
+\\
+\begin{center}
+\textbf{6.5. How easy is to find data related to product or process?\\
+6.5 查找與產品或過程相關的數據有多容易？}
+\end{center}
+
+Most of the data related to performance regarding production is concentrated under the
+reporting tab as mentioned in the previous chapter (Figure 71).
+
+與生產績效相關的大多數數據都集中在 報告選項卡，如上一章所述（圖 71）。
+\\
+\begin{center}
+\includegraphics[width=0.9\textwidth]{41123152-2.png}
+\end{center}
+\begin{center}
+\textbf{Figure 71 GUI Options of data reporting}
+\end{center}\\
+
+This means that as far as performance is concerned it is quite easy to find the data. The 
+previous chapter will show examples of possible information that are available within those 
+tabs.\\
+
+這意味著就效能而言，查找數據非常容易。 這前一章將展示這些內容中可能提供的資訊的範例\\選項卡。\\
+
+In addition to using this path the UI of the product item also has a tab that point to the 
+monthly comparison of production volume regarding the product (Figure 72). Which would 
+be more impressive if there was more than one month in the trial version of Odoo.\\
+
+除了使用此路徑外，產品項的UI還具有一個指向 產品的月度產量比較（圖72）。這將 如果\\Odoo的試用版超過一個月，那就更令人印象深刻了。\\
+\begin{center}
+\includegraphics[width=0.9\textwidth]{41123152-3.png}
+\end{center}
+\begin{center}
+\textbf{Figure 72 Total quantity regarding MO from product item}
+\end{center}
+\begin{center}
+\textbf{6.5.1. How easy is find production numbers?
+6.5.1 查找生產數量有多容易？}
+\end{center}
+
+In addition to the previously mentioned ways, Odoo also makes available a unit forecast 
+graph that records the ins and outs of the inventory. This is particularly useful to estimate 
+sales and balance storage with demand (Figure 73). This feature is not mentioned to much in 
+this work because supply and demand is not so much a MES functionality, but it is to useful 
+to have an overview of the production.\\
+
+除了前面提到的方法外，Odoo還提供單位預測 記錄庫存來龍去脈的圖表。這對於估計特別有用 銷售並平衡存儲與需求（圖 73）。這個功能在 這項工作是因為供求關係與其說是MES功能，不如說 是有用的 以了解生產情況。\\
+\begin{center}
+\includegraphics[width=0.9\textwidth]{41123152-4.png}
+\end{center}
+\begin{center}
+\textbf{Figure 73 Unit forecast overview}
+\end{center}
+\begin{center}
+\textbf{6.5.2. How does Odoo generate performance data?\\
+6.5.2 Odoo如何生成性能數據？}
+\end{center}
+
+The astute reader will notice that all the data mentioned so far is derived from the time to 
+completion of the operations been carried out, the related amount to the MO and the 
+workcenter utilized. Even so it is impressive how much information can be drawn especially 
+considering that it is all generated automatically.\\
+
+敏銳的讀者會注意到，到目前為止提到的所有數據都是從 完成操作后，MO和MO的相關金額\\已完成。已使用工作中心。即便如此，可以繪製多少信息還是令人印象深刻，尤其是 考慮到它都\\是自動生成的。
+\begin{center}
+\textbf{6.5.3. How does the software present performance change as a result of a 
+upgrade?\\
+6.5.3 軟體如何展示升級後的性能變化？}
+\end{center}
+
+In order to identify the change, the user must identify the MOs following the change and 
+see the difference based on that. Ideally it would be nice if the graphical information showed 
+the revision of the product, but this is not present as of Odoo V13.\\
+
+為了識別更改，用戶必須識別更改後的MO，並且 基於此查看差異。理想情況下，如果顯示圖\\形資訊會很好產品的修訂版，但從Odoo V13開始就不存在了。
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\begin{center}
+\textbf{CONCLUSION}
+\end{center}
+
+In chapter 2 I referenced a diagram that represents a theoretical ideal of how the 
+integration of PLM with other systems should be (Figure 74). In that diagram the reader can 
+notice that ideally PLM would be the center of the system with other systems (Including 
+ERP) attached to it. Different from said diagram the Odoo software takes ERP as the center 
+with other systems attached to it. This work has shown that it is certainly possible to use 
+Odoo for PLM and MES however it has also shown that the PLM and MES implementation 
+presents some weaknesses.\\
+
+在第2章中，我引用了一張圖表，該圖表代表了如何PLM應該與其他系統集成（圖74）。在該\\圖中，讀者可以請注意，理想情況下，PLM 將是系統的中心，與其他系統（包括 ERP）附加到它。\\與上述圖表不同的是，Odoo軟體以ERP為中心並附有其他系統。這項工作表明，使用然而，Odoo\\用於PLM和MES的實施存在一些弱點。\\
+\begin{center}
+\includegraphics[width=0.9\textwidth]{41123152-5.png}\\
+\textbf{Figure 74 Comparison to the left the adapted diagram as theorized by Saaksvuori, A. 
+and Immonen, A. (2008), to the right Odoo take on how systems interact.}
+\end{center}
+
+The lack of file upload support on things like operation items, work centers or equipment 
+is something of some concern especially considering 3D printing or CNC because access to 
+the CAD files would prove helpful to the operators. Also, there is a gap in between the facets 
+of product and tool when the company is taking upon themselves to develop and produce 
+said tooling (similar situation founded when developing the molds in the simulation).\\
+
+缺乏對操作專案、工作中心或設備等內容的檔上傳支援 這是一些值得關注的問題，特別是考慮\\到3D列印或CNC，因為可以訪問CAD檔將對操作員有所説明。此外，刻面之間也存在間隙當公司\\自行開發和生產時，產品和工具所述工具（在類比中開發模具時出現類似情況）。\\
+
+In addition, although MES provide detailed graphical representation regarding the dataset 
+that it has, it is limited to data derived from the time to completion of the operations been 
+carried out. For instance, it would be very valuable if graphical representation regarding 
+quality control was easily available as well.\\
+
+此外，儘管MES提供了有關數據集的詳細圖形表示它有，它僅限於從操作完成時間得出的數據\\進行。例如，如果圖形表示品質控制也很容易獲得。\\
+
+All that said, applying ECOs to BOMs in Odoo is a procedure deserving of praise. The 
+ECO holds the information until it is ready to be applied and then it updates the BOM 
+automatically once the ECO is validated by responsible personnel. It might not look like 
+something so important now because this simulation is dealing with very simple products, 
+but it becomes exponentially more important as complexity increases. E.g. A car with 
+thousands of parts and hundreds of nested BOMs would be considered a nightmare to control 
+and keep track of change if a system like this was not present.\\
+
+綜上所述，將ECO應用於Odoo中的BOM是一個值得稱讚的過程。這ECO會保留資訊，直到準\\備好應用，然後更新BOM一旦ECO由負責人員驗證，就會自動執行。它可能看起來不像 現在非常\\重要，因為這個類比正在處理非常簡單的產品，但隨著複雜性的增加，它變得越來越重要。例如，\\一輛汽車數千個零件和數百個嵌套BOM將被視為控制的噩夢如果沒有這樣的系統，請跟蹤更改。\\
+
+This software is not perfect for PLM or MES implementation, but it does hold value in 
+the sense of availability and integration with other systems. The functionality is there 
+specially regarding product and process and the software has an extremely interesting 
+integration with its natural ERP functionalities. All this makes up for a system that would 
+suit better:\\
+
+該軟體對於PLM或MES實施並不完美，但它確實具有價值可用性和與其他系統的整合感。功能\\就在那裡特別是關於產品和工藝，軟體有一個非常有趣的與其自然的ERP功能集成。所有這些都彌\\補了一個系統，該系統將更適合：\\
+
+▪ Small business that could use PLM and MES in a smaller scale.\\
+
+▪ 可以在較小規模中使用 PLM 和 MES 的小型企業。 \\
+
+▪ Companies that deal with less manufacturing and more assembly or distribution 
+taking advantage of the All in One nature of the software.\\
+
+▪ 處理較少製造和更多組裝或分銷的公司 利用軟體的多合一性質。\\
+
+It is important to mention that the limitations of Odoo are not in the complexity of the 
+product itself but in the complexity of the operations that surround its development. All things 
+considered you could track a large and complex assembly if it includes only simple 
+manufacturing operations or if more complex engineering tasks are done by suppliers. I.e. 
+you could track the assembly of a motorcycle with ease in Odoo, but the PLM features are 
+not polish enough to track the full evolution/development of its powertrain. It is certainly 
+possible to do so but it would take too much time and effort from the engineering team to be 
+considered worth it just for the sake of having an all in one solution with ERP features.\\
+
+值得一提的是，Odoo的局限性不在於Odoo的複雜性。產品本身，但在圍繞其開發的操作的複\\雜性中。萬物考慮您可以跟蹤大型複雜裝配體，如果它只包含簡單的製造操作，或者更複雜的工程\\任務由供應商完成。即您可以在Odoo中輕鬆跟蹤摩托車的裝配，但PLM功能是不夠完善，無法跟\\蹤其動力總成的完整演變/發展。當然是 可以這樣做，但工程團隊需要花費太多的時間和精力僅僅\\為了擁有具有ERP功能的多合一解決方案而被認為是值得的。\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\begin{center}
+\textbf{BIBLIOGRAPHY}
+\end{center}
+Ben Khedher, A., Henry, S., Bouras, A. (2011), “Integration between MES and product 
+lifecycle management”. IEEE International Conference on Emerging Technologies and 
+Factory Automation (ETFA 2011), Toulouse, France.\\
+\\
+Brownells. 
+Available 
+in 
+<https://www.brownells.com/rifle-parts/receiver
+parts/receive\\rs/lower-receivers/ak-47-fixed-stock-receiver-w-trigger-guard-rear-trunnion
+prod97339.aspx>. Last access in 29/08/2020.\\
+\\
+D’Antonio, G.; Macheda, L.; Sauza Bedolla, J.; Chiabert, P. (2017), “PLM-MES 
+Integration to Support Industry 4.0”. PLM 2017, IFIP AICT 517, pp. 129–137, 2017.\\
+\\
+D’Antonio, G.; Sauza Bedolla, J.; Chiabert, P.; Lombardi, F. (2015), “PLM-MES 
+integration to support collaborative design”. International Conference on Engineering Design 
+(ICED 2015), Milano, Italy.\\
+\\
+Hanson, K (2019) “When it does and doesn’t make sense to 3D-print molds”. Available 
+in: <https://www.thefabricator.com/additivereport/article/additive/plastic-injection-molds
+can-be-3d-printed-quickly>. Last access in 17/11/2020.\\
+\\
+MEScenter 
+“MES - Manufacturing Execution System”. Available 
+in:<http://mescenter\\.org/en/articles/108-mes-manufacturing-execution-system>. Last access 
+in 25/10/2020.
+\\
+Meyer, H.; Fuchs, F.; Thiel, K. (2009), “Manufacturing Execution Systems (MES): 
+Optimal Design, Planning, and Deployment”. McGraw-Hill.\\
+\\
+Odoo Forum. Available in <https://www.odoo.com/fr_FR/forum/aide-1/problems-with
+v14-manufacturing-and-inventory-177511>.\\ Last access in 31/10/2020.
+\\
+Redwood, B (2020) “3D printing low-run injection molds”. Available 
+in:<https://www.\\3dhubs.com/knowledge-base/3d-printing-low-run-injection
+molds/#design>. Last access in 16/10/2020.
+\\
+Saaksvuori, A. and Immonen, A. (2008), “Product Lifecycle Management”, 3rd edition, 
+Springer, Berlin.\\
+\\
+Sharpsbros. Firearms design (2020). Available in <https://sharpsbros.com/mb74-5-45-x
+39mm/>. Last access in 29/08/2020.\\
+
+Stancioiu, A (2017) “The Fourth Industrial Revolution Industry 4.0” s.l.: Academica 
+Brancusi.\\
+\\
+Star Rapid (2020) “The 10 Best Plastic Injection Molding Materials”. Available in: 
+<https://www.starrapid.com/blog/the-ten-most-popular-plastic-injection-molding
+materials/>. Last access in 20/09/2020.\\
+\\
+Stark, J. (2015), “Product Lifecycle Management”, 3rd edition, Springer, Berlin.\\
+\\
+Sudarsan, R.; Fenves, S. J.; Sriram, R. D.; Wang, F. (2005), "A product information 
+modeling framework for product". Computer Aided Design, Vol. 37 No. 13, pp. 1399-1411.\\
+\\
+Tripaldi, M (2019) “Evaluating PLM Implementation in a Medium Enterprise - The 
+Cubogas Case Study”, Tesi di laurea, Politecnico di Torino. Available in: 
+<https://webthesis.\\biblio.polito.it/13994/>. Last access in 23/09/2020.\\
+\\
+Umble, E. J.; Haft, R. R.; Umble, M. M. (2003), "Enterprise resource planning: 
+Implementation procedures and critical success factors". European Journal of Operational 
+Research, Vol. 146 No. 2, pp. 241-257.\\
+\\
+Vásquez, V. K. R.; Escribano, J. F (2017) “ERP implementation for an administrative 
+agency as a corporative Frontend and an e-commerce Smartphone App”, Master of Science 
+Thesis, Universitat Politecnica de Catalunya.\\
+\\
+Womack, J.P.; Jones, D.T.; Ross, D. (1990), “The Machine that Changed the World”, 1st 
+Edition, Rawson Associates, New York.
+\end{document}
