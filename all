@@ -1,0 +1,30 @@
+#! /bin/bash
+git submodule update --init
+
+cd 41123105
+git pull origin main
+cd ..
+
+cd 41123108
+git pull origin main
+cd ..
+
+cd 41123119
+git pull origin main
+cd ..
+
+cd 41123123
+git pull origin main
+cd ..
+
+cd 41123130
+git pull origin main
+cd ..
+
+cd 41123145
+git pull origin main
+cd ..
+
+cd 41123152
+git pull origin main
+cd ..
