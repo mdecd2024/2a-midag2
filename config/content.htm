@@ -54,7 +54,8 @@
 <p>2a_w1_word(逐字稿)<br/> 1.如何設定個人倉儲中的 Pelican 網誌 (12:51)<br/> 2.簡介 Odoo PLM 用法 (6:45)</p>
 <p>2a_w2_video(字幕)<br/> 1.如何建立各組的 Team midag1 並利用 Codespaces 維護內容 (13:24)<br/> 2.利用 Replit 管理 Github Classroom 分組倉儲 (25:02)<br/> 3.如何利用近端可攜環境與外部 IPv4 開啟動態網站 (14:18)</p>
 <p>2a_w2_word(逐字稿)<br/> 1.如何建立各組的 Team midag1 並利用 Codespaces 維護內容 (13:24)<br/> 2.利用 Replit 管理 Github Classroom 分組倉儲 (25:02)<br/> 3.如何利用近端可攜環境與外部 IPv4 開啟動態網站 (14:18)</p>
-<p></p><h2>7.提示各分組可以利用可攜式套件, 在近端充分了解個人倉儲與分組倉儲的各種改版或解決衝突議題</h2>
+<p></p>
+<h2>7.提示各分組可以利用可攜式套件, 在近端充分了解個人倉儲與分組倉儲的各種改版或解決衝突議題</h2>
 <p><strong>update 了 組中自己的子模組 且學習如何用branch 協同更新</strong></p>
 <p><strong>方法如下:</strong></p>
 <p><img alt="" height="405" src="/images/1.png" width="800"/></p>
@@ -83,7 +84,16 @@
 <p><strong>13.同意後即可</strong></p>
 <p><strong>14.合併後的branch 只要沒有與main有衝突的合併應該可以一直用</strong></p>
 <p><img alt="" height="422" src="/images/12.png" width="800"/></p>
-<h1>cmsimde</h1>
+<h1>每週心得</h1>
+<h2>w1</h2>
+<p>1.blog 的文檔在 markdown 用pelican套件 轉完後html檔會跑到 blog folder</p>
+<p>2.為何可以用pelican? 在init_replit安裝 有安裝 pelican套件和markdown套件</p>
+<p>3.有關blog 的 檔案 1. local_publishconf.py 啟動留言</p>
+<p>2.pelicanconf.py 共用的 <br/> 進去需要改相關的設定:AUTHOR=學號<br/>                                 SITENAME=網誌的名稱(協同產品設計實習)</p>
+<p>3.publishconf.py 加留言的<br/> 進去需要改相關的設定:SITEURL=網誌網址</p>
+<p>4.轉檔透過gen_blog<br/>先在shell打入chmod u+x gen_blog才能執行<br/>u:使用者<br/>x:執行</p>
+<p>5.page裡要自行更對應正確的網址<br/>網誌前八行的格式不能改變第12行也不行亂改標題大小用#表示:大標#.小標##<br/>轉檔打./gen_blog</p>
+<p></p><h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
 <p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
