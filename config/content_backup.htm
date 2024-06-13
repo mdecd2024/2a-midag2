@@ -105,10 +105,10 @@
 <p>2a_w1_word(逐字稿)<br/> 1.如何設定個人倉儲中的 Pelican 網誌 (12:51)<br/> 2.簡介 Odoo PLM 用法 (6:45)</p>
 <p>2a_w2_video(字幕)<br/> 1.如何建立各組的 Team midag1 並利用 Codespaces 維護內容 (13:24)<br/> 2.利用 Replit 管理 Github Classroom 分組倉儲 (25:02)<br/> 3.如何利用近端可攜環境與外部 IPv4 開啟動態網站 (14:18)</p>
 <p>2a_w2_word(逐字稿)<br/> 1.如何建立各組的 Team midag1 並利用 Codespaces 維護內容 (13:24)<br/> 2.利用 Replit 管理 Github Classroom 分組倉儲 (25:02)<br/> 3.如何利用近端可攜環境與外部 IPv4 開啟動態網站 (14:18)</p>
-<h2>5. </h2>
+<h2>5.</h2>
 <p><strong><a href="https://mde.tw/cd2024/blog/2024-cd-2b-w5.html#NX1872">要求</a>下載 Siemens NX 1872 至個人隨身碟或電腦 (含筆電), 後續專案系統的零組件繪圖可採電腦輔助設計室固態硬碟所安裝的 NX1872 或隨身碟中的可攜系統, 必須透過連網取得認證後才能開啟.</strong></p>
 <h2>6.</h2>
-<p><a href="https://mde.tw/cd2024/blog/2024-cd-2b-w6.html#copsim_xml">提醒</a><span> </span>CoppeliaSim 不同版本中存檔上的差異, 並強調 cd2024 將沿用 cad2023 課程中所使用的 4.5.1 版.</p>
+<p><strong><a href="https://mde.tw/cd2024/blog/2024-cd-2b-w6.html#copsim_xml">提醒</a> CoppeliaSim 不同版本中存檔上的差異, 並強調 cd2024 將沿用 cad2023 課程中所使用的 4.5.1 版.</strong></p>
 <h2>8.</h2>
 <p><strong>update 了 組中自己的子模組 且學習如何用branch 協同更新</strong></p>
 <p><strong>方法如下:</strong></p>
@@ -161,7 +161,29 @@
 <li>設計和實現不同的控制算法（如PID控制）。</li>
 <li>在模擬環境中測試和調整控制算法，確保其性能。</li>
 </ul>
-<h1>每週心得</h1>
+<h2>10.</h2>
+<h2>11.</h2>
+<h2>12.</h2>
+<h2>13.</h2>
+<h2>14.</h2>
+<h2>15.</h2>
+<div>
+<div><span></span></div>
+<br/>
+<div><span>(手動測試影片無機器人)</span></div>
+</div>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3ksJcwWcqSE" title="手動測試" width="853"></iframe></p>
+<p>問題1:電子是記分板都只停在5再得分還是不會進位</p>
+<p>原因:角度轉到180再丟進一球角度反而重180變到0</p>
+<p>解決:添加了角度範圍檢查和修正，確保角度值在合理範圍內。這樣可以避免角度從正值跳到負值的問題</p>
+<p>問題2:轉到360度時角度不會再累積下去</p>
+<p>解決:添加了 cumulative_red_angle 和 cumulative_blue_angle 變數來保持累積角度。每次更新時，這些變數都會累積關節的旋轉角度，並用於計算分數。</p>
+<p>問題3:上述添加的程式只要丟一球正嘗是轉180度但實際上卻一直飆升沒有停</p>
+<p>原因:由於每次在<code>sysCall_actuation</code>中不斷累加當前角度，導致角度持續增加。</p>
+<p>解決:每次<code>sysCall_actuation</code>調用時，我們計算相對於前一次的角度增量，並將其累加到累積角度中。</p>
+<p>問題4:機械式計分器顯示5分但電子式卻顯示4分</p>
+<p>原因:使用 math.floor 的问题 假设累积角度应该是180度，这应该等于5分（180 / 36 = 5）。 然而，由于浮点数的精度问题，累积角度可能会变成179.999999度。 在这种情况下，math.floor(179.999999 / 36) 将返回4，因为 math.floor 向下取整，179.999999 / 36 约为 4.99999997，向下取整结果为4。</p>
+<p>解決:加入0.5修正的优势 如果你加入0.5，计算方式变为 math.floor((179.999999 / 36) + 0.5)。 这里，179.999999 / 36 约等于4.99999997，加上0.5等于5.49999997。 然后 math.floor(5.49999997) 返回5，这就修正了由于浮点数精度问题导致的误差。</p><h1>每週心得</h1>
 <h2>w1</h2>
 <p>1.blog 的文檔在 markdown 用pelican套件 轉完後html檔會跑到 blog folder</p>
 <p>2.為何可以用pelican? 在init_replit安裝 有安裝 pelican套件和markdown套件</p>
