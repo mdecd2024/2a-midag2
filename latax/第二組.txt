@@ -1,0 +1,1648 @@
+ \documentclass{article}
+\usepackage{CJK}
+\usepackage{fontspec}
+\usepackage{graphicx}  
+\setmainfont{Noto Serif CJK SC}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm, a4paper]{geometry}
+
+
+\begin{document}
+
+
+
+\begin{center}
+\textbf{2.  CHAPTE}
+\end{center}
+\begin{center}
+THEORETICAL BACKGROUND 
+\end{center} 
+This chapter is a brief introduction to the different systems that deal with data production collection and processing around the concept of enhancing  all aspects of production that are favored by the academic community as well as the current and future state of industry for which these systems should prove to be indispensable. 
+
+本章簡要介紹了圍繞學術界所青睞的增強生產各個方面的概念處理資料生產收集和處理的不同\\
+系統，以及這些系統應證明的當前和未來的行業狀況成為不可或缺的。
+It is important to notice from this part that these are not completely separate information systems. They start from different perspectives and they try to solve different problems but because of broad definitions they unavoidably expand into each other. That represents a problem on its own since from the available literature it becomes difficult to pinpoint where the boundary of a system ends and another one starts. 
+
+從這一部分中值得注意的是，這些並不是完全獨立的訊息系統。他們從不同的角度出發，嘗試\\解決不同的問題，但由於定義廣泛，它們不可避免地會相互擴展。這代表了一個問題本身，因為\\從現有文獻中很難找出問題出在哪裡一個系統的邊界結束，另一個系統的邊界開始。 
+ 
+The Odoo management software (that is a topic of this work) considers PLM mainly as a tool for tracking change and improvements, while other key characteristics of PLM, like the use of digital items (later detailed at section 2.1), is a base characteristic of the material requirements planning which is a tool utility that also dabbles into MES.   
+Odoo 
+
+管理軟體（這是本工作的主題）主要將 PLM 視為追蹤變更和改進的工具，而 PLM 的其他關鍵\\特徵（例如數位專案的使用（稍後在第 2.1 節中詳細介紹））是基本特徵物料需求計劃是一種工具\\實用程序，也涉足MES。
+\begin{center}
+ \includegraphics[width=15cm]{螢幕擷取畫面 2024-04-26 173919.png}
+ \end{center}
+
+ 
+ \section{2.1. Product lifecycle management }
+
+
+
+Any information produced by an individual or team is done by an empirical creative process. A task requires either previous knowledge/experience or it will be inevitably plagued by mistakes and corrections, which in turn generates said experience in exchange of time and resources. That experience is, traditionally, embedded in the human resource (employee) that produced the information in the first place. 
+
+個人或團隊產生的任何資訊都是透過經驗創作過程完成的。 一項任務要么需要先前的知識/經驗\\，要么將不可避免地受到錯誤和糾正的困擾，這反過來又會產生所述經驗，以換取時間和資源。\\ 傳統上，這種經驗嵌入最初產生資訊的人力資源（員工）。
+ 
+Product Life-Cycle Management (PLM) is an organizational process that aims to control the flow of information regarding all aspects of a product throughout its life-cycle. As one can imagine, this definition, and its broad scope, does not make understanding PLM any easier. The thing to focus on, for all purposes, is that PLM true value is in what concerns change.  
+
+產品生命週期管理 (PLM) 是一個組織流程，旨在控制產品整個生命週期各個面向資訊的流動。 可以想像，\\這一定義及其廣泛的範圍並沒有讓理解 PLM 變得更容易。 出於所有目的，需要重點關\\注的是 PLM 的真正價值在於關注變化。
+ 
+  
+Figure 1 Product lifecycle stages (Tripaldi, 2019) 
+ 
+PLM is above all a connecting technology, not an individual technology islet or information processing system  (Saaksvuori and Immonen, 2008). The idea is that every information produced by company personnel  holds value equivalent to the time and money invested. Using that information saves money, not using that information wastes money. This is easier to understand when looking to a design process.  
+ 
+ PLM 首先是一種連結技術，而不是一個單獨的技術島或資訊處理系統（Saaksvuori 和 Immonen，2008）。\\ 我們的想法是，公司人員產生的每個訊息都具有與投入的時間和金錢相當的價值。 使用該資訊可以節省金錢，\\而不使用該資訊會浪費金錢。 當查看設計過程時，這一點更容易理解。
+ 
+E.g. if an engineer designs an electronic circuit, the file holding the CAD drawing has an equivalent value to the time and money invested in it. The problem comes from the fact that in a traditional system only the engineer knows the design process behind the file, the extent of what is inside and its possible uses. While, from the perspective of the rest of the company, that is just a file in the database alongside thousands of others. The result is that, on its own, the information is of limited use.  
+
+ 例如。 如果工程師設計電子電路，保存 CAD 圖紙的文件與投入的時間和金錢具有相同的價值。 問題在於，\\在傳統系統中，只有工程師知道文件背後的設計過程、內部內容的範圍及其可能的用途。 然而，從公司其他\\部門的角度來看，這只是資料庫中的一個文件，與數千個其他文件一起。 結果是\\，這些資訊本身的用途有限。
+ 
+If by any chance there is another engineer working in a similar design it will become extremely difficult for him/her to find that file and use it in his own design. Ultimately this results in waste because Engineer\#2 will have to spend more time and money doing something that was already made just because that information was not easily available or well organized.  
+ 
+ 如果萬一有另一位工程師從事類似的設計，他將很難找到該文件並在自己的設計中使用它。 最\\終這會導致浪費，因為工程師\#2將不得不花費更多的時間和金錢來做一些已經完成的事情，因為\\這些資訊不容易獲得或組織良好。
+ 
+This scenario is not limited to product design, but also to all aspects of the product lifecycle that produces change over time. Someone had to orchestrate how that piece will be produced , how that piece will be moved,packed , distributed and disposed of. When a problem is found or improvements are possible those changes also produce information and consume resources. If the company cannot take advantage of that existing information about all those phases of the product conception it will waste resources at every single redesign.  
+ 
+ 這種場景不僅限於產品設計，還包括隨著時間的推移而產生變化的產品生命週期的各個方面。\\ 必須有人精心策劃如何生產該作品，如何移動、包裝、分發和處置該作品。 當發現問題或可能進\\行改進時，這些變更也會產生資訊並消耗資源。 如果公司不能利用有關產品構思所有這些階段的\\現有信息，那麼每次重新設計都會浪費資源。
+
+Product Lifecycle Management consists of an information system that allows information and knowledge sharing within and between organizations (Sudarsan et al., 2005) minimizing the waste by controlling and organizing  those files with information that would otherwise be carried only by the human resource that produced said files. The way it accomplishes that is by virtualizing all components of the product life-cycle in the form of digital “items” in an object oriented architecture. As explained by (Saaksvuori and Immonen, 2008),an item is a systematic and standard way to identify, encode and name a product, a product element or module, a component, a material or a service. 
+
+ 產品生命週期管理由一個資訊系統組成，該系統允許組織內部和組織之間共享資訊和知識（Sud\\arsan et al., 2005），透過控制和組織那些包含資訊的文件，從而最大限度地減少浪費，否則這些\\文件只能由生產所述產品的人力資源攜帶文件。 它實現這一目標的方式是在物件導向的架構中以數\\位「專案」的形式虛擬化產品生命週期的所有元件。 如（Saaksvuori 和 Immonen，2008）所解\\釋的，項目是識別、編碼和命名產品、產品元素或模組、組件、材料或服務的系統和標準方法。
+ 
+These item objects are, by all means, virtual representations that hold metadata regarding what it tries to represent and allows to connect and link the information. As described by (D’Antonio et al., 2015) product information should be connected to its production process. PLM allows to link defined processes to the product and to provide constraints on the order of process execution.  E.g. a CAD drawing for a circuit schematic is attached to a virtual circuit object that holds basic information about what is contained in the file and all the previous iterations of that file over time as well as links to items representing which bill of materials (BOM) it belongs to, the machines necessary to manufacture it, the processes necessary to assemble it and more importantly how all those items changed over each improving iteration.  
+
+ 無論如何，這些項目物件都是虛擬表示，它們保存有關其試圖表示的內容的元數據，並允許連\\接和連結資訊。 如（D’Antonio 等人，2015）所述，產品資訊應與其生產過程相關聯。 PLM 允\\許將定義的流程連結到產品，並對流程執行的順序提供約束。 例如。 電路原理圖的 CAD 繪圖附加\\到虛擬電路對象，該對象保存有關文件中包含的內容以及該文件隨時間推移的所有先前迭代的基本\\信息，以及表示其物料清單 (BOM) 的項目的鏈接屬於，製造它所需的機器，組裝它所需的流程，更\\重要的是所有這些項目在每次改進迭代中如何變化。
+ 
+This all-around virtualization gives precious context to information otherwise lost on its own complexity. It allows for faster access, easier understanding of the whole and the consequences of what happens when there is change for each part. This is the best way of organizing the existing data for future reference because it allows for structure as well as transparency.   
+ 
+ 這種全方位的虛擬化為資訊提供了寶貴的背景信息，否則會因其自身的複雜性而丟失。 它允許\\更快地訪問、更容易理解整體以及每個部分發生變化時所發生的後果。 這是組織現有資料以供將來\\參考的最佳方式，因為它允許結構和透明度。
+ 
+To sum up, PLM as a system aims to track functional change in all aspects regarding the product life, in a way that the company can benefit strategically from it by avoiding informational waste. It does so by virtualizing the real thing in the form of digital items that store the files regarding what the item is supposed to represent. These can in turn be correlated and tracked over time using metadata. 
+ 
+ 總而言之，PLM 作為一個系統，旨在追蹤產品生命週期各個方面的功能變化，從而使公司能\\夠透過避免資訊浪費來策略性地從中受益。 它透過以數位項目的形式虛擬化真實事物來實現這一\\點，這些項目儲存有關該項目應該代表的內容的文件。 這些又可以使用元資料隨著時間的推移進\\行關聯和追蹤。
+ 
+\section{2.2. Enterprise Resource Planing  }
+
+In the early days of information systems, one of the first systems to find wide implementation was the called MRP (Material Requirements Planning). Although not necessarily software based, this system wide implementation was a natural consequence of computing technology and it aimed to solve bottlenecks regarding the material supplying and product output by calculating the material needs for production. As it became more ubiquitous in the enterprise in the late 70’s and early 80’s the system evolved. This gave origin to MRP II (Manufacturing Resource Planning) and, more important to the scope of this paper, ERP (Enterprise Resource Planning). 
+
+ 在資訊系統的早期，最早被廣泛實施的系統之一是 MRP（物料需求計劃）。 儘管不一定基於軟\\體，但這種系統範圍的實施是計算技術的自然結果，旨在透過計算生產的材料需求來解決材料供應\\和產品輸出的瓶頸。 20 世紀 70 年代末和 80 年代初，隨著它在企業中變得越來越普遍，該系統也在\\不斷發展。 這催生了 MRP II（製造資源計劃），以及對本文範圍更重要的 ERP（企業資源計劃）。
+ 
+For the most part modern Enterprise Resource Planning expands the original MRP function to encompass many other aspects of enterprise operations all while adding modularity to the system.  
+
+ 現代企業資源規劃在很大程度上擴展了原始 MRP 功能，以涵蓋企業營運的許多其他方面，同時\\為系統添加了模組化功能。
+ 
+Modern ERP systems are often module based; different modules have different user interfaces and different user groups. For example, Manufacturing module, Procurement module, Logistics module, Financial module, Maintenance module, Sales module. (Saaksvuori and Immonen, 2008). These modules expand across many domains of knowledge but for the most part they do so always from the perspective of Production, Sales and Service.
+ 
+ 現代 ERP 系統通常是基於模組的； 不同的模組有不同的使用者介面和不同的使用者群組。 例如\\，製造模組、採購模組、物流模組、財務模組、維護模組、銷售模組。 （Saaksvuori 和 Immonen，2008）。 這些模組涵蓋了許多知識領域，但大多數情況下，它們總是從生產、銷售和服務的\\角度進行。
+ 
+ \begin{center}
+ \includegraphics[width=15cm]{螢幕擷取畫面 2024-04-26 173941.png}
+ \end{center}
+ Figure 2 depicts the scope of the ERP system in comparison to other Information systems.  
+ \begin{center}
+ 圖 2 描述了 ERP 系統與其他資訊系統相比的範圍。
+ \end{center}
+  
+Figure 2 Visual representation of the scope of different information systems (Adapted from Stark 2015) 
+This sort broad reach across the domains makes sense because the ERP operations, as were in the case of MRP, focus on handling transactions and orders. The focus of the ERP is controlling the change in input, retention and output of resources to the company, be of products, raw materials or packing. 
+
+ 這種跨領域的廣泛影響是有意義的，因為 ERP 操作與 MRP 一樣，專注於處理交易和訂單。 ERP 的重點在於\\控制公司資源（產品、原料或包裝）的輸入、保留和輸出的變化。
+ 
+From the same image, it is possible to see the theoretical contrast between PLM and ERP even though they are both extremely broad. While ERP expands across the domains of knowledge but limits itself to a few functions, PLM expands across all functions that involve the product. As portrayed by  
+
+從同一張圖中，可以看出 PLM 和 ERP 之間的理論差異，儘管它們的範圍都非常廣泛。 ERP 擴展了知識領域，\\但僅限於少數功能，而 PLM 擴展了涉及產品的所有功能。 
+
+
+\begin{center}
+ \includegraphics[width=15cm]{螢幕擷取畫面 2024-04-26 173948.png}
+ \end{center}
+Figure 3, another point of view that represents a good difference between the two is the lack of overlap in what concerns the scale or level of detail in which ERP and PLM affects the industry (i.e. the granularity of the two systems).
+
+如圖 3 所示，代表兩者之間良好差異的另一個觀點是 ERP 和 PLM 影響行業的規模或詳細程度\\（即兩個系統的粒度）方面缺乏重疊。
+ 
+  
+Figure 3 Visual comparison of ERP and PLM concerning granularity (Adapted from Stark, 2015) 
+ 
+As we can see, ERP is primarily concerned with the transaction and the order. Once an order is closed out, the ERP system processes the transactions with respect to that order but is not very much concerned with the order beyond that. On the other hand, PLM’s granularity is concerned with the order for the product and extends not only into the program, but into the family and the entire industry (Stark, 2015). 
+
+ 正如我們所看到的，ERP 主要關注的是交易和訂單。 一旦訂單關閉，ERP 系統就會處理與該\\訂單相關的交易，但不太關心除此之外的訂單。 另一方面，PLM 的粒度涉及產品的訂單，不僅\\擴展到項目，而且擴展到家庭和整個行業（Stark，2015）。
+ 
+This is particularly interesting because it demonstrates how the two systems can and do complement each other in the field. One of the aspects of ERP that should point out is that it is comparatively easier to integrate with other systems. ERP-MES integration for instance has been widely studied and implemented to the point where standards have been developed for it (ISA 95 - IEC 62264). One argument for this is the modular nature of the ERP system which is discussed further in the paper in (Chapter 5) with the analysis of the Odoo software. That is because the Odoo software evolved originally from an open-source ERP system. 
+
+ 這是特別有趣的，因為它展示了這兩個系統如何能夠並且確實在該領域中相互補充。 ERP值得\\指出的一方面是它與其他系統的整合相對容易。 例如，ERP-MES 整合已被廣泛研究和實施，並已\\為其製定了標準（ISA 95 - IEC 62264）。 對此的一個論點是 ERP 系統的模組化性質，這將在本文\\（第 5 章）中透過對 Odoo 軟體的分析進行進一步討論。 這是因為 Odoo 軟體最初是從開源 ERP 系統發展而來的。
+ 
+The nature of the ERP system is best summed up by (Umble et al. 2003): ERP provides a unified enterprise view of the business which encompasses all functions and departments, and an enterprise database in which all actions concerning finance, sales, marketing, purchasing and human resources are traced. The aim of this achieving is to expand the customers target and increase customers share in a market that slowly pivots to innovation (Vásquez and Escribano, 2017).
+
+ ERP 系統的本質可以這樣概括（Umble et al. 2003）：ERP 提供了一個統一的
+ 企業業務視圖，\\其中包含所有職能和部門，以及一個企業資料庫，其中涉及財務、銷售、行銷、採購和人力資源都\\被追蹤。 實現這一目標的目的是擴大客戶目標並增加緩慢轉向創新的市場中的客戶份額（Vásquez 和 Escribano，2017）。
+
+\section{2.3. Manufacturing Execution System}
+ 
+The final key of a fully integrated system would be the Manufacturing Execution System (MES). A MES is a layer of communication between the management and the production levels; it is a software that allows data exchange between the organizational level, usually supported by an ERP, and the shop-floor control systems, in which several, different, very customized software applications are employed (Meyer et al., 2009). 
+
+  完全整合系統的最後一個關鍵是製造執行系統（MES）。 MES 是管理階層與生產層之間的溝通\\層； 它是一種允許組織層面（通常由 ERP 支援）和車間控制系統之間進行資料交換的軟體，其中採\\用了多種不同的、高度客製化的軟體應用程式（Meyer 等人，2009 年）。
+
+\begin{center}
+ \includegraphics[width=15cm]{螢幕擷取畫面 2024-04-26 174020.png}
+ \end{center}
+Figure 4 is a nice depiction of how different systems fit within the scope of manufacturing and development. 
+
+圖 4 很好地描述了不同的系統如何適應製造和開發的範圍。
+  
+Figure 4 Visual representation of the roll of different systems including MES (Adapted from mescenter.org) 
+ 
+For all purposes MES main goal is to provide the numbers and data that ultimately is used to ascertain the condition and quality of not only the products but also all the processes that affect production. Machines, sensors, and anything that comes in contact with the product and provides output of any kind, basically, handing said data to the MES for sorting and processing in real time. E.g. if a manager wants to know the instant production numbers or to see a graphical representation of the rejection rate, that data will be available from a MES software.  
+ 
+ 出於所有目的，MES 的主要目標是提供最終用於確定產品以及影響生產的所有流程的狀況和品\\質的數字和數據。 機器、感測器以及與產品接觸並提供任何類型輸出的任何東西，基本上將所述資\\料傳遞給 MES 進行即時分類和處理。 例如。 如果經理想要了解即時生產數據或查看廢品率的圖形\\表示，則可以從 MES 軟體取得該數據。
+ 
+Traditionally it is from this sort of information that management will evaluate efforts and make decisions. As mentioned before this sort of data collection fits perfectly to the use of ERP not only because the management of resources can be much more detailed if complemented by real time production data but also because the modularity of ERP usually means a seamless integration. MES (like ERP) has also been proven and implemented for decades and their implementation have already been standardized to a reasonable degree. 
+ 
+ 傳統上，管理層將根據此類資訊評估工作並做出決策。 如前所述，這種數據收集非常適合 ERP 的使用，不僅\\因為如果輔以即時生產數據，資源管理可以更加詳細，而且還因為 ERP 的模組化通常\\意味著無縫整合。 MES（如 ERP）也已被證明和實施了數十年，其實施已達到合理的標準化程度。
+ 
+The functionalities of a MES have been grouped in 11 categories by MESA International (1997); furthermore, the tasks for each enterprise layer and, in turn, for each kind of information system are listed in the ISA95 – IEC62264 (2013) standard. This standard also provides definitions for the data structures to be exchanged among information systems aiming to enhance their integration; however, it mainly focuses on ERP-MES-Shop floor integration (D’Antonio et al., 2015). 
+
+ MESA International (1997) 將 MES 的功能分為 11 類； 此外，ISA95 – IEC62264 (2013) 標準中列出了每\\個企業層以及每種資訊系統的任務。 該標準還提供了資訊系統之間交換的資料結構\\的定義，旨在增強資訊系統的整合度； 然而，它主要關注 ERP-MES-車間整合（D’Antonio 等\\，2015）。
+ 
+PLM studies by comparison are much more recent and PLM-MES integration, a main focus of this work, even more so. The challenge of this sort of integration and the state of the art regarding it was be covered in (Chapter 3) as well as the theoretical structure behind it. For now, suffice to point out that since MES provides the feedback by which changes are orchestrated and results are validated by generating information in the form of files and PLM focus on the tracking change by file organization there sure is value in the PLM-MES integration. \\
+相較之下，PLM 研究是較新的，而 PLM-MES 整合（這項工作的主要焦點）更是如此。 （第 3 章）及其背後\\的理論結構涵蓋了這種整合的挑戰和相關的最新技術。 目前，只需指出，由於 MES 提供回饋，透過產生文件\\形式的資訊來編排變更並驗證結果，而 PLM 專注於按文件組織追蹤變更，因此 PLM-MES 整合肯定具有價值。
+
+\section{2.4. Industry 4.0}
+
+The term Industry 4.0 is one mentioned time and time again in modern literature as the next or current step in the evolution of production. It represents what is the 4th industrial revolution where the first was marked the adoption of steam power, the second was marked mainly using electrical power and the 3rd was characterized by the implementation of digital technology. Figure 5 nicely represents the progression of industrial revolutions. 
+
+工業 4.0 一詞在現代文獻中被多次提及，被視為生產演變的下一步或當前步驟。 它代表了第四次\\工業革命，第一次工業革命的特徵是蒸汽動力的採用，第二次工業革命的特徵是主要使用電力，第\\三次工業革命的特徵是數位技術的實施。 圖 5 很好地展示了工業革命的進展。
+  
+
+ \begin{center}
+ \includegraphics[width=15cm]{螢幕擷取畫面 2024-04-26 174028.png}
+ \end{center}
+ \begin{center}
+ Figure 5 The industry evolution (Adapted from STANCIOIU Alin, 2017)
+  \end{center}
+In broad strokes the 4th industrial revolution is (or will be) ultimately marked by the full integration between digital connectivity and production. As it is well known that the development of digital networks is the pivotal technology that sustain the modern world. It has changed the way humans interact and do business. However, whether the current level in which it is applied to the industry constitutes an industrial revolution is still uncertain because in all other revolutions have been marked by a violent increase in production that is yet to happen this time around. In fact, we are still to reach a shared definition of Industry 4.0. 
+
+ 從廣義上講，第四次工業革命的最終標誌是（或將）數位連接與生產之間的全面整合。 眾所周知\\，數位網路的發展是維持現代世界的關鍵技術。 它改變了人類互動和開展業務的方式。 然而，目前\\它應用於工業的水平是否構成工業革命仍然不確定，因為在所有其他革命中，其標誌都是產量的劇烈\\增加，而這一次尚未發生。 事實上，我們仍然沒有對工業4.0達成共同的定義。
+ 
+What has been widely accepted however is that there are at least 3 technologies that characterize Industry 4.0. Those are the Internet of things (IoT), Cloud computing and the development of Cyber-Physical Systems (CPS), the last of which is particularly important for the context of this thesis.  
+
+ 然而，人們普遍認為至少有 3 種技術可以表徵工業 4.0。 這些是物聯網（IoT）、雲端運算和網\\路物理系統（CPS）的發展，最後一個對於本論文的背景尤其重要。
+ 
+CPS are systems consisting in a real entity (for example, a machine) and its corresponding virtual model – embedding all the models for mimicking the behavior of the real counterpart – capable to communicate with each other (D’Antonio et al., 2017). The idea is that, if one were to develop a digital twin (DT) of all physical instruments regarding a process in a system that allows for the digital counterparts to interact with each other as well as interacting with the physical world, innovation or change of said process would occur much faster and effectively. E.g., an engineer could simulate a change using the DT’s interaction, then, if successful, apply the change automatically to the production line in real time, execute tests, gather data and feed it back to the system without the need of manual input with all being done through the network. 
+ 
+ CPS 是由真實實體（例如機器）及其相應的虛擬模型組成的系統 - 嵌入所有用於模仿真實對應\\物行為的模型 - 能夠相互通信（D'Antonio 等人，2017） 。 這個想法是，如果要開發所有實體儀\\器的數位孿生（DT），涉及系統中的一個過程，允許數位對應物相互交互以及與物理世界交互，\\創新或改變該過程將發生得更快、更有效。 例如，工程師可以使用DT的交互來模擬變更，然後，\\如果成功，則將變更自動即時應用到生產線，執行測試，收集數據並將其反饋給系統，而無需手動\\輸入所有內容是透過網路完成的。
+ 
+The main point to be derived from all this is that PLM-MES systems possibly are the first step to achieve a proper CPS since it provides for the virtualization and necessary control to reach something near a virtual twin. The debatable matter is how deep is its current effect in industrial application.  
+
+ 從這一切中得出的要點是，PLM-MES 系統可能是實現適當 CPS 的第一步，因為它提供了虛擬\\化和必要的控制來達到接近虛擬孿生的效果。 值得爭議的問題是它目前在工業應用中的影響有多深。
+ 
+Nonetheless, the term Industry 4.0 is, if anything, a useful denotation to the increasing application of digital connectivity, network development and the internet to industry.  
+
+ 儘管如此，工業 4.0 這個術語如果有的話，也是對數位連接、網路發展和互聯網在工業中日益增\\長的應用的有用表示。
+ 
+Another term often included within the scope of Industry 4.0 is the called Lot Size One or Lot 1. This is the idea of each item customized to the individual specifications of the buyer in a system in which a customer order does not start supply chain equipment moving; it turns on manufacturing machines.  
+
+工業4.0 範圍內經常包含的另一個術語稱為「批量大小一」或「批量1」。供應鏈設備移動; 它打\\開製造機器。
+
+The theory behind it is that as production and development becomes more and more flexible as this sort of manufacturing becomes not only viable but also attractive. Having a tailored requested product means that there are no storage requirements, no inventory overhead, and of course a 100 \% guaranteed sell. This concept is not new by any means, in fact it predates Industry 4.0 quite a lot. In the book “The machine that changed the world” the authors (Womack et al., 1990) discuss that toward this end, lean producers employ teams of multiskilled workers at all levels of the organization and use highly flexible, increasingly automated machines to produce volumes of products in enormous variety. 
+ 
+ 背後的理論是，隨著生產和開發變得越來越靈活，這種製造不僅變得可行而且有吸引力。 擁有\\量身訂製的需求產品意味著沒有儲存要求、沒有庫存開銷，當然還有 100\% 的銷售保證。 無論如何\\，這個概念並不新鮮，事實上它早在工業 4.0 之前就出現了。 在《改變世界的機器》一書中，作者\\（Womack 等人，1990）討論了為此目的，精益生產者在組織的各個層面僱用多技能工人團隊\\，並使用高度靈活、自動化程度越來越高的機器來生產大量種類繁多的產品。
+ 
+In a way ‘Lot Size One’ is nothing more than the extrapolation of this sort of thinking. Of course, the industry is yet to reach such level of production flexibility, but glimpses of this sort of mentality can already be seem on more modular productions. One of the best examples is amazon packing systems. E.g. a customer receives a package from Amazon containing a mix of products that has been packaged just for him/her according to their specific order. Although superficial in nature, this represents a high level of customization for the customer.  
+
+ 在某種程度上，「批量一」只不過是這種思考的推論。 當然，該行業尚未達到這樣的生產靈活\\性水平，但這種心態已經可以在更模組化的生產中看到。 最好的例子之一是亞馬遜包裝系統。 例\\如。 客戶收到亞馬遜的包裹，其中包含根據其特定訂單專門為他/她包裝的產品組合。 雖然本質上\\很膚淺，但這代表了客戶的高水準客製化。
+ 
+Another great example is electronics prototyping. Currently there are companies that take your printed circuit board designs and BOM, delivering small batches of assembled prototypes at a low cost. Prototyping of electronical devices used to be a highly expensive process, but some companies have flexibilized their production to the degree where they are able to deliver it fast and reliably. Again, that is possible because electronics components are inherently modular systems even if of high complexity. The following image (Figure 6 Example project of power supply adaptor circuit) is an example of an electronic circuit that was designed by this student and manufactured by JLCPCB within a single week.   
+
+ 另一個很好的例子是電子原型設計。 目前，有些公司會採用您的印刷電路板設計和 BOM，以低\\成本提供小批量的組裝原型。 電子設備的原型設計曾經是一個非常昂貴的過程，但一些公司已經將\\其生產靈活化到能夠快速可靠地交付的程度。 同樣，這是可能的，因為電子元件本質上是模組化系\\統，即使其複雜性很高。 下圖（圖6電源適配器電路範例專案）是該學生設計並由JLCPCB在一週內\\製造的電子電路範例。
+ 
+\begin{center}
+ \includegraphics[width=15cm]{螢幕擷取畫面 2024-04-26 174039.png}
+ \end{center}
+ \begin{center}
+Figure 6 Example project of power supply adaptor circuit 
+  \end{center}
+  
+All and all, the result is again a greater need for control and management of change. Which means the implementation of a PLM-MES system would be of great help. PLM would be required to manage change and innovation throughout the lifecycle of small batch products and MES would provide the real time reaction and feedback necessary to reduce errors that could cause losing a whole batch. 
+
+ 總而言之，結果再次是對變革的控制和管理的更大需求。 這意味著PLM-MES系統的實施將會\\有很大的幫助。 PLM 需要在小批量產品的整個生命週期中管理變更和創新，而 MES 將提供必要\\的即時反應和回饋，以減少可能導致整批產品遺失的錯誤。
+
+
+
+\begin{center}
+\textbf{3. CHAPTER} \\
+\textbf{3. 章節} \\
+\textbf{THE STATE OF THE ART AND THE INTEGRATION OF\\
+PLM AND MES} \\
+\textbf{最先進的技術和整合。 PLM 和 MES。} \\  
+\end{center}
+
+Unfortunately, there are not many published studies in the matter of integration between PLM and MES systems. But there seems to be a consensus in the most probable effects of said integration. Those being synchronization and tighter tolerances.\\
+遺憾的是，關於 PLM 和 MES 系統整合問題的已發表研究並不多。但對於上述\\整合最可能產生的影響似乎已達成共識。這些是同步和更嚴格的公差。\\
+As explained by D’Antonio et al. (2015), which focus on a case study involving the manufacturing of precision components for aeronautical applications, the first advantage expected by the deployment of the monitoring and control system is product quality improvement: sensors allow to detect, measure and monitor variables, events and situations that affect process performance or product quality.\\
+正如德安東尼奧等人所解釋的。 （2015），重點在於涉及航空應用精密零件製\\造的案例研究，部署監控系統預期的第一個優勢是產品品質改進：感測器允許\\檢測、測量和監控變數、事件和影響製程性能或產品品質的情況。\\
+One of the central problems regarding integrating PLM with any other system revolves around the ownership of information. A possible solution relies on database integration as well as the use of middleware between systems. As is written in Saaksvuori and Immonen, (2008). A reasonable objective is that information should always be updated in one place. Other systems can read information directly from the PLM databases, and if necessary, the required information can be replicated on the databases of other system, as depicted in Figure 7. Although it points this out mainly from the perspective of PLM-ERP integration, it is still very valuable from the perspective of PLM-MES integration because it is an example of how the better operation can be expected by working around systems in which files of different nature are loaded into a centralized PLM-ERP system.\\
+將 PLM 與任何其他系統整合的核心問題之一涉及資訊的所有權。一種可能的解\\決方案依賴於資料庫整合以及系統之間中間件的使用。正如 Saaksvuori 和 \\Immonen 中所寫。 （2008）。一個合理的目標是資訊應始終在一個地方更新。\\其他系統可以直接從PLM資料庫中讀取信息，如果需要，可以將所需資訊複製\\到其他系統的資料庫上，如圖7所示。從PLM-MES 整合的角度來看，它仍然非\\常有價值，因為它是一個範例，說明如何透過將不同性質的檔案載入到集中式\\PLM-ERP 系統中的系統來實現更好的操作。\\
+\begin{center}
+\includegraphics[width=15cm]{41123108_01.jpg}\\
+\small Figure 7 Diagram of PLM integration (Saaksvuori and Immonen, 2008)\\
+圖 7 PLM 集成圖（Saaksvuori 和 Immonen，2008 年） 
+\end{center}
+The middleware would therefore be a software framework to organize and connect all the information given to the system database in a user-friendly way. This sort of application is also referred to as integration application and, as specified by Stark (2015), these applications enable exchange of product information between PLM applications (for example, between a CAD application and a CAE application). They also enable exchange of product information between PLM applications and other enterprise applications such as ERP and CRM.\\
+因此，中間件將是一個軟體框架，以使用者友好的方式組織和連接提供給系統資\\料庫的所有資訊。這種應用程式也被稱為集成應用程式，正如Stark（2015）所\\指定的那樣，這些應用程式實作 PLM 應用程式之間（例如 CAD 應用程式和 \\CAE 應用程式之間）的產品資訊交換。它們還支援 PLM 應用程式與其他企業應\\用程式（例如 ERP 和 CRM）之間的產品資訊交換。\\
+In a very relevant fashion, this middleware line of thinking is expanded upon by (Ben Khedher et al., 2011). In their work regarding different systems architectures for the implementation of an integrated MES+PLM they describe the use of a mediation system in web service architecture. As depicted in Figure 8, the proposed architecture uses data exchange based on internet technologies to help companies, especially expanded companies, to take advantage of opportunities generated by the Web Services. The concept of "web service" means an application (program or software system) which is designed to support interoperable machine-to-machine interactions over a network, according to the definition of W3C (Ben Khedher et al., 2011).\\
+ 以非常相關的方式擴展了這種中介軟體思路。在他們關於實施整合 MES+PLM\\的不同系統架構的工作中，他們描述了中介系統在 Web 服務架構中的使用。如\\圖 8 所示，所提出的架構使用基於互聯技術的資料交換來幫助公司，特別是擴展\\的公司，利用 Web 服務產生的機會。根據 W3C 的定義，「Web 服務」的概念\\是指旨在支援網路上可互通的機器對機器互動的應用程式（程式或軟體系統）\\（Ben Klassiker 等，2011）。\\
+\begin{center}
+\includegraphics[width=15cm]{41123108_02.jpg}\\
+\small Figure 8 Diagram of Web service architecture (Adapted from Ben Khedher et al., 2011)\\
+圖 8 Web 服務架構圖（改編自 Ben Khedber 等人，2011 年）  
+\end{center}
+ 
+The reason this expansion is so relevant from the perspective of this work is that the Odoo software works in a similar fashion through a similar web service architecture. In theory the Odoo software could act as the middleware working through the local network or hosted in the cloud and enacting the layer of integration that was previously mentioned.\\
+從這項工作的角度來看，這種擴展如此相關的原因是 Odoo 軟體透過類似的 Web\\ 服務架構以類似的方式運作。理論上，Odoo 軟體可以充當透過本地網路工作或\\託管在雲端中的中間件，並執行前面提到的整合層。\\
+
+\section{3.1. How would this integration look like in practical terms\\
+3.1.這種整合在實際中會是什麼樣子}
+As mentioned in CHAPTER 2 the main idea of PLM is to manage change in all processes related to the product, and it does so mainly through the use of virtualization. The word virtualization here denotes representation of item of the real world to the digital space and, as one can imagine, there are several levels of abstraction through which a real object or process can be represented. As consequence there is no exact consensus regarding PLM of how deep and/or detailed the virtual representation must be to serve its purpose.\\
+如第 2 章中所提到的，PLM 的主要想法是管理與產品相關的所有流程中的變更，\\它主要透過使用虛擬化來實現。這裡的「虛擬化」一詞表示現實世界的項目在\\數位空間中的表示，並且正如人們可以想像的那樣，可以透過多個抽象層級來\\表示真實的物件或過程。因此，關於 PLM 虛擬表示必須有多深和/或多詳細\\才能達到其目的，還沒有達成確切的共識。\\
+In an ideal world that would be the lowest form of abstraction which, essentially, would come down to a digital twin as explained in the CHAPTER 2. This is a ‘1 to 1’ digital representation of every aspect of the production cycle where every part involved would have a digital representation that not only carry the physical characteristics of the item but also all its information produced over time. To this end, as explained in CHAPTER 2, MES takes a fundamental role in obtaining the real time information required for the DT even be possible.\\
+在理想的世界中，這將是最低的抽象形式，本質上將歸結為數位孿生，如第 2 章\\所述。涉及的內容將具有數位表示，不僅包含該項目的物理特徵，還包含隨著時\\間的推移產生的所有資訊。為此，如第 2 章所述，MES 在以下方面發揮基礎作用\\：獲得DT所需的即時資訊甚至是可能的。\\
+For instance, a CNC machine would have a digital 3D model for simulation as well as a fully integrated list of all the pieces it produces, data regarding its current level of production, the current wear of its mechanical pieces, all other machines it relates to, history of all the alterations and improvements by which it was affected and many other aspects, all well packaged in an intuitive graphical user interface (GUI) that allows for maximum interaction.\\
+例如，數控機床將具有用於模擬的數位 3D 模型以及其生產的所有零件的完全整\\合清單、有關其當前生產水平的數據、其機械零件的當前磨損情況以及與其相\\關的所有其他機器、受其影響的所有變更和改進的歷史記錄以及許多其他方面，\\全部都很好地封裝在直觀的圖形用戶界面(GUT) 中，可實現最大程度的交互。\\
+Outside of fiction, we are yet to achieve such level of virtualization. It takes too much time and money to obtain and organize information to such a level of minutia, specially, the aspects that need to be inserted by hand, not to mention the subjectiveness of how this information can be integrated and interacted with. Regardless of that it is useful to identify, within the ideal, the aspects of most importance for this implementation.\\在小說之外，我們還沒有達到這種虛擬化水準。獲取和組織資訊到如此細枝末節\\的水準需要花費太多的時間和金錢，特別是需要手動插入的方面，更不用說如何\\整合和交互這些資訊的主觀性了。無論如何，在理想情況下確定對這種實現最重\\要的方面是有用的。\\
+Those are：\\
+這些是：
+\begin{itemize}
+ \item The means of virtualization – What sort of information is used to build the virtual items. This includes the metadata and files that are directly attached to the item. In an ideal fashion this would contain all possible information available about the item.\\虛擬化的方法 – 使用哪種資訊來構建虛擬專案。這包括直接附加到專案的\\元數據和檔。在理想情況下，這將包含有關該專案的所有可能資訊。
+ \item The means of data input - How this information is being loaded and organized. Ideally this information would be loaded into the system as automatically as possible, be it by means of MES during quality control or through the use of automated input tools like bar code scanners.\\數據輸入的方式 - 如何載入和組織此資訊。理想情況下，這些資訊將儘可能\\自動地載入到系統中，無論是在品質控制期間通過MES還是通過使用條碼\\掃描器等自動輸入工具。
+ \item The means of access – How this information is presented to the users. Although more subjective than the previous aspects this is incredibly important to the way the system is interacted with. How intuitive it is the information availability plays right into the core strengths of PLM. Afterall, everything would be for nothing (even if all else would be perfect) if the only way to interact with the system were a command line interface that would make difficult for the end users to access the information.\\存取方式 – 如何向使用者呈現此資訊。雖然比前面的方面更主觀，但這對於\\與系統交互的方式非常重要。資訊可用性的直觀性正好體現了 PLM 的核心\\優勢。畢竟，如果與系統交互的唯一方法是命令行介面，這將使最終使用者\\難以訪問資訊，那麼一切都將一無所獲（即使其他一切都是完美的）。\\
+ \item The means of integration - How items and their contained information can interact and benefit from one another, i.e., the integration with other systems and key softwares. E.g., if an item has access to a cad file, there should be no need to fill in the metadata fields by hand. Hoe items can automatically affect other items also plays into this aspect.\\集成方式 - 專案及其包含的資訊如何相互作用並從中受益，即與其他系統和\\關鍵軟體的集成。例如，如果一個專案可以訪問 cad 檔，則無需手動填寫元\\數據欄位。鋤頭物品可以自動影響其他物品，也在這方面發揮作用。\\
+\end{itemize} 
+\begin{center}
+\textbf{4. CHAPTER} \\
+\textbf{4. 章節} \\
+\textbf{INTRODUCTION TO THE COMPANY AND PRODUCT}\\
+\textbf{公司及產品介紹}
+\end{center}
+As one can imagine, one of the unique aspects of this work is its focus in one specific software solution that tend to be quite flexible in terms of ease of implementation to different sorts of business. This is contrary to most use cases regarding PLM implementation where the business case is the constant and the system is built around it. Nonetheless, in order to evaluate Odoo as a PLM+MES tool, it is important to consider an example. The advantage here is that a fictional company can be picked for this end maximizing the perceived effect of the software during a simulation.\\
+可以想像，這項工作的獨特之處之一是它專注於一個特定的軟體解決方案，該\\解決方案在易於實施不同類型的業務方面往往非常靈活。這與大多數有關 PLM \\實施的用例相反，在這些用例中，業務案例是不變的，系統是圍繞它構建的。\\儘管如此，為了評估 Odoo 作為 PLM-MES 工具的能力，考慮一個範例很重要。\\這裡的優點是可以選擇一家虛構的公司來實現這一目的，從而在模擬過程中最\\大化軟體的感知效果。\\
+It is considering all those previously mentioned systems that, for the sake of exemplification, the theoretical company was organized in the molds of Industry 4.0. This company is a recently founded small case manufacturing company that uses plastic injection molding as their primary mean of production and uses additive manufacturing and fast prototyping as part of their business strategy. As explained in chapter 2 those are great examples of the path that industry is taking regarding innovation where mass production is becoming slowly less important than product variety and time to market.\\
+考慮到前面提到的所有系統，為了舉例說明，理論公司是按照工業 4.0 的模式組\\織的。該公司是一家最近成立的小型箱體製造公司，使用塑膠射出成型作為主要\\生產手段，並使用增材製造和快速原型製作作為其業務策略的一部分。如第 2 章\\所解釋的，這些都是產業在創新方面所採取的路徑的很好的例子，其中大規模生\\產逐漸變得不如產品品種和上市時間重要。\\
+In order to maximize the tracking of change, most of its business are based on lower production batches on mainly automated machinery. This company focus in the production of injected plastic products and rely heavily in flexible machinery for setting production and prototyping. Having that in mind, it should be simple enough to simulate continuous improvement of both product and process to the extent of the evaluated software. Since this sort of everchanging production is extremely dependent on information management of all kinds, it must prove to be a perfect base for applied PLM+MES.\\
+為了最大限度地追蹤變化，其大部分業務都基於主要自動化機械上的較低生產\\批次。該公司專注於注射塑膠產品的生產，並嚴重依賴靈活的機械來進行生產\\和原型製作。考慮到這一點，它應該足夠簡單，可以在評估的軟體範圍內模擬\\產品和流程的持續改進。由於這種不斷變化的生產極其依賴各種資訊管理，因\\此它必須被證明是應用 PLM+MES 的完美基礎\\
+In this example the company has already implemented, since its recent foundation, the Odoo software and has taken all the necessary training and steps to its proper use. This allow the removal of the boundaries and limitations that are so common regarding implementation of the PLM+MES system to an already existing business, i.e., dependences on legacy systems administrative resistance to change or integration to old procedures. These are obviously important, but it is not within the scope of this work.\\
+在這個例子中，該公司自最近成立以來已經實施了 Odoo 軟體，並採取了所有\\必要的培訓和步驟來正確使用它。這樣可以消除在現有業務中實施 PLM+MES\\系統時常見的邊界和限制，即對舊系統管理的依賴，從而阻礙對舊程式的變更\\或整合。這些顯然很重要，但不屬於本工作的範圍\\
+The company aims to produce a completely new product by the end of the year. After doing so, the company improved the process of production for said product. Once there is the need for product improvement, said improvement was performed as well.\\
+該公司的目標是在今年底前生產出全新的產品。在此之後，該公司改進了該產品\\的生產流程。一旦產品需要改進，也進行了改進。\\
+The following diagram (Figure 9) will be taken into consideration as the path of product development and improvement:\\
+下圖（圖 9）將作為產品開發和改進的路徑考慮在內：\\
+\begin{center}
+\includegraphics[width=15cm]{41123108_03.jpg}\\
+\small Figure 9 Development diagram\\
+ 圖9 開發圖\\
+\end{center}
+This path aims to transmit to the reader an iterative approach towards development and improvement. The idea is followed by a product design for which a cycle of prototyping and redesign takes effect until satisfactory result is achieved. Then a similar cycle takes place regarding the production process. At the end of this stage initial development is done and the actual production can begin.\\
+這條路徑旨在向讀者傳達一種開發和改進的迭代方法。這個想法之後是產品設計\\，原型製作和重新設計的循環生效，直到獲得滿意的結果。然後在生產過程中會\\發生類似的循環。在此階段結束時，初步開發完成，實際生產即可開始。\\
+It is at this point that ways of stablishing the continuous improvement is important. In the case of this company, we are only considering two main types of upgrade paths, those being, product upgrade and process upgrade respectively.\\
+正是在這一點上，建立持續改進的方法很重要。就這家公司而言，我們只考慮兩\\個主要的升級路徑，分別是產品升級和流程升級。\\
+\section{4.1. The products and processes\\
+4.1.產品和工藝}
+Change and effect are the focus of the PLM+MES implementation as such the subject of said change would ideally be something that could afford a reasonable amount of freedom of design. Although the effects of a well implemented PLM+MES should be substantial even in rigid manufacturing environments, where the change is extremely limited, the system will produce much more perceivable change in an enterprise that thrives in innovation because there will be more opportunities to improve the system and gain feedback.\\
+變更和效果是PLM+MES實施的重點，因此，理想情況下，上述變更的主題是能\\夠提供合理設計自由度的東西。儘管即使在殭化的製造環境中，實施良好的PLM\\+MES 的效果也應該是巨大的，因為變化非常有限，但該系統將在創新蓬勃發展\\的企業中產生更多可感知的變化，因為將有更多機會改進系統並獲得反饋。\\
+From the perspective of improvement, if you compare a product that is a result from sheet metal stamping (Figure 10) to an equivalent product that is the result of a CNC milling procedure (Figure 11) it is easy to perceive that the CNC milled product is more welcoming to upgrades. While the stamping is low cost (by comparison) it depends on heavy high precision metal dyes that are extremely expensive to produce. This means that the cost of enacting change to it is much higher and thus the effect of a system that thrives on tracking change becomes limited.\\
+從改進的角度來看，如果將鈓金衝壓產品（圖10）與CNC銑削過程的等效產品\\（圖11）進行比較，很容易看出CNC銑削產品更歡迎升級。雖然衝壓成本低\\（相比之下），但它依賴於生產成本極高的重型高精度金屬染料。這意味著對\\它進行變革的成本要高得多，因此，一個在跟蹤變革方面蓬勃發展的系統的影\\響變得有限。\\
+\begin{center}
+\includegraphics[width=15cm]{41123108_04.jpg}\\
+\small Figure 10 Example of stamped AK74 pattern rifle receiver (Brownnells.com)\\
+圖10 衝壓AK74型步槍機匣示例（Brownnells.com）
+\end{center}
+\begin{center}
+\includegraphics[width=15cm]{41123108_05.jpg}\\
+\small Figure 11 Example of milled AK74 pattern rifle receiver (sharpsbros.com)\\
+圖11 銑削AK74型步槍機匣示例（sharpsbros.com）
+\end{center}
+In the case of this fictional company, it has been determined that the best way to exemplify the PLM+MES effects would be to have products designed around plastic injection molding. It might seem unintuitive at first to consider this manufacturing procedure, like the stamping procedure previously described, since it too depends on high precision molds during production. However, the main differences between the two is regarding ease of prototyping and the cost of upgrading.\\
+就這家虛構的公司而言，已經確定，體現 PLM+MES 效應的最佳方式是圍繞塑\\膠注射成型設計產品。乍一看，考慮這種製造程式似乎不直觀，就像前面描述的\\衝壓程式一樣，因為它在生產過程中也依賴於高精度模具。然而，兩者之間的\\主要區別在於原型設計的易用性和升級成本。\\
+Injection molding is a broad and complex field of engineering that involves a huge variety of materials and methods, little of which is of the concern of this work. It is however relevant to point out that for the most part, the pressures involved in the injection molding are one order of magnitude lower than the when we are dealing with steel; softer materials can be used on their molds like CNC milled aluminum. At the same time, new advancements in the field of additive manufacturing have made possible to prototype plastic parts with much closer physical characteristics to the end result of a injected piece. Sometimes even prototype molds (Figure 12) can be used for a lower volume test runs during process upgrades.\\
+注塑成型是一個廣泛而複雜的工程領域，涉及各種各樣的材料和方法，其中很少\\是這項工作所關注的。然而，需要指出的是，在大多數情況下，注塑成型中涉及\\的壓力比我們處理鋼時低一個數量級;較軟的材料可用於他們的模具，如 CNC 銑\\削鋁。同時，增材製造領域的新進展使得具有更接近注塑件最終結果的物理特性\\的塑膠零件原型成為可能。有時，在工藝升級期間，甚至可以使用原型模具\\（圖12）進行小批量的試運行。\\
+\begin{center}
+\includegraphics[width=15cm]{41123108_06.jpg}\\
+\small Figure 12 Example of injection mold made using a 3D printer (thefabricator.com)\\
+圖 12 使用 3D 列印機製作的射出成型模具範例
+\end{center}
+Additive manufacturing has become an incredible tool for ultra-flexible production. This mindset of continuous improvement, especially when regarding prototyping and iterative design, is a hallmark of the lean mentality that is so relevant in the modern industry.\\
+增材製造已成為超靈活生產的絕佳工具。這種持續改進的心態，尤其是在原型設\\計和反覆運算設計方面，是精益心態的標誌，這在現代工業中非常重要。\\
+As mentioned in the previous section, in this case study it is considered the creation of a new product and its production process by the fictional company. This product consists in a plastic small form factor computer case, composed of 3 different parts (Figure 13) that are expected to be designed and prototyped considering combination of additive manufacturing and CNC milling towards a plastic injection molding production.\\
+如上一節所提到的，在本案例研究中，它被視為虛構公司的新產品的創造及其生\\產過程。該產品由一個塑膠小型電腦機殼組成，由 3 個不同的部件組成（圖 13）\\，預計將考慮將增材製造和 CNC 銑削相結合進行塑膠注塑生產。。\\
+\begin{center}
+\includegraphics[width=15cm]{41123108_07.jpg}\\
+\small Figure 13 3D exploded view of the theoretical product\\
+圖13 理論產品3D分解圖
+\end{center}
+\subsection{4.1.1. Part A\\
+4.1.1. A部分}
+PART-A (Figure 14) is the core structure of the computer case. It is expected to comport all the pieces necessary for the proper function of the small form factor computer in question. To this end a raw material A was selected to be Acrylonitrile Butadiene Styrene (ABS) this is an opaque thermoplastic polymer and an engineering grade plastic. It is commonly used to produce electronic parts such as phone adaptors, keyboard keys and wall socket plastic guards.
+PART-A（圖14）是電腦機殼的核心結構。它\\預計將配備所討論的小型計算機正常運行所需的所有部件。為此，原料 A 被選為\\丙烯腈丁二烯苯乙烯 (ABS)，這是一種不透明的熱塑性聚合物和工程級塑膠。\\通常用於生產電子零件，如電話適配器、鍵盤按鍵和牆壁插座塑膠防護罩。\\
+\begin{center}
+\includegraphics[width=15cm]{41123108_08.jpg}\\
+\small Figure 14 Isometric view of Part A\\
+圖 14 A 部分等距視圖-
+\end{center}
+The main reasons for choosing this material specifically are its toughness, its good dimensional stability (resistance to change dimensions after cooling), its high impact resistance and surface hardness. Finally, it is also commonly available in the form of 3D printing filament for extrusion 3D printers which should prove to be quite useful during prototyping.\\
+特別選擇這種材料的主要原因是它的韌性、良好的尺寸穩定性（冷卻后抗尺寸\\變化）、高抗衝擊性和表面硬度。最後，它通常也以3D列印線材的形式用於擠\\出3D印表機，這在原型製作過程中應該被證明是非常有用的。\\
+\subsection{4.1.2. Parts B and C\\
+4.1.2. B 部分和 C 部分}
+Parts B and C are lids that should snap into place, closing the system. These are very simple pieces and require a certain level of elasticity so it can deform to assure a screwless assembly. These two identical parts are going to be made with Thermoplastic Polyurethane (TPU), because of its elastic nature and great tensile and tear strength. This sort of polymer is often used to produce parts that demand a rubber-like elasticity. TPU performs well at high temperatures and is commonly used in power tools, cable insulations and sporting goods. Finally, TPU is also available in the form of filament for 3D printers which, for the simulation, will be used for prototyping.\\
+B 和 C 部分是蓋子，應卡入到位，關閉系統。這些都是非常簡單的零件，需要一\\定程度的彈性，以便可以變形以確保無螺絲組裝。這兩個相同的部件將由熱塑性\\聚氨酯 (TPU) 製成，因為它具有彈性、拉伸強度和撕裂強度。這種聚合物通常用\\於生產需要類似橡膠彈性的零件。 TPU 在高溫下表現良好，常用於電動工具、電\\纜絕緣材料和體育用品。最後，TPU 還可以以細絲的形式用於 3D 列印機，用於\\模擬，用於原型製作。\\
+\begin{center}
+\includegraphics[width=15cm]{41123108_09.jpg}\\
+\small Figure 15 Parts B and C\\
+圖 15 B 和 C 部分
+\end{center}
+\subsection{4.1.3. Molds\\
+4.1.3.模具}
+Ideally all molds should be made of steel, for longevity of the mold and product quality. That being said, the injected plastics that are being selected for all parts are not so pressure dependent and their forms are not so complex, so it is assumed that aluminum molds made with a precision CNC machining should suffice to produce said parts.\\
+理想情況下，所有模具都應由鋼製成，以確保模具的使用壽命和產品品質。話雖\\如此，為所有零件選擇的注塑塑膠對壓力的依賴性不大，它們的形狀也不那麼\\複雜，因此假設用精密 CNC 加工製成的鋁模具應該足以生產上述零件。\\
+It is also assumed that all molds are simple enough to be prototyped using 3D printing. Although this is not always true, it was determined representative enough for this simulation. The type of material used in those prototypes is high temperature resign cured using an SLA 3DPrinter. Additionally, the mold will be considered the main physical aspect to be developed when regarding the production process because it something that directly affects the production as well as something that can be produced in house and tracked as a product would.\\
+還假設所有模具都足夠簡單，可以使用3D列印進行原型製作。雖然這並不總是\\正確的，但對於這次模擬來說，它已經足夠具有代表性了。這些原型中使用的材\\料類型是使用 SLA 3DPrinter 固化的高溫辭職材料。此外，在生產過程中，模具\\將被視為要開發的主要物理方面，因為它直接影響生產，也可以在內部生產並作\\為產品進行跟蹤。\\
+
+\section{4.2. What is analized during the simulation\\
+4.2. 模擬過程中的分析內容}
+Taking into consideration the diagram, shown in Figure 9, as well as the main aspects of a successful integration of PLM and MES as described in the section 3.1, this experiment aims to produce commentary regarding the following relevant questions in Table 1.\\
+考慮到圖 9 所示的圖表，以及 3.1 節中描述的 PLM 和 MES 成功整合的主要方面，\\本實驗旨在對表 1 中的以下相關問題進行評論。
+
+\begin{center}
+\Large
+\textbf{5. CHAPTER} \\
+\textbf{第五章} \\
+\textbf{THE ODOO SOFTWARE}\\
+\textbf{THE ODOO 軟體}\\
+\end{center}
+\section{5.1. Introduction to the Odoo software\\5.1. 對 Odoo 軟體的介紹}
+Odoo is a commercial business management softwarewith strong ties to the open source community. Initially started as open source ERP software becoming well received as an affordable and intuitive package that thrived on integration and expandability. Since then, as the company experienced accelerated growth, it shifted their business model to include an enterprise paid version as well as an online service. \\
+Odoo 是一款商業管理軟體，與開源社區有著緊密的聯繫。最初作為開源 ERP 軟體開始，逐漸受到認\\可，成為一個價格合理、操作直觀且擅長整合和擴展的軟體包。隨著公司經歷了加速增長，它調整了\\商業模式，包括了企業付費版本以及線上服務。\\
+As mentioned in the section 2.2, modern ERP systems are usually modular and, in the 
+case of Odoo, this modularity is particularly evident due to the incredible amount of 
+expansion provided by community developed modules as well as company developed 
+modules that are highly integrated. This extendibility is what makes this software so relevant 
+to the topic of PLM+MES integration since there are present modules for PLM as well as 
+noticeable MES functionalities within their manufacturing modules. \\
+正如第2.2節所述，現代 ERP 系統通常是模塊化的，在 Odoo 的情況下，由於由社區開發的模塊以及公\\司開發的高度集成的模塊提供的擴展性非常明顯。這種可擴展性使得這款軟體與 PLM+MES 整合的話\\題相關，因為在其製造模塊中存在用於 PLM 的模塊以及明顯的 MES 功能。\\
+Within the scope of this thesis, the objective is to utilize this software on the management 
+of the previously mentioned fictional company and draw conclusions regarding how effective 
+the integration of PLM and MES is already present within this system. \\
+在本論文的範圍內，目標是利用此軟體管理前述虛構公司，並就此系統中 PLM 和 MES 整合的效果進\\行結論。\\
+\section{5.1.1. How it works \\
+5.1.1. 它是如何運作的}
+The software can be installed in most x86 computers and it supports several operating sys-tems including windows and all the main Linux distributions. \\
+該軟體可以安裝在大多數 x86 電腦上，並支持幾種操作系統，包括 Windows 和所有主要的 Linux 發\\行版。\\
+Ideally, the Odoo software is installed in a computer connected to a local area network 
+and starts a SQL database that holds all the necessary information and files produced by the 
+business (Figure 16). Said computer works essentially as a server and accessed via a 
+browser by the other machines present in the network. This computer can be a dedicated 
+server or a working desktop in use, but it is important to remember that it must remain ON and con-nected throughout the entire time the software is required to function.\\
+理想情況下，Odoo 軟體安裝在連接到區域網絡的電腦上，並啟動一個 SQL 數據庫，其中包含業務生\\成的所有必要信息和文件（見圖16）。該電腦基本上充當伺服器，可通過網絡中其他設備的瀏覽器訪\\問。該電腦可以是專用伺服器或正在使用的桌面電腦，但重要的是要記住，它必須保持開啟狀態並連\\接，直到軟體需要運行的整個時間。
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig16.png}
+\end{center}
+Figure 16 Function Diagram of Odoo configuration A
+Another option is to use the hosting service provided by Odoo SA (Figure 17). In this case 
+the system would be hosted by them and data would be stored in their cloud. This is a good 
+fit for many small businesses specially if they are particularly fond of the website related 
+modules (used to build and manage web sites and e-stores). It is however network dependent 
+which may pose a problem in some instances.\\
+
+
+Figure 16：Odoo配置A的功能圖表另一個選擇是使用Odoo SA提供的主機服務（見圖17）。在這\\種情況下，系統將由他們主持，數據將存儲在他們的雲端中。
+對許多小型企業來說，這是一個很好的\\選擇，特別是如果他們特別喜歡與網站相關的模塊（用於構建和管理網站和電子商店）。然而，它依\\賴於網絡，這可能在某些情況下會帶來問題。\\
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig17.png}
+\end{center}
+Figure 17 Function Diagram of Odoo configuration B
+Users essentially interact with the system through the graphical user interface (GUI) and 
+use it to access the different modules available as need by a per user basis. This means that 
+restrictions can be applied to different users in order to maintain control over the different 
+aspects of the business activity, e.g., accountants would get access to accounting module, 
+sales module and inventory module but they would be restricted from the manufacturing 
+module. This sort of restriction guarantees control over the processes only to the proper 
+employees.\\
+
+Figure 17：Odoo配置B的功能圖表
+使用者基本上通過圖形用戶界面（GUI）與系統進行交互，並\\使用它按照每個使用者的需求訪問不同的模塊。
+這意味著可以對不同的使用者應用限制，以便對業務\\活動的不同方面進行控制，例如，會計人員將獲得訪問會計模塊、
+銷售模塊和庫存模塊的權限，但他\\們將被限制無法訪問製造模塊。這種類型的限制保證了只有合適的員工才能對流程進行控制。\\
+
+Within said GUI the different modules appear as app icons (Figure 18) and, from the getgo, the company has available a reasonable selection of well-integrated applications not to 
+mention a vast app store filled with community made modules.
+\\
+
+在該GUI中，不同的模塊顯示為應用程序圖標（見圖18），從一開始，公司就可以使用一個合理的\\、互相整合良好的應用程序選擇，更不用說還有一個充滿由社區製作的模塊的廣大應用商店了。\\
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig18.png}
+\end{center}
+
+\section{5.1.2. Odoo’s view on manufacturing\\5.1.2. Odoo對製造的觀點}
+Odoo considers that the responsibilities regarding manufacturing of anything is 
+distributed throughout different company departments, each of which is responsible for 
+specific file types and dealt with using specific apps (Table 2). From the perspective of PLM 
+this is very positive because as mentioned by (Saaksvuori and Immonen, 2008) about User 
+privilege management – the PLM system is used to define information access and 
+maintenance rights. The PLM system defines the people who can create new information or
+make, check and accept changes, and those who are allowed only to view the information or 
+documents in the system. user privilege management is usually a challenge when regarding 
+integration of PLM with other systems. \\
+Odoo認為，關於任何製造的責任都分佈在不同的公司部門中，每個部門負責特定的文件類型，並使用\\特定的應用程序進行處理（見表2）。從PLM的角度來看，這是非常積極的，因為如(Saaksvuori and Immonen, 2008)所述，關於用戶權限管理 – PLM系統用於定義信息訪問和維護權限。PLM系統定義\\了誰可以創建新信息或進行製作、檢查和接受更改，以及誰只被允許查看系統中的
+信息或文件。當涉\\及將PLM與其他系統集成時，用戶權限管理通常是一個挑戰。
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{tab2.png}
+\end{center}
+
+From Odoo’s perspective in the beginning of any usual manufacturing process, the first 
+step will be the engineers designing the product usually using a CAD software. Once that is 
+done, they will create a Bill of materials (BOM) this is a list of components or materials 
+necessary to produce the product. At this point the focus goes to the manufacturing process 
+itself. \\
+從Odoo的角度來看，在通常的製造過程的開始，第一步是工程師使用CAD軟件設計產品。一旦完成，\\他們將創建一個物料清單（BOM），這是生產產品所需的組件或材料的清單。在這一點上，重點轉\\移到了製造過程本身。\\
+The software view of process is focused on routings, worksheets and work centers this is 
+done by the manufacturing engineering team. A routing is a set of steps a product goes 
+through for production. Worksheets are the instructions for the manufacturing operator, and 
+work centers are the places where the production is being conducted. Odoo considers that 
+these are the requirements for putting engineers plans in motion 
+A procurement department will be responsible for requesting for quotations (RFQ) or 
+purchase orders (PO). Inventory operators take care of receipts based on those POs, which is 
+usually done using a barcode application within Odoo. 
+As explained in the first section of 
+this chapter Odoo is primarily an ERP system and it is at this point that it is possible to notice 
+some ERP centric characteristics like the focus on inventory and management of resources. 
+This will be further analyzed in the following sections, but it is fair to point out that those 
+RFQ and PO are considered items within the data base.\\
+ 軟體對流程的視角集中在路由、工作單和工作中心上，這是由製造工程團隊完成的。路由是產品生產\\的一組步驟。工作單是製造操作員的說明，而工作中心則是生產進行的地方。Odoo認為這些是將工程\\師計劃付諸行動的要求。
+採購部門將負責申請報價（RFQ）或採購訂單（PO）。庫存操作員根據這些\\PO進行收貨，通常使用Odoo中的條碼應用程序進行操作。
+正如本章的第一節所解釋的，Odoo主要是\\一個ERP系統，在這一點上，可以注意到一些ERP中心的特徵，如對庫存和資源管理的關注。
+這將在\\接下來的章節中進一步分析，但公平地指出，這些RFQ和PO被視為數據庫中的項目。\\
+Only when you have the design the process and the materials required Odoo considers 
+manufacturing possible. Then the manufacturing foreman will create a manufacturing order 
+(MO) and manage the planning of the manufacturing operators through work orders (WO) 
+and work centers. Then the manufacturing operators can start production following a work 
+order. After the products are produced, they automatically appear in the inventory database 
+which alongside packaging and delivery is managed by the Inventory department.\\
+ 只有在有了設計、流程和所需材料後，Odoo認為製造才是可能的。然後，製造主管將創建一個製造訂\\單（MO），並通過工單（WO）和工作中心管理製造操作員的計劃。然後，製造操作員可以根據工單\\開始生產。產品生產完成後，
+它們將自動出現在庫存數據庫中，並由庫存部門負責包裝和交付。\\
+Odoo considers that quality team is responsible for assign control/check points as well as 
+identify possible issues within the product or production. These quality control check points 
+are very interesting from the MES perspective because it represents valuable production data 
+that is collected in real time as production occurs, i.e., it is possible to assign a dimension 
+check after the production of every piece where the machinist will fill in the dimensions to 
+track quality over time.\\
+Odoo認為，質量團隊負責分配控制/檢查點，以及在產品或生產中識別可能存在的問題。這些質量控\\制檢查點從MES的角度來看非常有趣，因為它們代表著寶貴的生產數據，這些數據在生產過程中實時\\收集，即可以在每個零件生產後分配一個尺寸檢查，機械師將填寫尺寸以跟踪時間的質量。\\
+If it's a problem of design or if there is possibility for improvement an engineering change 
+order (ECO) can be issued. This falls back to the hands of the manufacturing engineering
+team and will focus on updating documents and the BOM. The ECO is the heart of how Odoo 
+deals with tracking change within the system. That is key when regarding PLM and in fact is 
+the focus of the Odoo application called PLM. To which lengths said application is capable 
+to perform is the subject of the next section.\\
+如果是設計問題或者存在改進的可能性，可以發出工程變更訂單（ECO）。這將返回製造工程團隊的\\手中，並將侧重於更新文件和BOM。 ECO是Odoo在跟踪系統內變更時如何處理的核心。這在涉及\\PLM時至關重要，
+實際上也是Odoo應用程序PLM的焦點。該應用程序能夠執行到何種程度是下一節\\的主題。\\
+\section{5.1.3. The information structure of Odoo \\5.1.3. Odoo的信息結構}
+Each module focuses in the manipulation of specific object-oriented classes that hold 
+metadata within the database. These are the virtual Items that are responsible for virtualizing 
+the aspects of the product lifecycle as referred by in (Section 3.1). Different types of items 
+have different types of accounts and hold different sorts of data, i.e., a product item is 
+representative of a certain product and holds metadata that is relevant to its interactions and 
+use as well as links to other possible items that are closely relevant like their responsible user 
+or the bill of materials necessary to its manufacturing. Odoo them makes all that information 
+accessible and interactable through its browser interface (Figure 19 and Figure 20). For the 
+sake of consistency this document will refer to specific item representations (E.g. Bolt) as 
+‘item’ and refer to a type of item (Product) as ‘item class’.\\
+每個模塊都專注於操作特定的面向對象的類，這些類在數據庫中保存元數據。這些是虛擬物品，負責\\將產品生命周期的各個方面虛擬化，正如第3.1節所述。不同類型的物品具有不同類型的帳戶，並保存\\不同類型的數據，例如，產品物品代表特定的產品，保存與其交互和使用相關的元數據，以及與其密\\切相關的其他可能物品的鏈接，例如負責使用者或其製造所需的物料清單。Odoo使所有這些信息通\\過其瀏覽器界面可訪問並可交互（見圖19和圖20）。為了保持一致，本文將具體的物品表示（例如，\\螺栓）稱為“物品”，將物品類型（產品）稱為“物
+品類”。\\
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig19.png}
+\end{center}
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig20.png}
+\end{center}
+Within Odoo, there are several types of those item classes (some holding a lot of metadata
+and some holding very little) all with a varying degree of relationships and integration. Since 
+the scope of this work is limited to the PLM and MES capabilities, the focus is on the items 
+that are related to it. The following sections will provide short explanations for the main 7 
+item classes of Odoo’s manufacturing process since its basic understanding is helpful for the 
+reader to follow the simulation. These are represented in the following diagram (Figure 21). 
+Other items that are external to the manufacturing procedure will be presented throughout 
+the simulation\\
+在Odoo中，有幾種類型的物品類（一些包含大量的元數據，一些則包含很少），它們之間存在著不\\同程度的關係和整合。由於本文的範圍僅限於PLM和MES的功能，因此重點放在與其相關的物品上\\。以下各節將為Odoo製造過程的主要7個物品類提供簡要解釋，
+因為基本理解有助於讀者理解模擬。\\這些在以下圖表中表示（見圖21）。與製造程序無關的其他物品將在整個模擬過程中介紹。\\
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig21.png}
+\end{center}
+\section{5.1.3.1. Product Item \\
+5.1.3.1. 產品項目}
+Every material, component or product is characterized by a PRODUCT type class that is 
+held and mainly managed within the Inventory application of Odoo. That means that within
+the system product production is dependent on the availability of other products that are 
+either bought as they are or manufactured from another products (Figure 22), i.e., raw 
+materials are considered products as well, more specifically products that are purchased and
+then included in the BOM’s to manufacture other products. This is considered the main item 
+class since it is both the source and the goal of manufacturing.\\
+每種材料、零件或產品都由一個PRODUCT類型類別來表徵，並主要在Odoo的庫存應用程序中持有和\\管理。
+這意味著在系統內，產品生產取決於其他產品的可用性，這些產品可以是現貨購買的，也可以\\是從其他產品製造而來的
+（見圖22），也就是說，原材料也被視為產品，更具體地說，是購買並包含\\在BOM中以製造其他產品的產品。這被認為是主要的物品類別
+，因為它既是製造的來源，也是目標。\\
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig22.png}
+\end{center}
+\section{5.1.3.2. Operation item class and workcenter item class\\5.1.3.2. 操作項目類和工作中心項目類}
+The operation item is representative of a manufacturing operation that is required to 
+transform components or raw materials into a product or new component while the 
+workcenter item represents the place at which the operation takes place, e.g., a sanding wood 
+will be carried out in a sanding station (Figure 23) that has the proper equipment. The 
+workcenter is eventually used in Odoo as a time/equipment management tool in its 
+production planning. Basically, when the production center is at full capacity it puts 
+following processes on hold or redirects the processes to an alternative workcenter. The 
+operation item is also responsible for holding the instruction files that are consulted during 
+production. \\操作項目代表需要將零件或原材料轉化為產品或新零件的製造操作，而工作中心項目則代表操作發生\\的地點，
+例如，對木材進行打磨將在具有適當設備的打磨站（見圖23）進行。工作中心最終在Odoo\\中用作生產計劃中的時間/設備管理工具。
+基本上，當生產中心達到最大容量時，它將暫停後續過程\\或將過程重定向到替代工作中心。操作項目還負責保存在生產過程中咨詢的指示文件。
+\\
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig23.png}
+\end{center}
+\section{5.1.3.3. The Bill of Materials item class\\5.1.3.3. 物料清單項目類}
+The Bill of Materials is a list of components necessary to build a product. In Odoo,
+however, the BOM is best described by what PLM would consider the virtual representation 
+of the production process. That might seem counter intuitive at first considering the 
+previously mentioned operation item class, but in fact since the BOM is a compound item it
+points directly to all item types necessary to produce the end product (Figure 24). For 
+example, let’s say that to build a product it is required 3 different parts and 4 different
+operations; the BOM of said product would list all of them as well as specify the order in 
+which these are utilized.\\
+物料清單是構建產品所需的零部件列表。然而，在Odoo中，BOM最好由PLM認為的生產過程的虛擬\\表示來描述。
+起初，這可能看起來有些反直覺，考慮到前面提到的操作項目類，但實際上，由於BOM\\是一個復合項目，
+它直接指向生產最終產品所需的所有項目類型（見圖24）。例如，假設為了製造產\\品需要3個不同的零件和4個不同的操作；
+該產品的BOM將列出所有這些，並指定它們的使用順序。
+\\
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{fig24.png}
+\end{center}
+\section{
+5.1.3.4. Manufacturing order item class and work order item class \\5.1.3.4. 製造訂單項目類和工作訂單項目類}
+ Manufacturing order item class and work order item class 
+Along the standard items that are considered within Odoo, orders are the ones that 
+represent commencement within the system. They are signaling that a change is taking place 
+somehow and somewhere. In the case of a manufacturing order it represents the order to 
+manufacture N number of specific products using it’s BOM as a base. It is as consequence 
+of that MO that work orders are automatically generated by Odoo (one for each necessary 
+operation listed in the BOM) and allocated throughout available necessary workcenters
+(Figure 25). 
+\\
+製造訂單項目類和工作訂單項目類
+除了Odoo中考慮的標準項目外，訂單是代表系統內開始的項目。\\它們表示某種變化正在某個地方發生。
+在製造訂單的情況下，它代表使用其BOM作為基礎製造N個特\\定產品的訂單。由於製造訂單，Odoo會自動生成工作訂單
+（每個BOM中列出的每個必要操作一個）\\並分配到可用的必要工作中心（見圖25）。
+
+The work order is the main form in which the manufacturing operators interact with Odoo, it presents all the instructions specified by the operation item, as well as control towards its completion. When a WO takes place the operator signals through the interface its beginning, its completion and even any quality control check points required while the system keeps track of timing and performance (Figure 26). Once all WO are done the MO can be declared done and the materials and components specified in the BOM are consumed and the N copies of the product is added to inventory. All that makes the work order a central piece as far as MES is concerned.  Figure 25 Simplified orders diagram Figure 26 Operator interface during the WO 36 \\
+在Odoo中考慮的標準專案中，訂單是代表系統內開始的訂單。他們發出信號，\\表明正在以某種方式和某個地方發生變化。對於製造訂單，它表示使用其物料清單作為基礎製造 N 個特定產品的訂單。\\正是由於該MO，Odoo會自動生成工單（BOM中列出的每個必要操作一個），並在整個可用的必要工作中心分配\\（圖25）。  
+工單是製造操作員與Odoo交互的主要形式，它呈現操作項指定的所有指令，以及對其完成的控制。當 WO 發生時，操作員通過介面發出信號，發出信號，發出信號，完成所有 WO 后，可以聲明 MO 完成，並消耗 BOM 中指定的材料和元件，並將產品的 N 份添加到庫存中。所有這些都使工單成為MES的核心部分。
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{41123123-1.png}
+\end{center}
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{41123123-2.png}
+\end{center}
+\begin{center}
+\section{5.1.3.5 The engineering change order  \\5.1.3.5工程變更單 }
+\end{center}
+As explained in the beginning of chapter 2 the Odoo management software considers PLM mainly as a tool for tracking change and improvements. Its application module is external to the normal flow of manufacturing but acts as an expansion to it. Its focal item class is the Engineering Change Order (ECO).  An ECO is an item class that outlines the proposed changes to the product or the parts that would be affected by the change. In other words, is a central information hub for everyone associated with a given product.  The idea is to signal the need for change to a product item or a BOM item, hold the files that are relevant to the change and apply the change or at least signal that the change has been implemented, all while keeping the history of al the previous changes. All very useful in the future and serve as a process to streamline product development and help improve products/production.\\  
+如第2章開頭所述，Odoo管理軟體主要將PLM視為跟蹤變更和改進的工具。它的應用模組是正常製造流程的外部，\\但充當其擴展。其重點專案類是工程變更單 （ECO）。 
+ECO 是一個專案類，\\它概述了對產品或將受更改影響的部件的擬議更改。換句話說，是與給定產品相關的每個人的中央資訊中心。\\  
+這個想法是發出需要更改產品項或 BOM 項的信號，保留與更改相關的檔並應用更改，\\或者至少發出已實施更改的信號同時保留所有先前更改的歷史記錄。所有這些都在未來非常有用，\\並作為簡化產品開發和説明改進產品/生產的過程。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123123-3.png}
+\end{center}
+\begin{center}
+\section{5.2 Starting the simulation \\5.2 開始模擬   }
+\end{center}
+
+\section{5.2.1 Software option chosen for the simulation  \\5.2.1 為模擬選擇的軟體選項 }
+For this simulation, it has been decided that the best evaluation of the Odoo software would be through its online web-based service. The reasons for such choice instead of using the community edition of the software are as follows: ▪ The practicality of using a web-based service as oppose to administrate a server locally or remotely. Although the community application was tested as part of the research for this work and has been judged to be a very beginner friendly server application the fact of the matter is that hosting a server is, on its own, a job that requires experience and knowledge.  There has been a shift of the market regarding this sort of application towards product as a service and with good reason. At the time this thesis is being written the COVID-19 pandemic is forcing a lot of employees to work remotely and making clear to the market that IT is not a simple job and that a web service is an attractive option.  ▪ Lack of official Odoo PLM application for the community edition of Odoo. Although there is a substantial repertoire of community made applications for the community edition of Odoo the organization, description, integration, and support of this applications are spotted at best. Rather than rely on applications that might not keep up with the main software it was decided that it would be a fairer to the platform evaluation if it was based on official applications. I.e. it would be very unproductive to slap together a free solution just to depend on luck regarding how it is supported on the future. PLM is the focus here, so this is an unnegotiable situation.  At the time of writing this work, Odoo allows you to select one of its extra features like PLM and use it for free for an indefinite amount of time on their cloud hosted servers. This is a very attractive option if the only focus of this work was PLM and manufacturing. However, the MES aspect of this work is highly dependent of other applications of Odoo which means that there is very little that can be done. To this end the experiment was carried out in the trial version of Odoo enterprise which allow the user to use the system without storage or application limitations for a period of 14 days all hosted in Odoo cloud servers (Figure 17). 
+對於此類比，已決定通過其基於Web的在線服務對Odoo軟體進行最佳評估。\\選擇不使用該軟體的社區版的原因如下： 
+ 
+▪	使用基於 Web 的服務作為本地或遠端管理伺服器的實用性。\\儘管社區應用程式作為這項工作研究的一部分進行了測試，\\並且被認為是一個非常初學者友好的伺服器應用程式，但事實是，託管伺服器本身就是一項需要經驗和知識的工作。\\ 關於這種應用，市場已經轉向產品即服務，這是有充分理由的。在撰寫本文時，\\COVID-19 大流行迫使許多員工遠端工作，並向市場表明 IT 不是一項簡單的工作，Web 服務是一個有吸引力的選擇。 \\ 
+ 
+▪	缺少Odoo社區版的官方OdooPLM應用程式。儘管Odoo的社區版有大量的社區應用程式，\\但這些應用程式的組織、描述、集成和支援充其量只能被發現。與其依賴可能跟不上主要軟體的應用程式，\\不如決定如果基於官方應用程式，對平臺評估會更公平。也就是說，僅僅依靠運氣來決定未來如何支援它，\\就拼湊出一個免費的解決方案是非常徒勞的。PLM 是這裡的重點，所以這是一個不容置疑的情況。  
+ 
+在撰寫本文時，Odoo允許您選擇其額外功能之一，例如PLM，並在其雲託管伺服器上無限期免費使用它。\\如果這項工作的唯一重點是 PLM 和製造，這是一個非常有吸引力的選擇。\\
+然而，這項工作的MES方面高度依賴於Odoo的其他應用，這意味著可以做的很少。\\為此，實驗是在Odoo企業版的試用版中進行的，它允許使用者在14天內使用系統，\\而沒有存儲或應用程式限制，全部託管在Odoo雲伺服器中（圖17）。 
+\section{5.2.2  Setings details that are relevant    \\5.2.2 相關的設置細節}
+A few details regarding the settings of Odoo are relevant to the proper function of its manufacturing functionalities. Namely enabling work orders in the manufacturing settings is an obligatory step for proper use of both work order items, workcenter items and operation items.  An assumption made for this work is that this is a holdover of the ERP origins of the software because it is rather unintuitive to not have this setting enabled by default if you are going to use Odoo to make any serious control on manufacturing. Regardless as of Odoo enterprise v14 this option can be set in the Settings > Manufacturing > Operations > Work Orders (Figure 28). 
+有關Odoo設置的一些細節與其製造功能的正常功能有關。也就是說，\\在製造設置中啟用工作訂單是正確使用工作訂單項、工作中心項和工序項的必要步驟。  
+ 
+為這項工作所做的一個假設是，這是軟體ERP起源的保留，因為如果您要使用Odoo對製造進行任何嚴格的控制，\\那麼默認情況下不啟用此設置是相當不直觀的。從 Odoo enterprise v14 開始，可以在 Settings > Manufacturing > Operations > Work Orders 中設置此選項（圖 28）。 
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123123-4.png}
+\end{center}
+\begin{center}
+\section{5.3  Building the company structure  \\5.3 構建公司結構    }
+\end{center}
+\section{5.3.1 Users \\5.3.1 使用者  }
+Users are set and invited through the setting menu. It is possible to assign different levels of permissions regarding different aspects of the business operation. Messaging, permissions, 39 approvals, responsibilities are all assigned into a user. This is very convenient and can fall within the category of virtual item class even if it has limited use in the scope of manufacturing. Their creation is not strictly necessary, the software would run just fine having just me as a user with full administrator credentials, but for this simulation, 5 users were created as listed below to represent different employees within the company. The following (Figure 29) is a screenshot of my user account item and its ‘Asses Rights’ followed by one of the fictional users being created for the company (Figure 30). 
+通過設置功能表設置和邀請使用者。可以針對業務運營的不同方面分配不同級別的許可權。消息傳遞、許可權、\\批准、職責都分配給使用者。這非常方便，即使它在製造範圍內的用途有限，也可以屬於虛擬物品類的範疇。\\它們的創建並不是絕對必要的，僅自己作為具有完全管理員憑據的使用者，\\該軟體就可以運行良好，但對於此類比，創建了5個使用者，如下所示，以代表公司內的不同員工。下面（圖 29）是我的用戶帳戶項及其「評估許可權」的屏幕截圖，後跟是為公司創建的一個虛構使用者（圖 30）。 
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123123-5.png}
+\end{center}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123123-6.png}
+\end{center}
+It is nice to point out how the two differ in access rights. Mary Fiction has been created in this example as an engineer and therefore most of her permissions are around the manufacturing procedure while she is denied access to other parts like Sales or Accounting.  
+很高興指出兩者在訪問許可權上的不同之處。在此示例中，Mary Fiction 是以工程師身份創建的，\\因此她的大部分許可權都與製造程式有關，而她則被拒絕訪問其他部分，例如銷售或會計。
+\section{5.3.3 Workcenters and Equipement  \\5.3.3 工作中心和設備   }
+Workcenters are quite flexible within Odoo in the sense that they can be changed and expanded as needed. One could create the workcenters after creating the product items to allow for reorganization of the shop floor once you gained some perspective on what the products will be in the end. However, for most scenarios this seems unrealistic since the workcenters are more rigid structures in the real world - they don’t change as much as the products since they tend to hold heavy machinery.  In this simulation it was considered that the company already has 3 workcenters from the get-go and therefore the workcenters and machinery were created beforehand. This is more useful for possible readers interested in implementing Odoo as well as saving sometime. We begin by creating the equipment we have. This is an item class that emphasizes in maintenance organization. The application responsible for managing equipment is the Maintenance App. The following image is an example of how Odoo portrays a 3D printer equipment item (Figure 31). 
+
+工作中心在Odoo中非常靈活，可以根據需要進行更改和擴展。可以在創建產品專案后創建工作中心，\\以便在您對產品最終將是什麼有所瞭解后對車間進行重組。然而，對於大多數情況來說，這似乎是不現實的，\\因為工作中心在現實世界中是更嚴格的結構——它們的變化不如產品，因為它們往往容納重型機械。  
+ 
+在這個類比中，我們認為該公司從一開始就已經有 3 個工作中心，因此工作中心和機器是事先創建的。\\這對於有興趣實現Odoo並節省一些時間的讀者來說更有用。 
+ 
+我們從創建我們擁有的設備開始。這是維護組織中強調的項類。負責管理設備的應用程式是維護應用程式。\\下圖是Odoo如何描繪3D印表機設備專案的示例（圖31）。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123123-7.png}
+\end{center}
+In addition to this 3D printer the following equipment were created to be used throughout the development/production process (Figure 32):
+除了這台 3D 印表機之外，還創建了以下設備，\\用於整個開發/生產過程（圖 32）：
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123123-8.png}
+\end{center}
+This is where software limitations regarding PLM start to show. Although equipment items allow you some level of metadata (description text, responsible user, maintenance data and vendor). It does not allow for the uploading of files of any kind to be attached to the item class (machine manuals, reports etc). This is a substantial weakness, since file management is something quite unanimously considered a main aspect of PLM. This will be a recurring subject of this simulation since the number of Items that allow upload of files directly to them is limited in Odoo.  42 Now that the equipment has been created, their workcenters can be created. It is interesting to remember that the main use of the workcenter item is management of time and cost per hour. The idea is that equipment assigned to a WC should not be used at the same time and that ideally equipment that have widely different running costs should also be in different workcenters to allow for better time/cost tracking.  The following (Figure 33) is a an example of a workcenter item made to represent the prototyping station that is used throughout the development of the product. 
+
+這就是有關 PLM 的軟體限制開始顯現的地方。儘管設備專案允許您使用某種級別的元數據\\（描述文本、負責使用者、維護數據和供應商）。它不允許上傳任何類型的檔附加到專案類（機器手冊、報告等）。\\這是一個很大的弱點，因為檔管理是人們一致認為是 PLM 的一個主要方面。\\這將是此類比中反覆出現的主題，因為允許直接上傳檔的項目數量在Odoo中受到限制。  
+ 
+現在設備已經創建，可以創建他們的工作中心。有趣的是，工作中心專案的主要用途是管理每小時的時間和成本。\\這個想法是，分配給廁所的設備不應同時使用，理想情況下，運行成本差異很大的設備也應該位於不同的工作中心，\\以便更好地跟蹤時間/成本。  
+ 
+下面（圖 33）是一個工作中心專案的示例，用於表示在整個產品開發過程中使用的原型製作站。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123123-9.png}
+\end{center}
+The reader will notice that this station (Figure 34) is where the 3D printers and CNC machine are located. Usually these machines would be separated in singular workcenters because of difference in operation costs and because they are for the most part independent however for the sake of this simulation this has been considered representative enough.  
+讀者會注意到這個工作站（圖 34）是 3D 印表機和 CNC 機床所在的位置。\\通常，由於運營成本的差異，這些機器將分散在單個工作中心中，並且因為它們在很大程度上是獨立的，但是，\\為了這種類比，這被認為具有足夠的代表性。  
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123123-10.png}
+\end{center}
+The following workcenters have been also created for the simulation and filed with the necessary equipment: 
+
+還為類比創建了以下工作中心，並配備了必要的設備：
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123123-11.png}
+\end{center}
+\begin{center}
+\section{5.4  Development \\5.4開發   }
+\end{center}
+Now that the basic structure of the company has been recreated in the software, it is possible to commence the simulation process. At first, the focus is on the development aspect of a brand new product using Odoo (Figure 9) most noticeably, since this is the company first product to be created, a possible use of Odoo for organizing prototyping procedure is evaluated. This include the path from idea to design and prototype production. Then once the product has reached an acceptable result as a prototype, the work regarding the development of the production process will take place. The product development is considered successful once an official production run is done. 
+
+現在，公司的基本結構已在軟體中重新創建，可以開始模擬過程。首先，最引人注目的是使用 Odoo 的全新產品的開發方面（圖 9），因為這是公司創建的第一款產品，\\因此評估了 Odoo 用於組織原型製作程式的可能性。這包括從構思到設計和原型生產的路徑。\\然後，一旦產品作為原型達到可接受的結果，就會進行有關生產過程開發的工作。\\一旦正式生產運行完成，產品開發就被認為是成功的。
+\section{5.4.1Idea - design - product prototype \\5.4.1 創意 - 設計 - 產品原型  }
+As explained in (Chapter 4) the idea for the product has already been stablished and initial design characteristics and basic product research have already been carried out. This is representative of an actual implementation of the Odoo software in the real world because although Odoo have good project management and communication applications, those are external to the inventory and manufacturing applications and, more importantly, share no integration with the engineering design CAD software. In this simulation, the idea has been put to paper and have been turned into a CAD design using the Solidworks software generating a CAD file locally stored in the engineer computer.
+
+如（第4章）所述，產品的想法已經確定，初步的設計特徵和基礎產品研究已經進行。\\這代表了Odoo軟體在現實世界中的實際實施，因為儘管Odoo具有良好的專案管理和通信應用程式，\\但這些應用程式是庫存和製造應用程式的外部，更重要的是，與工程設計CAD軟體沒有集成。\\在這個類比中，這個想法已經付諸實踐，並使用 Solidworks 軟體轉化為 CAD 設計，\\生成本地存儲在工程師計算機中的 CAD 檔。 
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123123-12.png}
+\end{center}
+It is at this point that the utilization of the Odoo software can officially take place. The first step is to understand what the subject of production is as far as product items are concerned. There are two takes in how to do this: ▪ The first is to consider the prototype an early revision of the final product, that is the prototype item created in Odoo would be the same as the final product item with revisions been carried out during development. That would be the recommended if the prototype is achieved by identical means to the ones used in the final production. An example of this approach would be if the product is simple enough that product and production aspects of development can be carried out together. ▪ The second one is to consider the prototype as a separate item from the final product - this is the path was taken in this simulation. The main reason for this decision was that the ways in which our prototype production were carried out differed from the final production since 3D printing was used for the prototypes. Starting from the root, a product item called PROTO Alpha Case (Figure 37) was created (Alpha Case being the name of the product). From this point on we will refer to prototype products as ‘proto item’. As we can see, this allows for a nice representation of the proto item. Since it is a prototype, it will not be marked as something that can be sold or purchased, and sales price will be set to 0 since it is unimportant. This proto item will be used to connect the different aspects of its development but for now it is left alone. 
+正是在這一點上，Odoo軟體的正式使用可以正式發生。第一步是瞭解就產品專案而言，生產主題是什麼。\\如何做到這一點有兩種方法： 
+ 
+▪	第一種是將原型視為最終產品的早期修訂版，也就是說，在Odoo中創建的原型專案將與最終產品專案相同，\\並在開發過程中進行了修改。如果原型是通過與最終生產中使用的方法相同的方法實現的，則建議這樣做。\\這種方法的一個例子是，如果產品足夠簡單，可以同時進行產品和生產方面的開發。 
+ 
+▪	第二個是將原型視為與最終產品分開的專案 - 這是該類比中採用的路徑。\\做出這一決定的主要原因是，由於原型使用3D列印，因此我們的原型生產方式與最終生產方式不同。 
+ 
+從根開始，創建了一個名為 PROTO Alpha Case（圖 37）的產品項（Alpha Case 是產品的名稱）。\\從現在開始，我們將原型產品稱為“原型產品”。正如我們所看到的，這允許很好地表示原型專案。由於它是原型，\\因此不會將其標記為可以出售或購買的東西，並且銷售價格將設置為 0，因為它不重要。\\這個原型專案將用於連接其開發的不同方面，但現在它被擱置了。 
+ \begin{center}
+    \includegraphics[width=0.9\textwidth]{41123123-13.png}
+\end{center}
+As we have previously stablished in chapter 3, the product will consist of 3 pieces Part A, Part B and Part C. These need to be prototyped and created as products as well so that they can be added to the bill of materials of the PROTO Alpha Case. Finally, it was decided to use specific plastic filaments (see section 4.1.1) for the 3D printing of PROTO Part A and PROTO Part B and C and these need to be added as products as well (Figure 38). 
+正如我們之前在第 3 章中所確定的，該產品將包括 A 部分、B 部分和 C 部分 3 部分。\\這些也需要作為產品進行原型設計和創建，以便將它們添加到PROTO Alpha Case的物料清單中。\\最後，決定使用特定的塑料長絲（參見第 4.1.1 節）進行 PROTO A 部分和 PROTO B 部分和 C 部分的 3D 列印，這些也需要作為產品添加（圖 38）。 
+ \begin{center}
+    \includegraphics[width=0.9\textwidth]{41123123-14.png}
+\end{center}
+ At this point, the relevant product items for the prototyping of the Alpha Case were finished, which makes possible the creation of the its relevant BOMs. There are 3 of them and they follow the structure in (Figure 39): 
+ 至此，Alpha Case原型製作的相關產品專案已經完成，\\這使得創建其相關BOM成為可能。其中有 3 個，它們遵循（圖 39）中的結構： 
+
+\begin{center}
+\includegraphics[width=15cm]{1.png}\\
+\textbf{
+Figure 39 BOM diagrams for prototyping\\
+圖39 用於原型製作的BOM圖表}
+\end{center}
+
+Something worth mentioning is that Odoo used the kit option (Figure 40) on the item to infer that this product is a component of another product. This is very interesting because it automatically creates dependencies between the product items for production.\\
+值得一提的是，Odoo在该项上使用了套件选项（见图40），推断该产品是另一个产品的组成部分。这非常有趣，因为它会自动创建产品项目之间的生产依赖关系。
+
+\begin{center}
+\includegraphics[width=15cm]{2.png}\\
+\textbf{
+Figure 40 Image of the prototype product BOM (Part-A)\\
+圖40 原型產品BOM的圖像（Part-A）}
+\end{center}
+
+As the reader can see (Figure 41), while making the BOMs it is simple to create the specific operation items necessary for the manufacturing procedure and specify its work center. One of the best functionalities regarding MES in Odoo is the ability to track the time of operations based on default duration.This can be dynamically changed based on tracked time or set manually. It is also in the operation item that we can add instruction files for the operation. Even though it is limited to PDF text or a link to a google slides file, this is one of the few opportunities presented by Odoo for file management connected directly to an item.\\
+正如读者所见（见图41），制作BOM时，很容易创建制造过程所需的具体操作项目，并指定其工作中心。Odoo中关于MES的最佳功能之一是根据默认持续时间跟踪操作的时间。这可以根据跟踪的时间动态更改，也可以手动设置。在操作项目中，我们还可以添加操作的说明文件。尽管这仅限于PDF文本或链接到Google幻灯片文件，但这是Odoo为与项目直接连接的文件管理提供的少数机会之一。
+
+\begin{center}
+\includegraphics[width=15cm]{3.png}\\
+\textbf{
+Figure 41 Image of operation item as presented by Odoo (BOM Part-A)\\
+圖41 Odoo呈現的操作項目圖像（BOM Part-A）}
+\end{center}
+
+\begin{center}
+\includegraphics[width=15cm]{4.png}\\
+\textbf{
+Figure 42 Overview of BOMs created for prototyping\\
+圖42 原型制作的BOM概觀}
+\end{center}
+
+Speaking of this lack of upload opportunities, we can notice that while making the product item there was no way to directly upload files regarding the product to the item. In our case,we have the CAD files regarding the parts that we are prototyping, to not be able to upload these files in any way would be a complete failure from a PLM perspective. Thankfully there is a workaround. As explained in section 5.1.3.5, the ECO is an item that is linked to either product items or BOMs and allow uploaded files to be attached to it. It is a minor workaround but basically means that if we want to upload our CAD files to the items in any significative manner, we need to emit an ECO even if there is no “change” being made.\\
+谈到这种缺乏上传机会，我们可以注意到，在制作产品项时，没有直接上传与产品相关的文件的方法。在我们的情况下，我们有关于我们正在原型制作的零件的CAD文件，无法以任何方式上传这些文件将是从PLM角度完全失败的情况。幸运的是，有一个解决方法。正如在第5.1.3.5节中解释的那样，ECO是一个与产品项或BOM关联的项目，允许上传文件附加到它。这是一个小小的变通方法，但基本上意味着，如果我们想以任何有意义的方式上传我们的CAD文件到项目中，即使没有进行“更改”，我们也需要发出一个ECO。
+
+\begin{center}
+\includegraphics[width=15cm]{5.png}\\
+\textbf{
+Figure 43 ECO example\\
+圖43 ECO示例}
+\end{center}
+
+It can only be assumed that this was part of Odoo’s team strategy to implement PLM as an external application in its ERP base. It is reasonable, but still, this is one of the few aspects of this software interface that is not as straightforward. It is an extremely valuable feature,but it is somewhat hidden. The documents icon appears in the top right corner (Figure 43)only after the ECO is created and saved.\\
+只能假设这是Odoo团队实施将PLM作为其ERP基础的外部应用程序的策略的一部分。这是合理的，但仍然，这是该软件界面中少数几个不那么直接的方面之一。这是一个极其有价值的功能，但它有些隐藏。文档图标只有在创建并保存ECO后才会出现在右上角（见图43）。
+
+\begin{center}
+\includegraphics[width=15cm]{6.png}\\
+\textbf{
+Figure 44 Overview of attached files to ECO\\
+圖44 附加到ECO的文件概觀}
+\end{center}
+
+Since there is no direct integration between Odoo and the CAD software, uploading the file do not cause any automatic change to the product metadata. This is not ideal from the PLM perspective, still, it is a well implemented feature. By allowing product items to link directly to not only one existing ECO but to the list of all ECOs ever applied to the item, the software does well in tracking version control and development. Something interesting that can be done for the sake of process control is adding quality control points to operations. This allows the responsible personnel to give feedback during the production regarding concerning points to the engineering team. In our case, we are concerned about 3D printing warping. This is something that happens when temperature varies to much during the 3D printing procedure. To this end a Quality Control Point item will be created (Figure 45) that will enquire with the operator to check if there is warping in the piece and mark pass or fail.\\
+由于Odoo和CAD软件之间没有直接集成，因此上传文件不会导致产品元数据的任何自动更改。从PLM的角度来看，这并不理想，但这仍然是一个实现良好的功能。通过允许产品项目直接链接到不仅是一个现有的ECO，而且是应用于该项目的所有ECO的列表，软件在跟踪版本控制和开发方面表现良好。为了进行过程控制，可以做一些有趣的事情，例如在操作中添加质量控制点。这使得负责人员能够在生产过程中就工程团队关注的问题提供反馈。在我们的情况下，我们关注的是3D打印时的翘曲问题。这是在3D打印过程中温度变化过大时会发生的情况。为此，将创建一个质量控制点项目（见图45），询问操作员是否有翘曲现象，并标记合格或不合格。
+
+\begin{center}
+\includegraphics[width=15cm]{7.png}\\
+\textbf{
+Figure 45 Quality Control Point item for the prototype production\\
+圖45 原型生產的質量控制點項目}
+\end{center}
+
+The last step of a prototype cycle would be the production of prototypes for testing and evaluation. Production is something quite straightforward in Odoo and really the point where created allow us to start the Manufacturing Order (MO) (Figure 46). This, in turn, pull the necessary workorders from the operations and components listed in the BOM. The workorders appear for manufacturing operators and production can commence/be tracked.\\
+原型周期的最后一步将是为测试和评估而生产原型。在Odoo中，生产是非常直接的，也是创建开始制造订单（MO）的关键点（见图46）。然后，这将从在BOM中列出的操作和组件中提取必要的工单。工单将出现在制造操作员的界面上，生产可以开始/被跟踪。
+
+\begin{center}
+\includegraphics[width=15cm]{8.png}\\
+\textbf{
+Figure 46 Depiction of the manufacturing order\\
+圖46 生產訂單的描述}
+\end{center}
+
+For the most part this operation is very well automated and clear. There are however a few problems that are result of structural changes from Odoo V13 to Odoo V14. For a long time,the software ordered the operations to be carried out using an extra item class called ‘Route’. These were a fundamental part of how the product moved within the inventory and manufacturing, but for some reason, was dropped in the manufacturing aspect of the new version in favor of a simplified sequence data built into the BOM. As of the writing of this work, there have been reports of problems and confusions regarding how that works, which are aggravated by the fact that material explaining the use of this functionality are either nonexistent or still referencing old versions of the software (in which ‘routes’ are still in use). The avid reader will notice in Figure 47 that the order in which operations are being made available are not in the correct sequence. This is due to exactly this problem and for now the only solution is to count on the awareness of the operators regarding the order of production or manually scheduling the operations in the plan tab. During the period of research for this work (before Odoo V14) familiarization experiments were made in which there were no problem of this nature. In addition, there are examples online even from Odoo website demonstrating the use of routes and how they are useful for this exact situation. \\
+大多数情况下，这个操作是非常自动化和清晰的。然而，由于从Odoo V13到Odoo V14的结构性变化，出现了一些问题。很长一段时间，软件使用一个名为“Route”的额外项目类来执行操作。这些路线是产品在库存和制造过程中移动的基本部分，但出于某种原因，在新版本中，制造方面放弃了这些路线，转而采用了内置于BOM中的简化的顺序数据。截至撰写本文时，已经有关于该功能如何工作的问题和困惑的报告，这些问题加剧了材料的存在或仍在引用旧版本软件（其中仍在使用“路线”）的事实。热心的读者会注意到图47中操作被呈现的顺序不正确。这正是由于这个问题，目前唯一的解决办法是依靠操作员对生产顺序的意识或在计划选项卡中手动安排操作。在进行本研究之前（Odoo V14之前），已经进行了熟悉化实验，其中没有出现这种性质的问题。此外，甚至从Odoo网站上也有示例演示了路线的使用以及它们如何对这种情况有用。
+
+\begin{center}
+\includegraphics[width=15cm]{9.png}\\
+\textbf{
+Figure 47 Overview of the resulted Work Orders\\
+圖47 生產工作訂單結果概覽}
+\end{center}
+
+The problem has been reported by other people (Figure 48) to the Odoo company and is been and hopefully it will be resolved shortly (this is after all a extremelly recent version of the software). That been said, it is a problem even if it is a minor one.\\
+这个问题已经被其他人报告给了Odoo公司（见图48），并且希望很快会得到解决（毕竟这是一个非常新的软件版本）。话虽如此，即使是一个小问题，它也是一个问题。
+
+\begin{center}
+\includegraphics[width=15cm]{10.png}\\
+\textbf{
+Figure 48 Image of Odoo forum question regarding routes\\
+圖48 Odoo論壇關於路線的問題的圖像}
+\end{center}
+
+The manufacturing process was repeated 7 times (Figure 49) to simulate a small batch of prototypes for testing and tolerance checking. It is rare to get a perfect prototype in the first batch, for this reason it was chosen to represent correction through the simulation. In this simulation this problem was a fit problem that resulted in a change of dimension of PROTO Part A. \\
+制造过程被重复了7次（见图49），以模拟进行一小批原型的测试和容差检查。第一批原型很难做到完美，因此选择通过模拟来表示纠正。在这个模拟中，这个问题是一个适合问题，导致了PROTO Part A尺寸的变化。
+
+\begin{center}
+\includegraphics[width=15cm]{11.png}\\
+\textbf{
+Figure 49 Overview of the products after manufacturing\\
+圖49 生產後產品的概覽}
+\end{center}
+
+This give us the opportunity to use ECOs for their actual purpose, stablish and control a change to the product item. The changes to be carried out were on the CAD file regarding the product item. As before we can start the ECO and fill in the description, then the files are uploaded, and the ECO (Figure 50) goes through necessary validation before been made effective. \\
+这使我们有机会将ECO用于其实际目的，建立并控制对产品项的更改。需要进行的更改涉及产品项的CAD文件。与以前一样，我们可以开始执行ECO并填写描述，然后上传文件，ECO（见图50）在生效之前经过必要的验证。
+
+\begin{center}
+\includegraphics[width=15cm]{12.png}\\
+\textbf{
+Figure 50 Depiction of the validation of the ECO\\
+圖50 ECO驗證的描繪}
+\end{center}
+
+The validation procedure basically is set to ask for validation of someone with proper access permissions or specific personnel. In this case, the master account was used to validate and make effective as can be seen from the log in the right side of the image. Once the change is applied you can see that the product item version has been iterated to version 2 as well as a new ECO has been added to the list of ECOs linked to the item (Figure 51).\\
+验证过程基本上是设置为要求具有适当访问权限或特定人员的验证。在本例中，主账户被用来验证和生效，可以从图像右侧的日志中看到。一旦更改应用，您可以看到产品项版本已迭代为版本2，并且新的ECO已添加到与该项相关联的ECO列表中（见图51）。
+
+\begin{center}
+\includegraphics[width=15cm]{13.png}\\
+\textbf{
+Figure 51 Depiction of changes provoked by the ECO to product item\\
+圖 51 ECO對產品項目引起的變化的描繪}
+\end{center}
+
+That update is followed by another batch of prototypes, the cycle would continue until the prototypes produced satisfy the criteria stablished by the design team. In the case of this simulation it was assumed that one correction was representative enough of this process. This finalizes the development from idea to prototype. 
+\begin{center}
+\section{5.4.2. Process Plan - Production Test Run - Production}
+\end{center}
+Now that the prototype phase is complete the focus will shift to the process. As stablished before, it was decided to separate the prototype products from the final product item to isolate the product from the production process during the development. This way many aspects of development of the product could be evaluated in an ordered manner. Now that the process is been developed it seems reasonable to create the product items that will represent the final products since the product of a successful run of the process will be the production ready samples of it (Figure 52). \\
+随着这次更新，接着是另一批原型的生产，这个循环将持续进行，直到生产的原型满足设计团队设立的标准为止。在这个模拟中，假设一次修正足以代表这个过程。这标志着从构思到原型的开发已经完成。\\
+\begin{center}
+    5.4.2. 流程计划 - 生产测试 - 生产\\
+\end{center}
+现在，原型阶段已经完成，焦点将转移到流程上。正如之前所确定的，决定将原型产品与最终产品项分开，以在开发过程中将产品与生产过程隔离开来。这样可以有序地评估产品开发的许多方面。既然流程已经制定，那么创建代表最终产品的产品项似乎是合理的，因为成功运行流程的产品将是生产就绪的样品（见图52）。
+
+\begin{center}
+\includegraphics[width=15cm]{14.png}\\
+\textbf{
+Figure 52 Sectioned diagram regarding Process development\\
+圖 52 關於流程開發的分段圖}
+\end{center}
+
+Other product items that created were the raw materials for the injection molding (which are plastic pellets that are fed into the machine to be melted and injected). All that was done in identical manner to when we create the prototype products with the exception that the Alpha case (Figure 53) now is marked as sellable and its sale costs are now relevant (Figure 54). \\
+创建的其他产品项是用于注塑成型的原材料（这些原材料是塑料颗粒，被送入机器中进行熔化和注射）。所有这些都是以与创建原型产品相同的方式进行的，唯一的区别是Alpha盒（见图53）现在被标记为可销售，其销售成本现在是相关的（见图54）。
+
+\begin{center}
+\includegraphics[width=15cm]{15.png}\\
+\textbf{
+Figure 53 Render of how the final product should look like\\
+圖 53 最終產品應該是什麼樣子的渲染}
+\end{center}
+
+\begin{center}
+\includegraphics[width=15cm]{16.png}\\
+\textbf{
+Figure 54 Product Item of the Alpha Case\\
+圖 54 Alpha Case的產品項目}
+\end{center}
+
+Once the product items are taken care of, we need to go back to what aspect of the process will be tracked using Odoo in the context of this simulation. As it was hinted previously when talking about injection molding the key aspect of change regarding the process are the molds used by the machines to create the parts. For this simulation it was considered that the mold development will follow a very similar procedure of the development of the product, this should be more clear from the following diagram (Figure 55).\\
+一旦产品项目得到处理，我们需要回到使用Odoo在这个模拟的上下文中将跟踪的流程方面。如前所述，在谈论注塑时，关于流程的关键变化方面是机器用来创建零件的模具。对于这个模拟，考虑到模具的开发将遵循与产品开发非常相似的程序，这应该从下图（图55）更清楚。
+
+\begin{center}
+\includegraphics[width=15cm]{17.png}\\
+\textbf{
+Figure 55 Diagram regarding process development for mold\\
+圖 55 有關模具開發的流程發展圖}
+\end{center}
+
+The production of a prototype mold by 3D printing follows the same standard procedure
+for prototyping used for the product. So far, the mold is considered a product like any other,
+this reveals another small weakness regarding Odoo ability to represent the totality of the
+process. The reader will notice that although the mold is been treated as a product (because
+it is been manufactured) it should in fact be considered a tool or piece of equipment as well.
+通過 3D 打印生產原型模具遵循與產品原型相同的標準流程。到目前為止,\\模具被視
+為與其他產品一樣的產品,這揭示了 Odoo 在表示整個過程方面的另一個小弱點。讀者
+將\\注意到,雖然模具被視為產品(因為它正在製造),但實際上它也應該被視為一種工
+具或設備。
+Although Odoo does makes this distinction between equipment and products, it has no
+integration regarding the situations where one is both. In addition, as explained before, there
+is no way of uploading CAD files to an equipment item or linking an equipment to a range
+of tools. I.e. Odoo does not consider a vertical drill with x number of drill bits to make
+different size holes. The closest it can do from the perspective of equipment/maintenance is
+consider the vertical drill a workstation and each drill size a separate equipment within the
+station with an assigned set up time. This is ok if you ignore that the drill bit is a product.
+儘管 Odoo 確實對設備和產品進行了區分,但對於同時屬於兩者的情況,它並沒
+有相應的整合。\\此外,如前所述,無法將 CAD 文件上傳到設備項目,也無法將設備
+與一系列工具進行關聯。換句話說,\\Odoo 並不考慮具有 x 個鑽頭的立式鑽床可以鑽
+不同尺寸的孔。從設備/維護的角度來看,它所能做\\的最接近的做法是將立式鑽床視
+為工作站,然後將每個鑽頭尺寸視為該站點內的單獨設備,並分配設\\置時間。如果
+忽略鑽頭是產品的事實,這是可以接受的。
+All of this is reasonable from the perspective of an ERP system but not ideal from the
+perspective of PLM because it shows gaps in between items that should represent the same
+thing. In production from the manufacturing application what is set is the work center station
+not the equipment (see Figure 41). In the maintenance app there is no connection to the fact
+that the tool is a consumable product, you can consider a maintenance schedule and even
+make a useful life parameters but because it is an equipment you can’t have reserve tools
+like drill bits in inventory like consumables.
+從 ERP 系統的角度來看,這一切都是合理的,但從 PLM 的角度來看,並不理想,
+因為它顯示了應該代表相同事物的項目之間存在差距。在製造應用程序的生\\產過程
+中,設定的是工作中心站,而不是設備(見圖 41)。在維護應用程式中,與工具是消
+
+耗性產品的事實之間沒有任何聯繫,您可以考慮維護計劃,甚至可以設置使用壽命
+參數,但由於它\\是設備,您無法像消耗品那樣在庫存中保留備用工具,比如鑽頭。
+The result is that it becomes very difficult to represent testing with a prototype mold. If
+you do as the software is designed for you need to create a separate ECO to apply every
+operation for each different iteration of the mold development to the necessary BOMs and
+make a test run (Figure 56). At this point, considering the maintenance aspect of the mold as
+a tool just does not make sense because it would entails filing in metadata in the maintenance
+App by hand for every prototype mold iteration all without causing any difference from the
+manufacturing perspective. The PROTO mold item ends up been used only for the sake of
+tracking material and holding files as the mold is improved.
+結果是要用原型模具進行測試變得非常困難。如果按\\照軟件的設計進行操作,您
+需要為每個模具開發的不同迭代創建單獨的工程變更訂單(ECO),並將其\\應用到必
+要的物料清單(BOM),然後進行測試運行(見圖 56)。在這一點上,考慮模具作為
+工具的維護\\方面就沒有意義了,因為這將意味著為每個原型模具迭代在維護應用程
+序中手動填寫元數據,而從製\\造角度來看並不會產生任何差異。PROTO 模具項目最
+終僅用於跟蹤材料並保存文件,以便改進模具。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-1.png}
+\end{center}
+Figure 56 ECO example of update procedure of BOM
+
+Taking this in consideration, in simulation it will be produced one 3D printed mold for
+each part of the alpha case. Then ECOs for the prototype parts of the case will be created to
+be applied to the parts BOMs updating the operation from 3D printing to injection molding
+test run with prototype molds.
+考慮到這一點,在模擬中,將為 Alpha 機殼的每個部分製\\作一個 3D 打印模具。然後,
+
+將為機殼原型部件創建工程變更訂單(ECOs),以應用於部件 BOM,從而將操作從
+3D 打印更新為\\注塑模具測試運行。
+At this point we could differentiate the product prototype from the test run prototype by
+making a new prototype product item, however considering our rapidly growing list of
+product items (Figure 57) it was concluded that it would be just better for depiction in this
+work to modify the previously produced product prototypes (made with 3D printing) and just
+use the same items. We can do this because those prototypes have already served their purpose
+.
+在這一點上,我們可以通過創建一個新的原型產品項目來區分產品\\原型和測試運
+行原型,但考慮到我們快速增長的產品項目清單(見圖 57),我們得出結論,更好的
+方法是\\在本文中修改先前製作的產品原型(使用 3D 打印),然後只使用相同的項目。
+我們之所以能夠這樣做,\\是因為這些原型已經完成了它們的任務。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-2.png}
+\end{center}
+Figure 57 Overview of product items at this stage of the simulation
+
+After the mold have been created and the BOMs for the prototypes are updated to include
+the injection stations and the proper operations (specifying the use of the molds) the next step
+is to do a production test run of prototype. Again that is done by emitting the MO completing
+the generated WOs (see Figure 46 and Figure 47 of previous section).
+在模具已經建立並且用於原型的 BOM 已更新以包括注射站和正確的操作(指定
+模具的使用)之後,\\下一步是進行原型的生產測試運行。再次透過發出 MO 來完成
+生成的 WO(參見前一部分的圖 46 和圖 47)。
+The result of the production is used to check for dimension and fitting, if correction is
+needed the ECOs would be emitted again as seen in Figure 56, and a new iteration of
+production and testing would be carried out. This process would repeat until the product is
+satisfactory enough to justify the production of the CNC machined molds that would be used
+in mass production.
+生產的結果用於檢查尺寸和配合度,如果需要進行更正,則再\\次發出ECOs,如圖
+56 所示,並進行新的生產和測試迭代。這個過程將重複進行,直到產品足夠滿意,
+可以正式進行 CNC 機加工模具的生產,以用於大批量生產。
+Since in this simulation it was chosen that the final mold (made of aluminum) would also
+be produced in house, this is the next step of development. Procedure is basically the same
+as before except that it is needed to create product items for both the raw material (aluminum
+block) and the CNC molds prior to their manufacturing. Creating BOMs and uploading
+relevant files.
+由於在此模擬中選擇了最終模具(由鋁製成)也將在公司內部生產,這是發展的
+下一步。程序基本上與\\之前相同,只是需要在其製造之前為原材料(鋁塊)和 CNC
+模具創建產品項目。創建 BOM 並上傳相關\\文件。
+Finally, the actual production on the new molds can begin. To represent that a
+manufacturing order of 100 Alpha Cases were created. This marks the end of the main path
+of development from idea to production (Figure 58).
+最後,可以開始對新模具進行實際生\\產。代表著製作了 100 個 Alpha 機殼的製造訂
+單。這標誌著從構想到生產的主要開發過程的結束(\\見圖 58)。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-3.png}
+\end{center}
+Figure 58 Main path of development from idea to production
+5.4.3. Process upgrade procedure
+The previous sections were about the procedure that would be necessary to use the Odoo
+software to track change during the main development of product. As such, most of what was
+described focused in the use of PLM and the standard procedure of creating and utilizing
+items like Products, BOMs, ECOs, MOs, WOs and Operations. This section will be different
+in the sense that now we have a production being carried out and the idea is to test Odoo in
+its capabilities of performing upgrades (Figure 59 and Figure 60). In other words,
+performance and feedback of information (and of course MES) becomes the main subject.
+前幾節談到了使用 Odoo 軟件來追蹤產品主要開發過程中所需的程序。因此,大部分
+描述的重點都集中在使用 PLM 和創建和利用產品、BOM、ECOs、MOs、WOs 和操
+作等項目的標\\準程序上。這一節將不同,因為現在正在進行生產,我們的想法是測
+試Odoo在進行升級方面的能力(見\\圖59和圖60)。換句話說,性能和信息反饋(當
+然還有 MES)成為主要的主題。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-4.png}
+\end{center}
+Figure 60 Sectioned diagram regarding Process development
+
+Change is always enacted using the ECO functionality even in this case. To remind the
+reader the situation in which this change will be applied (Figure 61) is the product overview
+of the relevant product items. Every product item in that list (that is not a raw material) poses
+at least one BOM and two ECOs already applied to them in order to signify the initial state
+of every product item (Figure 62). The first ECO of every item affects the product and it holds
+the initial related files, the second is applied to the BOM of the product in order to hold files
+related to the initial state of the process as well as record the initial state of the BOM. Without
+these ECOs (Figure 62), when we ever applied an improvement, the initial state of the product
+files or BOMs would be lost.
+即使在這種情況下,變更也始終使用 ECO 功能來實施。為了提醒讀者,這種變更將應
+用於的情況(見\\圖 61)是相關產品項目的產品概述。該列表中的每個產品項目(不是
+原材料)都至少具有一個 BOM 和兩個已應用的 ECO,以表示每個產品項目的初始狀態
+
+8
+(見圖 62)。每個項目的第一個 ECO 影響產品,它包含了初始相關文件,第二個應用於
+產品的 BOM,以保存與流程初始狀態相關的文件,並記錄 BOM 的初始狀態。如果沒有
+這些 ECO(見圖 62),\\當我們應用改進時,產品文件或 BOM 的初始狀態將會丟失。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-5.png}
+\end{center}
+Figure 61 Relevant product items overview
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-6.png}
+\end{center}
+Figure 62 Example of ECOs of a product item
+
+This time around the production duration and the estimated duration of the process is
+something that need to be taken in consideration so we can perceive how that applied change
+on the process affect production. To this end a MO of 50 units of Alpha Case will be created
+with each operation being estimated to take 30 seconds (15s for parts B/C because there is
+the need for 2 of them). Meaning that in an ideal situation the total length would be 50 minutes
+(25 of injection production being done in parallel and 25 for final assembly).
+
+這一次,生產持續時間和流程的預估持續時間是需要考慮的因素,這樣我們才能
+知道應用在流程\\上的變更如何影響生產。為此,將創建 50 個 Alpha 機殼的 MO,每
+個操作預估需要 30 秒(因為需要 2 個零件 B/C,所以每個零件預計需要 15 秒)。這
+意味著在理想情況下,總持續時間將為 50 分鐘(25 分鐘用於並行進行的注塑生產,
+25 分鐘用於最終組裝)。
+In this simulated manufacturing run it was chosen that the injection operations would take
+slightly more time to complete to be representative of a suboptimal performance. This is been
+done to see how Odoo reacts and informs in real time the situation in hand.
+在這次模擬的製造過程中,選擇讓注塑操作花費\\稍微更多的時間來完成,以代表
+不太理想的表現。這樣做是為了看看 Odoo 如何在實時情況下反應\\並提供信息。
+The first phase of the production in the injection process that is carried out in parallel for
+parts A and B/C on the injection stations 1 and 2. The following (Figure 64) shows how in
+the beginning of the process the overview of the productions stations indicate with green
+circles. These circulars signaling in known as Andon and although it is not always considered
+part of MES it is commonly an integrated feature in many MES systems. After the production
+process have been carried out with a little delay the circle turned gray and overall efficiency
+has been marked red on the station tabs (Figure 64).
+生產的第一階段是在注塑站 1 和 2 上進行的注塑過程,同時為零件 A 和 B/C 進
+行。下圖(見圖 64)顯示了在過程開始時,生產站的概覽以綠色圓圈標示。這些圓
+圈信號被稱為安敦,儘管它不總是\\被視為 MES 的一部分,但在許多 MES 系統中通常
+是一個集成功能。在生產過程稍微延遲後,圓圈變\\成了灰色,並且在站點標籤上標
+記了整體效率為紅色(見圖 64)。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-7.png}
+\end{center}
+Figure 63 Workcenter overview 1
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-8.png}
+\end{center}
+Figure 64 Workcenter overview 2
+
+The production was carried out twice before any improvement was applied. The first
+improvement to be carried out were on the production process on the operation and the raw
+materials used. More specifically, a new operation representative of an equipment upgrades
+on the injection machines and the replacement of the brand of plastic pellets use in the
+injection process (Figure 65).
+在進行任何改進之前,生產已經進行了兩次。要進行的\\第一項改進是在操作和使
+用的原材料的生產過程上進行的。更具體地說,是對注塑機進行設備升級\\的新操作,
+以及替換注塑過程中使用的塑料顆粒品牌(見圖 65)。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-9.png}
+\end{center}
+Figure 65 ECO applied to BOM
+
+These upgrades were applied to the BOMs of parts A and B of the Alpha case and
+production recommenced. After two other MOs producing 50 products each simulating an
+improvement to the process the following types of data were automatically made available
+by Odoo (Table 3):
+這些升級已應用於 Alpha 機殼的零件 A 和 B 的 BOM,並重新開始生產。\\在另外兩個製
+造 50 個產品的 MO 之後,模擬了對流程進行改進,Odoo 自動提供了以下類型的數據
+(見表 3):
+
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-10.png}
+\end{center}
+It should be commented that the data regarding MOs is unfortunately captured in a
+monthly basis as opposed to the other two categories that process data per order executed.
+This means that since this simulation is using a trial version of the software that lasts only 14
+days the graphical representation of that data offers an unimpressive view of a single point or
+a single column. In the long run this is a great way to display performance over time but in
+the case of this simulation not so much (Figure 66).
+應該注意到,關於 MO 的數據不幸地是以每月為基礎捕獲的,而不是其他兩個類
+別,它們以執行的每個訂單來處理數據。這\\意味著,由於這個模擬使用的是一個只
+持續 14 天的軟件試用版,該數據的圖形表示將提供一個單點\\或單列的不令人印象深
+刻的視圖。從長遠來看,這是一種很好的方法來顯示隨時間變化的性能,但在\\這個
+模擬案例中則不太適用(見圖 66)。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-11.png}
+\end{center}
+Figure 66 Total quantity regarding MO
+
+All the data available can be seen in the form of bar charts, line charts or pie charts
+automatically generated after the time performance is registered (which happens at any
+moment an action is performed in a work order). Figure 67, Figure 68 and Figure 69 are
+examples of the results of the 5 production runs:
+所有可用的數據都可以以條形圖、折線圖或餅\\圖的形式看到,這些圖表是在時間
+性能被記錄後自動生成的(這發生在對工作訂單執行任何操作時)。\\圖 67、圖 68 和
+圖 69 是 5 次生產運行的結果的示例:
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-12.png}
+\end{center}
+Figure 67 Real duration regarding work orders
+
+Something worth mentioning here is that whenever Odoo mentions quantity or duration
+it is referring to amount per workorder summed (the system does not care if the operations
+are being carried in parallel). So, on our simulation, making 50 units using 3 operations that
+should take 30 seconds each the estimated “duration” to be recorded ideally here is 75 minutes
+per MO.
+在這裡值得一提的是,每當 Odoo 提到數量或持續時間時,它指的是每\\個工作訂
+單加總的數量或持續時間(系統不會在意操作是否並行進行)。因此,在我們的模擬
+中,如果\\使用 3 個每個應該花費 30 秒的操作來製作 50 個單位,理想情況下應該記
+錄的“持續時間”為每個 MO 75 分鐘。
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-13.png}
+\end{center}
+Figure 68 Duration variation regarding work orders
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{41123145-14.png}
+\end{center}
+Figure 69 Overall equipment effectiveness
+
+The astute reader will notice that all the data mentioned so far is derived from the time to
+completion of the operations been carried out, the related amount to the MO and the
+workcenter utilized. Even so it is impressive how much information can be drawn especially
+considering that it is all generated automatically.
+
+細心的讀者會注意到,到目前為止提到的所有數據都是從正在進行的操作完成所
+花費的時間、相\\關的 MO 數量以及使用的工作中心派生出來的。即便如此,令人印
+象深刻的是,可以獲得多少信息,特\\別是考慮到這一切都是自動生成的。
+
+\begin{center}
+\textbf{6. CHAPTER  \\6. 章節 }
+\end{center}
+
+\textbf{ODOOS ACOMPLISHMENTS REGARDING PLM AND MES}\\
+
+\textbf{ODOO 在 PLM 和 MES 方面的成就}
+
+
+
+This chapter aims to summarize the strengths and weaknesses of the Odoo software 
+focusing on the questions raised on section 4.2. It will also comment Odoo functionalities or 
+lack thereof noticed throughout the simulation also taking the questions into account.\\
+\\
+
+本章旨在總結 Odoo 軟體的優勢和劣勢，重點關注第4.2節提出的問題。也將評論在模擬過程中注\\意到的 Odoo 功能或其缺失之處，同樣考慮這些問題。
+
+\begin{center}
+\textbf{6.1. How does the software deals with items?\\6.1. 軟體如何處理項目？}
+\end{center}
+
+Overall, the Odoo software presents the user with a wide variety of digital items that can 
+be used to represent several aspects of manufacturing as well as other aspects of business. 
+This is mainly due to the way the Odoo ERP functionality uses items to track the pull and 
+push actions throughout its use, that is also how automation is achieved in the software.\\
+\\
+
+總體而言，Odoo 軟體為用戶提供了各種數位項目，這些項目可以用來表示製造和業務的各個方面。\\這主要歸功於 Odoo ERP 功能使用項目來跟蹤其使用過程中的推動和拉動動作，這也是該軟體實現\\自動化的方式。
+
+\begin{center}
+\textbf{6.1.1. Are all aspects of the product lifecycle represented?
+\\6.1.1. 產品生命周期的所有方面是否都被表示？}
+\end{center}
+
+One of the disadvantages of being derived from a ERP system is that it focus on the 
+primary scope of ERP (Figure 2) ,that is, production and sales. The Items in Odoo reflect 
+that. For instance, the development part of the life cycle during the simulation, although the 
+representation was possible it certainly felt like a stretch of functionalities made for the 
+production phase rather than development is self (Figure 70). When developing prototypes 
+for instance many of the steps like creating an ECO just to carry files in the beginning and 
+going through many steps every time an adjustment in the prototype was made felt too 
+bureaucratic or too much of a workaround.\\
+
+由於來自 ERP 系統的缺點之一是它專注於 ERP 的主要範疇（圖2），即生產和銷售。在模擬過程\\中，雖然可以表示生命周期的開發部分，但感覺這更像是為生產階段而非開發本身設計的功能擴展。\\例如，在開發原型時，很多步驟如在開始時創建一個 ECO 來攜帶文件，以及每次調整原型時都要\\經過許多步驟，感覺過於繁瑣或過於曲折。
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{41123152-1.png}
+\end{center}
+\begin{center}
+\textbf{Figure 70 Diagram representing Odoo scope of ERP} 
+\end{center}
+\begin{center}
+\textbf{6.1.2. How well are each of those items represented?\\6.1.2 每個項目表示得如何？}
+\end{center}
+Representation levels of the items vary depending on how the item is used. A good 
+example of that is the material focus of product items. In the sense that everything is 
+considered a product with very little distinction between prototypes or raw materials.  The 
+representation of product items or BOM items is very high with a lot of metadata and useful 
+connections to other items. However, even within the manufacturing application there are 
+some items that lack attention. Operations for instance are items that could benefit greatly 
+from more upload capabilities like 3D printing or CNC files. As automation is becoming 
+more widespread in production it is no longer enough to have only PDF or slide instructions. 
+Additionally, other items do not have the ability of holding files not even with the use of 
+ECOs\\
+
+項目的表示水平取決於項目的使用方式。產品項目的材料焦點是一個很好的例\\子。就所有東西都被認為是產品而言，原型或原材料之間的區別很小。產品項目或BOM項目的表\\示非常高，具有大量元數據和與其他項目的有用連接。然而，即使在製造應用中，也有些項目缺乏\\關注。操作項目，例如，可以從更多的上傳功能（如3D打印或CNC文件）中受益。隨著自動化在\\生產中變得越來越普遍，僅有PDF或幻燈片說明已經不夠了。此外，其他項目即使使用ECO也無\\法攜帶文件。
+\begin{center}
+\textbf{6.2. How easy it is to create a brand-new product?
+\\6.2 創建全新產品有多容易？}
+\end{center}
+Product creation is one of the most straightforward procedures in Odoo, it really comes 
+down to using either the Inventory application or the Manufacturing application to create a 
+new Product and then fill in its metadata.\\
+在Odoo中，產品創建是最簡單的操作之一，基本上就是使用庫存應用或製造應用來創建新產品，\\然後填寫其元數據。
+\begin{center}
+\textbf{6.2.1. How is the product depicted? 
+\\6.2.1 產品如何被描述？}
+\end{center}
+The product depiction is clear and concise, the product item allows for an image to be 
+uploaded to the item and used as an icon. The ERP nature of the product items in Odoo means 
+that the metadata is reasonably bias toward information that is used to manage storage and 
+inventory (Weight, Volume, Quantity  etc.) but the item also allows for written description 
+as well as providing links to the BOMs and ECOs related to the product.\\
+
+產品描述清晰簡潔，產品項目允許上傳圖像並用作圖標。由於Odoo中的產品項目具有ERP性質，\\因此其元數據偏向於管理存儲和庫存的信息（如重量、體積、數量等），但該項目還允許撰寫描\\述，並提供與BOM和ECO相關的鏈接。
+\begin{center}
+\textbf{6.2.2. How does the product integrate and reference relevant files?
+\\6.2.2 產品如何整合和參考相關文件？}
+\end{center}
+There is surely a reasonable attempt in allowing the most valuable items (Product and 
+BOMs) to be able to manage and reference relevant files. However, Odoo does not implement 
+much more than the bare minimum as far as file management goes. The most it can do is 
+allow for files to be uploaded and download manually. This means that whenever someone 
+makes a change in a file it needs to be manually uploaded in ECO. Integration with most files 
+is inexistent except for operation items because the instruction files can be opened and 
+interacted within Odoo during the production.\\
+
+Odoo確實在允許最有價值的項目（產品和BOM）管理和參考相關文件方面做出了合理的嘗試。然\\而，Odoo在文件管理方面僅實現了基本功能，最多允許手動上傳和下載文件。這意味著每當有人\\更改文件時，都需要在ECO中手動上傳。除了操作項目可以在生產過程中打開和交互的指令文件外，\\與大多數文件的集成是不存在的。
+\begin{center}
+\textbf{6.2.3. Does changing one affects the other?
+\\6.2.3 更改一個會影響另一個嗎？}
+\end{center}
+It does not, files are mostly dealt by Odoo as paperwork for later reference. Anything 
+added file wise that could entail a change in the product or BOM metadata will require 
+someone to be aware of the change and update the information manually.\\
+
+不會，Odoo主要將文件視為供以後參考的文書工作。任何文件上的添加都可能涉及產品或BOM元\\數據的變更，這需要有人注意到變更並手動更新信息。\\
+\begin{center}
+\textbf{6.3. How easy it is to create a brand-new production process?
+\\6.3 創建全新生產過程有多容易？}
+\end{center}
+As mentioned before the item the best represents the process is the bill of materials. This 
+item class requires an existing product to be associated with, other that the BOM is no harder 
+to create than a product item.\\
+\\
+
+如前所述，最能代表過程的項目是物料清單（BOM）。此項目類別需要關聯一個現有產品，除此之\\外，創建BOM並不比創建產品項目難。
+\begin{center}
+\textbf{6.3.1. How the process is depicted? 
+\\6.3.1 過程如何被描述？}
+\end{center}
+The process is depicted in the BOM as a list of components (other product items) and 
+operations that are carried out in as specific order to produce a number of end products. This 
+representation seems to sit well with the production procedure. Metadata is kept to a 
+minimum but there is still the capability to offer a text description.\\
+\\
+
+過程在BOM中被描述為組成部分（其他產品項目）和按照特定順序執行的操作的列表，以生產一定\\數量的最終產品。這種表示似乎非常符合生產程序。元數據保持在最低限度，但仍有提供文本描述\\的能力。
+\begin{center}
+\textbf{6.3.2. How does the process integrate and reference the product it 
+produces?
+\\6.3.2 過程如何整合和參考其生產的產品？}
+\end{center}
+The integration between the BOM and the product items is by far the most well done in 
+Odoo. Changes made in the BOM affect production and are directly linked to the product. 
+Whenever metadata changes are possible and said aspect is represented in the product item 
+as well the change of one is inherited by the other.\\
+\\
+
+BOM和產品項目之間的集成在Odoo中做得最好。對BOM的更改會影響生產，並且與產品直接相關。\\只要元數據更改是可能的，而該方面在產品項目中也有表示，則一個的更改會被另一個繼承。
+\begin{center}
+\textbf{6.3.3. Does changing one affects the other?
+\\6.3.3 更改一個會影響另一個嗎？}
+\end{center}
+As far as inventory and manufacturing is concerned integration is and referencing is well 
+implemented. Production results flawlessly in the resulting changes in inventory and the 
+navigation path of the GUI is very well optimized.  It does not take more than 3 or 4 clicks 
+to get from one product to another or to navigate to other relevant items.\\
+\\
+
+就庫存和製造而言，集成和參考實現得非常好。生產結果會毫不費力地反映在庫存變化中，GUI的\\導航路徑也非常優化。從一個產品導航到另一個或導航到其他相關項目不需要超過3或4次點擊。
+\begin{center}
+\textbf{6.4. How easy is to improve an existing product/ production process?
+\\6.4 改進現有產品/生產過程有多容易？}
+\end{center}
+As mentioned previously, all improvements in Odoo are performed using engineering 
+change orders. These are applied to product items or bill of materials. Creating ECOs is quite 
+easy and organized, the ECO is an item on itself that symbolizes a signal given to create 
+change, once effective, it symbolizes an increment on the product or process.\\
+\\
+
+如前所述，所有改進在Odoo中都是通過工程變更單（ECO）進行的。這些應用於產品項目或物料\\清單。創建ECO相當容易且有條理，ECO本身是一個象徵著創建變更信號的項目，一旦生效，它\\象徵著產品或過程的增量。
+\begin{center}
+\textbf{6.4.1. How easy it is to update its metadata\\
+6.4.1 更新元數據有多容易？}
+\end{center}
+It is easy to update any metadata regarding any item in Odoo; however, it is wise to point 
+out that since the ECOs are separate items that are just point by products or BOMs many of
+the changes are not automatic and require manual intervention. I.e. an ECO will not change 
+the text description of the product for instance. If the new update were to require a change 
+on that description it would require a manual intervention from the user in the product item. 
+Doing that is easy, but it is an extra task that will not be tracked by the ECO.\\
+
+更新Odoo中任何項目的任何元數據都很容易；然而，值得指出的是，由於ECO是單獨的項目，只\\是指向產品或BOM，許多變更不是自動的，需要手動干預。例如，ECO不會更改產品的文本描述。\\如果新更新需要更改該描述，則需要用戶在產品項目中手動干預。這樣做很容易，但這是一個ECO\\不會跟踪的額外任務。
+\\
+\begin{center}
+\textbf{6.4.2. How easy it is to determine the effects of the change?\\
+6.4.2 確定變更效果有多容易？}
+\end{center}
+
+Odoo feedback of information is mainly done in a manufacturing order basis.The 
+information available is clear and ECOs do not affect MOs that are already under way so the 
+effects of an applied ECO would not be hard to notice. However, it is good to point out that 
+in the way the performance information is displayed there is no indication of the product 
+revision or the ECO applied. This means that the user would need to first figure when the 
+ECO was applied, then navigate to the equivalent MO in the data to draw its conclusions. 
+Although not a problem for recent changes this does becomes problematic if someone want 
+to analyze effects of old changes.\\
+
+Odoo中的變更管理主要通過ECO進行。對於每個ECO，都有詳細的記錄和追踪，以確保變更是可\\見的，並且其影響是可測量的。這使得確定變更的效果變得相對簡單，特別是在生產環境中。
+\\
+\begin{center}
+\textbf{6.4.3. How does the software deals with different product revisions?\\
+6.4.3 軟體如何處理不同的產品版本？}
+\end{center}
+
+Version control is something well covered by the 1 to N relation between product/BOM 
+and linked ECOs. Every product will have a tab containing all the ECOs applied to it in 
+chronological order effectively working as a timeline representing the item evolution.\\
+\\
+
+Odoo允許創建和管理多個產品版本，這些版本可以通過ECO進行變更和更新。每個版本都有其獨\\立的元數據和歷史記錄，這使得管理和追踪產品變更變得更加高效。
+\\
+\begin{center}
+\textbf{6.5. How easy is to find data related to product or process?\\
+6.5 查找與產品或過程相關的數據有多容易？}
+\end{center}
+
+Most of the data related to performance regarding production is concentrated under the
+reporting tab as mentioned in the previous chapter (Figure 71).
+
+與生產績效相關的大多數數據都集中在 報告選項卡，如上一章所述（圖 71）。
+\\
+\begin{center}
+\includegraphics[width=0.9\textwidth]{41123152-2.png}
+\end{center}
+\begin{center}
+\textbf{Figure 71 GUI Options of data reporting}
+\end{center}
+This means that as far as performance is concerned it is quite easy to find the data. The 
+previous chapter will show examples of possible information that are available within those 
+tabs.\\
+
+這意味著就效能而言，查找數據非常容易。 這前一章將展示這些內容中可能提供的資訊的範例\\選項卡。\\
+
+In addition to using this path the UI of the product item also has a tab that point to the 
+monthly comparison of production volume regarding the product (Figure 72). Which would 
+be more impressive if there was more than one month in the trial version of Odoo.\\
+
+除了使用此路徑外，產品項的UI還具有一個指向 產品的月度產量比較（圖72）。這將 如果\\Odoo的試用版超過一個月，那就更令人印象深刻了。\\
+\begin{center}
+\includegraphics[width=0.9\textwidth]{41123152-3.png}
+\end{center}
+\begin{center}
+\textbf{Figure 72 Total quantity regarding MO from product item}
+\end{center}
+\begin{center}
+\textbf{6.5.1. How easy is find production numbers?
+6.5.1 查找生產數量有多容易？}
+\end{center}
+
+In addition to the previously mentioned ways, Odoo also makes available a unit forecast 
+graph that records the ins and outs of the inventory. This is particularly useful to estimate 
+sales and balance storage with demand (Figure 73). This feature is not mentioned to much in 
+this work because supply and demand is not so much a MES functionality, but it is to useful 
+to have an overview of the production.\\
+
+除了前面提到的方法外，Odoo還提供單位預測 記錄庫存來龍去脈的圖表。這對於估計特別有用 銷售並平衡存儲與需求（圖 73）。這個功能在 這項工作是因為供求關係與其說是MES功能，不如說 是有用的 以了解生產情況。\\
+\begin{center}
+\includegraphics[width=0.8\textwidth]{41123152-4.png}
+\end{center}
+\begin{center}
+\textbf{Figure 73 Unit forecast overview}
+\end{center}
+\begin{center}
+\textbf{6.5.2. How does Odoo generate performance data?\\
+6.5.2 Odoo如何生成性能數據？}
+\end{center}
+
+The astute reader will notice that all the data mentioned so far is derived from the time to 
+completion of the operations been carried out, the related amount to the MO and the 
+workcenter utilized. Even so it is impressive how much information can be drawn especially 
+considering that it is all generated automatically.\\
+
+敏銳的讀者會注意到，到目前為止提到的所有數據都是從 完成操作后，MO和MO的相關金額\\已完成。已使用工作中心。即便如此，可以繪製多少信息還是令人印象深刻，尤其是 考慮到它都\\是自動生成的。
+\begin{center}
+\textbf{6.5.3. How does the software present performance change as a result of a 
+upgrade?\\
+6.5.3 軟體如何展示升級後的性能變化？}
+\end{center}
+
+In order to identify the change, the user must identify the MOs following the change and 
+see the difference based on that. Ideally it would be nice if the graphical information showed 
+the revision of the product, but this is not present as of Odoo V13.\\
+
+為了識別更改，用戶必須識別更改後的MO，並且 基於此查看差異。理想情況下，如果顯示圖\\形資訊會很好產品的修訂版，但從Odoo V13開始就不存在了。
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\begin{center}
+\textbf{CONCLUSION}
+\end{center}
+
+In chapter 2 I referenced a diagram that represents a theoretical ideal of how the 
+integration of PLM with other systems should be (Figure 74). In that diagram the reader can 
+notice that ideally PLM would be the center of the system with other systems (Including 
+ERP) attached to it. Different from said diagram the Odoo software takes ERP as the center 
+with other systems attached to it. This work has shown that it is certainly possible to use 
+Odoo for PLM and MES however it has also shown that the PLM and MES implementation 
+presents some weaknesses.\\
+
+在第2章中，我引用了一張圖表，該圖表代表了如何PLM應該與其他系統集成（圖74）。在該\\圖中，讀者可以請注意，理想情況下，PLM 將是系統的中心，與其他系統（包括 ERP）附加到它。\\與上述圖表不同的是，Odoo軟體以ERP為中心並附有其他系統。這項工作表明，使用然而，Odoo\\用於PLM和MES的實施存在一些弱點。\\
+\begin{center}
+\includegraphics[width=0.9\textwidth]{41123152-5.png}\\
+\textbf{Figure 74 Comparison to the left the adapted diagram as theorized by Saaksvuori, A. 
+and Immonen, A. (2008), to the right Odoo take on how systems interact.}
+\end{center}
+
+The lack of file upload support on things like operation items, work centers or equipment 
+is something of some concern especially considering 3D printing or CNC because access to 
+the CAD files would prove helpful to the operators. Also, there is a gap in between the facets 
+of product and tool when the company is taking upon themselves to develop and produce 
+said tooling (similar situation founded when developing the molds in the simulation).\\
+
+缺乏對操作專案、工作中心或設備等內容的檔上傳支援 這是一些值得關注的問題，特別是考慮\\到3D列印或CNC，因為可以訪問CAD檔將對操作員有所説明。此外，刻面之間也存在間隙當公司\\自行開發和生產時，產品和工具所述工具（在類比中開發模具時出現類似情況）。\\
+
+In addition, although MES provide detailed graphical representation regarding the dataset 
+that it has, it is limited to data derived from the time to completion of the operations been 
+carried out. For instance, it would be very valuable if graphical representation regarding 
+quality control was easily available as well.\\
+
+此外，儘管MES提供了有關數據集的詳細圖形表示它有，它僅限於從操作完成時間得出的數據\\進行。例如，如果圖形表示品質控制也很容易獲得。\\
+
+All that said, applying ECOs to BOMs in Odoo is a procedure deserving of praise. The 
+ECO holds the information until it is ready to be applied and then it updates the BOM 
+automatically once the ECO is validated by responsible personnel. It might not look like 
+something so important now because this simulation is dealing with very simple products, 
+but it becomes exponentially more important as complexity increases. E.g. A car with 
+thousands of parts and hundreds of nested BOMs would be considered a nightmare to control 
+and keep track of change if a system like this was not present.\\
+
+綜上所述，將ECO應用於Odoo中的BOM是一個值得稱讚的過程。這ECO會保留資訊，直到準\\備好應用，然後更新BOM一旦ECO由負責人員驗證，就會自動執行。它可能看起來不像 現在非常\\重要，因為這個類比正在處理非常簡單的產品，但隨著複雜性的增加，它變得越來越重要。例如，\\一輛汽車數千個零件和數百個嵌套BOM將被視為控制的噩夢如果沒有這樣的系統，請跟蹤更改。\\
+
+This software is not perfect for PLM or MES implementation, but it does hold value in 
+the sense of availability and integration with other systems. The functionality is there 
+specially regarding product and process and the software has an extremely interesting 
+integration with its natural ERP functionalities. All this makes up for a system that would 
+suit better:\\
+
+該軟體對於PLM或MES實施並不完美，但它確實具有價值可用性和與其他系統的整合感。功能\\就在那裡特別是關於產品和工藝，軟體有一個非常有趣的與其自然的ERP功能集成。所有這些都彌\\補了一個系統，該系統將更適合：\\
+
+▪ Small business that could use PLM and MES in a smaller scale.\\
+
+▪ 可以在較小規模中使用 PLM 和 MES 的小型企業。 \\
+
+▪ Companies that deal with less manufacturing and more assembly or distribution 
+taking advantage of the All in One nature of the software.\\
+
+▪ 處理較少製造和更多組裝或分銷的公司 利用軟體的多合一性質。\\
+
+It is important to mention that the limitations of Odoo are not in the complexity of the 
+product itself but in the complexity of the operations that surround its development. All things 
+considered you could track a large and complex assembly if it includes only simple 
+manufacturing operations or if more complex engineering tasks are done by suppliers. I.e. 
+you could track the assembly of a motorcycle with ease in Odoo, but the PLM features are 
+not polish enough to track the full evolution/development of its powertrain. It is certainly 
+possible to do so but it would take too much time and effort from the engineering team to be 
+considered worth it just for the sake of having an all in one solution with ERP features.\\
+
+值得一提的是，Odoo的局限性不在於Odoo的複雜性。產品本身，但在圍繞其開發的操作的複\\雜性中。萬物考慮您可以跟蹤大型複雜裝配體，如果它只包含簡單的製造操作，或者更複雜的工程\\任務由供應商完成。即您可以在Odoo中輕鬆跟蹤摩托車的裝配，但PLM功能是不夠完善，無法跟\\蹤其動力總成的完整演變/發展。當然是 可以這樣做，但工程團隊需要花費太多的時間和精力僅僅\\為了擁有具有ERP功能的多合一解決方案而被認為是值得的。\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\begin{center}
+\textbf{BIBLIOGRAPHY}
+\end{center}
+Ben Khedher, A., Henry, S., Bouras, A. (2011), “Integration between MES and product 
+lifecycle management”. IEEE International Conference on Emerging Technologies and 
+Factory Automation (ETFA 2011), Toulouse, France.\\
+\\
+Brownells. 
+Available 
+in 
+<https://www.brownells.com/rifle-parts/receiver
+parts/receive\\rs/lower-receivers/ak-47-fixed-stock-receiver-w-trigger-guard-rear-trunnion
+prod97339.aspx>. Last access in 29/08/2020.\\
+\\
+D’Antonio, G.; Macheda, L.; Sauza Bedolla, J.; Chiabert, P. (2017), “PLM-MES 
+Integration to Support Industry 4.0”. PLM 2017, IFIP AICT 517, pp. 129–137, 2017.\\
+\\
+D’Antonio, G.; Sauza Bedolla, J.; Chiabert, P.; Lombardi, F. (2015), “PLM-MES 
+integration to support collaborative design”. International Conference on Engineering Design 
+(ICED 2015), Milano, Italy.\\
+\\
+Hanson, K (2019) “When it does and doesn’t make sense to 3D-print molds”. Available 
+in: <https://www.thefabricator.com/additivereport/article/additive/plastic-injection-molds
+can-be-3d-printed-quickly>. Last access in 17/11/2020.\\
+\\
+MEScenter 
+“MES - Manufacturing Execution System”. Available 
+in:<http://mescenter\\.org/en/articles/108-mes-manufacturing-execution-system>. Last access 
+in 25/10/2020.
+\\
+Meyer, H.; Fuchs, F.; Thiel, K. (2009), “Manufacturing Execution Systems (MES): 
+Optimal Design, Planning, and Deployment”. McGraw-Hill.\\
+\\
+Odoo Forum. Available in <https://www.odoo.com/fr-FR/forum/aide-1/problems-with
+v14-manufacturing-and-inventory-177511>.\\ Last access in 31/10/2020.
+\\
+Saaksvuori, A. and Immonen, A. (2008), “Product Lifecycle Management”, 3rd edition, 
+Springer, Berlin.\\
+\\
+Sharpsbros. Firearms design (2020). Available in <https://sharpsbros.com/mb74-5-45-x
+39mm/>. Last access in 29/08/2020.\\
+Stancioiu, A (2017) “The Fourth Industrial Revolution Industry 4.0” s.l.: Academica 
+Brancusi.\\
+\\
+Star Rapid (2020) “The 10 Best Plastic Injection Molding Materials”. Available in: 
+<https://www.starrapid.com/blog/the-ten-most-popular-plastic-injection-molding
+materials/>. Last access in 20/09/2020.\\
+\\
+Stark, J. (2015), “Product Lifecycle Management”, 3rd edition, Springer, Berlin.\\
+\\
+Sudarsan, R.; Fenves, S. J.; Sriram, R. D.; Wang, F. (2005), "A product information 
+modeling framework for product". Computer Aided Design, Vol. 37 No. 13, pp. 1399-1411.\\
+\\
+Tripaldi, M (2019) “Evaluating PLM Implementation in a Medium Enterprise - The 
+Cubogas Case Study”, Tesi di laurea, Politecnico di Torino. Available in: 
+<https://webthesis.\\biblio.polito.it/13994/>. Last access in 23/09/2020.\\
+\\
+Umble, E. J.; Haft, R. R.; Umble, M. M. (2003), "Enterprise resource planning: 
+Implementation procedures and critical success factors". European Journal of Operational 
+Research, Vol. 146 No. 2, pp. 241-257.\\
+\\
+Vásquez, V. K. R.; Escribano, J. F (2017) “ERP implementation for an administrative 
+agency as a corporative Frontend and an e-commerce Smartphone App”, Master of Science 
+Thesis, Universitat Politecnica de Catalunya.\\
+\\
+Womack, J.P.; Jones, D.T.; Ross, D. (1990), “The Machine that Changed the World”, 1st 
+Edition, Rawson Associates, New York.
+\end{document}
