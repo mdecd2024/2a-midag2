@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,8 +142,25 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content">10. << <a href='10..html'>Previous</a> <a href='12..html'>Next</a> >> 12.<br /><h1>11.</h1>
-<br />10. << <a href='10..html'>Previous</a> <a href='12..html'>Next</a> >> 12.</div>
+    <div id="tipue_search_content">15. << <a href='15..html'>Previous</a> <a href='機器人.html'>Next</a> >> 機器人<br /><h1>場景</h1>
+<p></p>
+<div><span>(手動測試影片無機器人)</span></div>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3ksJcwWcqSE" title="手動測試" width="853"></iframe></p>
+<p><span style="color: #ff0000;">問題1</span>:電子是記分板都只停在5再得分還是不會進位</p>
+<p>原因:角度轉到180再丟進一球角度反而重180變到0</p>
+<p><span style="color: #000000;">解決:</span>添加了角度範圍檢查和修正，確保角度值在合理範圍內。這樣可以避免角度從正值跳到負值的問題</p>
+<p><span style="color: #ff0000;">問題2</span>:轉到360度時角度不會再累積下去</p>
+<p>解決:添加了 cumulative_red_angle 和 cumulative_blue_angle 變數來保持累積角度。每次更新時，這些變數都會累積關節的旋轉角度，並用於計算分數。</p>
+<p><span style="color: #ff0000;">問題3</span>:上述添加的程式只要丟一球正嘗是轉180度但實際上卻一直飆升沒有停</p>
+<p>原因:由於每次在<code>sysCall_actuation</code>中不斷累加當前角度，導致角度持續增加。</p>
+<p><span style="color: #000000;">解決:</span>每次<code>sysCall_actuation</code>調用時，我們計算相對於前一次的角度增量，並將其累加到累積角度中。</p>
+<p><span style="color: #ff0000;">問題4</span>:機械式計分器顯示5分但電子式卻顯示4分</p>
+<p>原因:使用 math.floor 的问题 假设累积角度应该是180度，这应该等于5分（180 / 36 = 5）。 然而，由于浮点数的精度问题，累积角度可能会变成179.999999度。 在这种情况下，math.floor(179.999999 / 36) 将返回4，因为 math.floor 向下取整，179.999999 / 36 约为 4.99999997，向下取整结果为4。</p>
+<p><span style="color: #0000ff;"><span style="color: #000000;">解決</span>:</span>加入0.5修正的优势 如果你加入0.5，计算方式变为 math.floor((179.999999 / 36) + 0.5)。 这里，179.999999 / 36 约等于4.99999997，加上0.5等于5.49999997。 然后 math.floor(5.49999997) 返回5，这就修正了由于浮点数精度问题导致的误差。</p>
+<p></p>
+<p></p>
+<p>解決完測試影片</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3ksJcwWcqSE" title="手動測試" width="853"></iframe></p><br />15. << <a href='15..html'>Previous</a> <a href='機器人.html'>Next</a> >> 機器人</div>
 
     <!-- footer -->
       <div class="container">

@@ -167,11 +167,9 @@
 <h2>13.</h2>
 <h2>14.</h2>
 <h2>15.</h2>
-<div>
-<div><span></span></div>
-<br/>
+<h3>場景</h3>
+<p></p>
 <div><span>(手動測試影片無機器人)</span></div>
-</div>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3ksJcwWcqSE" title="手動測試" width="853"></iframe></p>
 <p><span style="color: #ff0000;">問題1</span>:電子是記分板都只停在5再得分還是不會進位</p>
 <p>原因:角度轉到180再丟進一球角度反而重180變到0</p>
@@ -184,9 +182,30 @@
 <p><span style="color: #ff0000;">問題4</span>:機械式計分器顯示5分但電子式卻顯示4分</p>
 <p>原因:使用 math.floor 的问题 假设累积角度应该是180度，这应该等于5分（180 / 36 = 5）。 然而，由于浮点数的精度问题，累积角度可能会变成179.999999度。 在这种情况下，math.floor(179.999999 / 36) 将返回4，因为 math.floor 向下取整，179.999999 / 36 约为 4.99999997，向下取整结果为4。</p>
 <p><span style="color: #0000ff;"><span style="color: #000000;">解決</span>:</span>加入0.5修正的优势 如果你加入0.5，计算方式变为 math.floor((179.999999 / 36) + 0.5)。 这里，179.999999 / 36 约等于4.99999997，加上0.5等于5.49999997。 然后 math.floor(5.49999997) 返回5，这就修正了由于浮点数精度问题导致的误差。</p>
-<h3>機器人</h3>
+<p></p>
+<p></p>
+<p>解決完測試影片</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3ksJcwWcqSE" title="手動測試" width="853"></iframe></p><h3>機器人</h3>
 <p>最後版設計</p>
-<p><img alt="" height="320" src="/images/螢幕擷取畫面 2024-06-14 134133.png" width="561"/></p><h1>每週心得</h1>
+<p><img alt="" height="320" src="/images/螢幕擷取畫面 2024-06-14 134133.png" width="561"/></p>
+<p>(做動影片)</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/qgTu0lXpNCE" title="cd2024 協同產品設計實習期末實習評量項目三, 學號41123105" width="853"></iframe></p>
+<p></p>
+<div></div>
+<div><a href="https://1drv.ms/u/c/9a62b67559925288/Ef8WfLS_hkFCkH5PEX_bOBEBGwbKFd8uGSq66x0t2DO3NQ?e=23WwIf">機器人做動場景</a></div>
+<div></div>
+<div><a href="https://1drv.ms/u/c/9a62b67559925288/EXtfPiHTnjxBqW2EiKQuuaUB68PzlNcJ8WesjKNulBWecg?e=eDbyRe">機器人做動程式</a></div>
+<div></div>
+<div></div>
+<h3>最終成果</h3>
+<div>最終完成影片</div>
+<div></div>
+<div><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/G6ZIj2aWTdM" title="最終測試影片" width="853"></iframe></div>
+<div><span></span></div>
+<div><span></span><a href="https://1drv.ms/u/c/9a62b67559925288/EYqkJ-Q0Qc5LpxZPzME2PzwBNj5WHgay45jjgZThWJEZww?e=u81cq2">最終場景</a></div>
+<div></div>
+<div><a href="https://1drv.ms/u/c/9a62b67559925288/Edf0U34NH-JHkoXuvaS_1GAB4PO4ogNq0tLAr7SESJjHMA?e=cUmdns">最終程式</a></div>
+<h1>每週心得</h1>
 <h2>w1</h2>
 <p>1.blog 的文檔在 markdown 用pelican套件 轉完後html檔會跑到 blog folder</p>
 <p>2.為何可以用pelican? 在init_replit安裝 有安裝 pelican套件和markdown套件</p>
