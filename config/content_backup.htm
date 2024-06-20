@@ -7,7 +7,7 @@
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a></p>
 <p style="padding-left: 30px;">此 Template 將 cmsimde 作為子目錄而非子模組, 使用者可以依照需求自行修改</p>
 <p style="padding-left: 30px;">倉儲對應網站: <a href="https://mde.tw/cmsimde_site">https://mde.tw/cmsimde_site</a></p>
-<p style="padding-left: 30px;"></p>
+<h1 style="padding-left: 30px;">其中任務</h1>
 <h1>各週指定任務</h1>
 <ol>
 <li>個人 cd2024 與分組倉儲的建立及維護.</li>
@@ -182,6 +182,10 @@
 <p><span style="color: #ff0000;">問題4</span>:機械式計分器顯示5分但電子式卻顯示4分</p>
 <p>原因:使用 math.floor 的问题 假设累积角度应该是180度，这应该等于5分（180 / 36 = 5）。 然而，由于浮点数的精度问题，累积角度可能会变成179.999999度。 在这种情况下，math.floor(179.999999 / 36) 将返回4，因为 math.floor 向下取整，179.999999 / 36 约为 4.99999997，向下取整结果为4。</p>
 <p><span style="color: #0000ff;"><span style="color: #000000;">解決</span>:</span>加入0.5修正的优势 如果你加入0.5，计算方式变为 math.floor((179.999999 / 36) + 0.5)。 这里，179.999999 / 36 约等于4.99999997，加上0.5等于5.49999997。 然后 math.floor(5.49999997) 返回5，这就修正了由于浮点数精度问题导致的误差。</p>
+<p></p>
+<p></p>
+<p>解決完測試影片</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3ksJcwWcqSE" title="手動測試" width="853"></iframe></p>
 <h3>機器人</h3>
 <p>最後版設計</p>
 <p><img alt="" height="320" src="/images/螢幕擷取畫面 2024-06-14 134133.png" width="561"/></p>
