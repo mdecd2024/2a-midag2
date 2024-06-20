@@ -1,0 +1,609 @@
+\documentclass[12pt,a4paper,UTF8]{article}
+% 頁面邊距離設定
+\usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry} 
+% 提供超連結支持
+\usepackage[unicode=true,colorlinks,urlcolor=blue,linkcolor=blue,bookmarksnumbered=true]{hyperref}
+% 數學符號和工具
+\usepackage{latexsym,amssymb,amsmath,amsbsy,amsopn,amstext,amsthm,amsxtra,color,bm,calc,ifpdf}
+\usepackage{graphicx}% 圖形支持
+\usepackage{enumerate}% 自定義列表
+\usepackage{fancyhdr}% 自定義頁眉頁腳
+\usepackage{lipsum} % 引入 lipsum 宏包用於生成示例文本
+\usepackage{etoolbox}
+\usepackage{ifthen} % 引入 ifthen 宏包提供條件判斷功能
+\usepackage{listings}% 代碼列表
+\usepackage{multirow}% 表格中的多行支持
+\usepackage{makeidx}% 索引製作
+\usepackage{fontspec}% 字體指定
+\usepackage{subfigure}% 子圖形支持
+\PassOptionsToPackage{hyphens}{url}% URL換行支持
+\usepackage{pythonhighlight}% Python代碼高亮
+\usepackage[backend=biber, style=apa]{biblatex}
+\addbibresource{references.bib}  % 指向你的BibTeX文件
+\usepackage[american]{babel}
+\DeclareLanguageMapping{american}{american-apa}
+\usepackage{fontawesome}% 字體圖標
+\usepackage{setspace} % 引入setspace宏包
+\usepackage{enumitem} % 引入 enumitem 宏包
+\usepackage{xeCJK}
+\usepackage{hyperref}%允許你在文檔中插入活動連結，既可以是內部的（例如章節跳轉）也可以是外部的（如網頁URL）
+\setCJKmainfont{Noto Serif CJK TC} % 設置繁體中文主字體
+\usepackage{amsmath}
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+
+\pagestyle{fancy}
+
+\fancyhf{} % 清除所有頁眉頁腳
+\renewcommand{\headrulewidth}{0pt} % 清除页眉下方的横线
+
+
+\doublespacing % 设置双倍行距。
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+
+\begin{document}
+% 文档开头使用罗马数字页码
+\pagenumbering{roman}
+\fancyfoot[C]{\thepage} % 设置页脚中央为当前页码
+
+  \begin{titlepage}
+    \thispagestyle{fancy} % 應用 fancy 頁腳樣式
+    \fancyfoot[C]{\today} % 僅在這一頁的頁腳中央添加今天的日期
+    \centering % 使後續內容居中
+    \vspace*{10mm} % 調整標題距離頁面頂部的空間
+
+    {\Huge\textbf{國立虎尾科技大學\hspace{0.2cm} 機械設計工程}}\\[20mm] % 學校名稱和系所
+    {\huge\textbf{2a-midag2  期中分組報告}}\\[15mm] % 報告類型
+    {\LARGE\textbf{ODOO PLM 在協同產品設計上的應用}}\\[0.2mm] % 報告主題
+    {\LARGE\textbf{以鋼球平衡台機電控制系統設計為例}}\\[15mm] % 報告子題目
+    \Large\noindent\begin{tabular}{l  l}% 使用tabular環境對齊，防止接下來的文字或環境自動縮進 （l表示左對齊）
+     指 導 教 授： & 嚴家銘 教授 \\ % 指導教授名稱
+     班 \hspace{0.9cm} 級： & 四設二甲 \\ % 班級
+     學 \hspace{0.9cm} 生： & 邱翼飛\ \ (41123119)\\
+                           & 鐘士宏\ \ (41123152) \\
+                           & 張仕倚\ \ (41123123) \\
+                           & 劉經足\ \ (41123145) \\
+                           & 王俊棨\ \ (41123105) \\
+                           & 陳冠廷\ \ (41123130) \\
+                            & 仲唯岱\ \ (41123108) \\
+                        \\[2mm] % 學生姓名和學號
+   \end{tabular}
+\end{titlepage}
+
+\newpage % 從新頁開始顯示正文
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+
+
+
+% 生成目錄
+\small\tableofcontents
+ % 生成圖目錄
+\small\listoffigures   
+
+% 在适当的位置（比如在第三页的内容开始之前）更改页码编号方式为阿拉伯数字，并自动重置页码计数为1
+\newpage
+\pagenumbering{arabic}
+\fancyfoot[C]{\thepage} % 从这里开始，页脚中央使用阿拉伯数字页码
+\newpage % 從新頁開始顯示正文
+
+
+
+
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+
+\section{目的}
+
+透過Odoo PLM（即Odoo企業資源規劃（ERP）系統內的產品生命週期管理模塊），實現無縫的協同工作成為可能。Odoo PLM整合了製造流程、變更管理、版本控制以及文檔管理等關鍵功能，從而促進團隊成員之間的共同設計與開發工作。\\
+
+  以\href{https://mde.tw/cd2024/downloads/Solvespace_model%20_2d_for_cd2024_w6.7z}{Solvespace model  2d for cd2024 w6.7z }\footnote{ 嚴家明教授.  (2024, March 31).  協同產品設計實習課程. https://mde.tw/cd2024/blog/2024-cd-2a-w7.html}中的 slvs 檔的內容作為零件尺寸(需用solvespace程式開啟
+)再用\href{http://229.cycu.org/ball_beam_balancing_PID_control_coppeliasim_1d_and_2d.7z}{ball beam balancing PID control coppeliasim 1d and 2d cd2024 w9.7z}\footnote{ 嚴家明教 授. (2024, March 31).  協同產品設計實習課程.https://mde.tw/cd2024/blog/2024-cd-2a-w7.html}的文件內容作為程式範例，並參考\href{http://229.cycu.org/cd2024_ball_balancing_platform_control_ref.7z}{cd2024 ball balancing platform control ref.7z}\footnote{ 嚴家明教 授. (2024, April 25).  協同產品設計實習專案. https://mde.tw/cd2024/blog/2024-cd-midterm.html}各篇論文作為參考資料
+，從NX的安裝啟動、零組件繪圖、軟體的基礎應用，到 NXOpen Python 程式延伸架構。\\
+
+隨後，將.stl文件按照適當的尺寸和比例轉移到CoppeliaSim中，並了解CoppeliaSim的零件、機構設置以及座標系統的轉換，進行場景組件的構建並開發場景控制程序。\\
+
+最終，利用基於網頁的技術進行場景模擬串流。在文末，重點介紹了如何協同整理資料、撰寫網誌、創建網際簡報以及編寫結案報告的方法。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.6\textwidth]{7.png}
+    
+\caption{  完成圖}
+\label{fig:example1}
+\end{figure}
+
+
+
+\newpage
+\section{NX安裝與啟動}
+
+\subsection{如何使用1872版安裝及可攜版}
+\large \textbf{以下是Siemens NX 1872版安裝步驟：}
+
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 下載安裝包：從Siemens官方網站或其他授權的下載來源，取得Siemens NX 1872版的安裝文件。
+    \item 解壓安裝包：將下載的壓縮文件解壓到指定目錄。
+    \item 運行安裝程序：打開解壓後的目錄，找到並雙擊setup.exe文件，開始安裝程序。
+    \item 安裝向導：按照安裝向導的提示進行操作，選擇安裝路徑、安裝組件等選項。
+    \item 完成安裝：安裝完成後，點擊“完成”按鈕結束安裝向導。
+\end{enumerate}
+
+ 
+\large\textbf{可攜版的使用方法}
+
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 下載可攜版包：從mde.tw內下載 \href{https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EehhlaMDzTxAlOBppbPSoPwBCzsOQxvshtNL8xJel-zbJQ?e=YwKvdH}{Siemens NX1872.7z}\footnote{ 嚴家明教 授. (2024, April 25).  協同產品設計實習2a-4. https://mde.tw/cd2024/blog/2024-cd-2a-w4.html}。
+    \item 解壓可攜版包：將可攜版壓縮文件解壓到任意目錄。
+    \item 運行程序：進入解壓後的目錄，找到start\_USB\_nx1872.bat的可執行文件，直接運行即可。
+  
+\end{enumerate}
+ %\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\subsection{如何啓動及連網認證}
+ 
+\large \textbf{啓動 Siemens NX 1872 版的步驟：}
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 啓動軟件：雙擊桌面快捷方式或從可攜檔案中執行start\_USB\_nx1872.bat，啓動軟件。
+    \item 連網認證：首次啓動時，軟件可能會要求進行連網認證。確保計算機已連接到互聯網，然後按照提示輸入授權信息或序列號(可以用SciTE打開start\_USB\_nx1872.bat可以看到set SPLM\_LICENSE\_SERVER=28000@140.130.17.37設定環境變數 其中28000是授權伺服器的端口號 而140.130.17.37則是伺服器的IP地址。 另外 如果真的看不懂英文
+set UGII\_LANG=trad\_chinese 可以改成繁體中文 )。
+    \item 完成認證：完成認證後，軟件將自動進入主界面，表示已成功啓動。
+   
+\end{enumerate}
+
+
+
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\subsection{了解啓動後用戶設定的存檔位置}
+
+\large \textbf{了解Siemens NX 1872 啓動後用戶設定的存檔位置非常重要，以下是相關資訊： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 默認存檔位置：一般情況下，Siemens NX 會將用戶設定存儲在用戶主目錄下的專用文件夾中，例如 C:\textbackslash Users\textbackslash john\textbackslash AppData\textbackslash Local\textbackslash Siemens\textbackslash NX。
+    \item 更改存檔位置：用戶可以通過軟件內的設置選項更改存檔位置。通常在“首選項”或“設置”菜單中，可以找到相關配置項。
+    \item 備份設定：建議定期備份這些設定文件，以防止數據丟失。可以將設定文件夾複製到外部存儲設備或雲端存儲中。
+\end{enumerate}
+
+
+
+
+\newpage % 從新頁開始顯示正文
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\section{NX 軟體基礎}
+
+\subsection{如何使用 NX 執行零組件繪圖}
+
+\large \textbf{啟動 NX: }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 打開 Siemens NX 軟體，點擊左上角的 “File” > “New”。
+    \item 選擇 “Model” 作為模板，點擊 “OK” 開始新建一個模型。
+   
+\end{enumerate}
+
+\large \textbf{設置草圖: }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 在 “Home” 標籤下，點擊 “Sketch”。
+    \item 選擇一個平面（XY、YZ、XZ）作為草圖平面，點擊該平面來創建草圖。
+    \item 使用工具欄中的 “Line”、 “Circle”、 “Rectangle” 等工具繪製草圖輪廓。
+     \item 畫完草圖後，點擊 “Finish Sketch” 完成草圖。
+      
+\end{enumerate}
+
+
+\large \textbf{創建三維模型: }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 在 “Home” 標籤下，選擇 “Extrude”。
+    \item 選擇草圖中的封閉輪廓，設定拉伸的深度，然後點擊 “OK” 生成三維模型。
+    \item 如果需要旋轉特徵，選擇 “Revolve”，選擇草圖和旋轉軸，設定旋轉角度，點擊 “OK”。
+\end{enumerate}
+
+\large \textbf{編輯和修改模型: }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 選擇 “Fillet” 工具，點選需要倒角的邊線，設定倒角半徑，然後點擊 “OK”。
+    \item 使用 “Chamfer” 工具，點選需要斜角的邊線，設定斜角參數，然後點擊 “OK”。
+    \item 如果需要挖空模型，可以使用 “Shell” 工具，選擇需要挖空的面，設定壁厚，然後點擊 “OK”。
+\end{enumerate}
+
+\large \textbf{檢查和完成模型: }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 使用 “Analyze” 標籤中的工具檢查模型的尺寸、體積等屬性。
+    \item 完成模型後，點擊左上角的 “File” > “Save” 保存檔案。
+ 
+\end{enumerate}
+
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\subsection{認識 NX 的目錄模組架構}
+
+
+\large \textbf{NX 的目錄模組架構包含以下主要部分： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item Applications（應用）: \\
+    不同的應用模組，如 NX CAD、NX CAM、NX CAE，每個應用模組針對不同的工程領域提供專用工具。
+可以在 NX 主界面的 “Applications” 菜單中切換應用模組。
+
+    \item Assemblies（裝配）:\\
+    用於管理零部件的裝配結構，包括添加、約束和管理裝配中的零件。
+在 “Assemblies” 標籤下，可以使用 “Add Component” 添加零件，使用 “Assembly Constraints” 設定零件之間的約束。
+
+ \item Modeling（建模）:\\
+   提供幾何建模工具，包括草圖、曲面建模、實體建模等。
+在 “Modeling” 標籤下，可以找到所有的建模工具，如 “Sketch”、“Extrude”、“Revolve”、“Sweep”等。
+
+ \item Drafting（製圖）:\\
+    用於創建2D製圖，生成零件或裝配的工程圖。
+在 “Drafting” 標籤下，可以創建視圖、添加標註、標籤和明細表。
+
+ \item Simulation（模擬）:\\
+    包含有限元素分析（FEA）、運動模擬等工具。
+在 “Simulation” 標籤下，可以進行結構分析、熱分析、運動模擬等。
+
+\item Manufacturing（製造）:\\
+    提供NC編程和刀具路徑生成工具。
+在 “Manufacturing” 標籤下，可以創建和編輯刀具路徑，生成G代碼進行加工。
+
+\end{enumerate}
+
+\newpage 
+
+\subsection{認識 NXOpen Python 程式延伸架構}
+NXOpen 是 NX 的 API（應用程序接口），允許用戶使用多種編程語言（如 Python、C++、Java）進行自動化和擴展。NXOpen Python 提供了一個直接的方式來與 NX 互動和控制 NX 操作。
+
+\subsection{了解 Journal 程式設定、建立及執行（internal及run\_journal.exe 用法）}
+
+\large \textbf{設定和建立 Journal 程式: }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 錄製 Journal: \\
+    打開 NX，選擇 “Tools” > “Journal” > “Record” 開始錄製。
+執行一系列操作（如建模、裝配等），完成後選擇 “Tools” > “Journal” > “Stop Recording” 停止錄製並保存 Journal 文件。
+    \item 編輯 Journal:\\
+    打開保存的 Journal 文件（通常為 .py 或 .cs 格式），可以使用任意文本編輯器進行編輯。
+增加或修改腳本內容以自動化特定任務。
+ \item 運行 Journal: \\
+ 在 NX 中，選擇 “Tools” > “Journal” > “Play”。
+瀏覽並選擇要運行的 Journal 文件，點擊 “OK” 執行。
+\\ 
+\end{enumerate}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.6\textwidth]{1.png}
+    
+\caption{  Journal 開始錄製}
+\label{fig:example1}
+\end{figure}
+
+\large \textbf{****注意如果要錄製，NX一打開不要先按新增檔案，直接先按 Record 錄製再新增檔案 最後存完檔 在按Stop Recording****}
+  
+
+
+
+
+\newpage % 從新頁開始顯示正文
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\section{繪圖與程式}
+
+
+\subsection{了解如何針對設計繪圖尺寸單位選擇}
+
+\large \textbf{在 Siemens NX 1872中選擇設計繪圖的尺寸單位的步驟： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+\item 打開新文件：\\啟動 Siemens NX 1872，選擇 File > New 開啟一個新文件。
+   \item 選擇模板：\\在新文件對話框中選擇合適的模板（例如，Part、Assembly 或 Drawing），並在模板列表中選擇合適的模板。
+    \item 設置單位：\\在選擇模板後，您會看到“單位”選項，您可以選擇所需的單位（例如，毫米、英寸等）。選擇合適的單位後，點擊“確定”完成設置。
+     \item 繪圖前設定 :\\File > Preferences > User Interface > Tools > Journal > Journal Language 中選擇python並點擊下方Apply
+      \item 修改現有文件單位：\\如果您需要更改現有文件的單位，可以在 File > Preferences > Part 中找到“Units”選項，然後選擇所需的單位。
+\end{enumerate}
+
+
+\subsection{學習草圖建構、參數選用及長出特徵使用}
+
+\large \textbf{在 Siemens NX 1872中進行草圖建構和特徵建模的步驟： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 進入草圖模式：\\在工具欄中選擇 Sketch，然後選擇要繪製草圖的平面或面。
+   \item 草圖繪製：\\使用線條、圓形、矩形等工具繪製草圖。確保草圖封閉並且所有線條都相連。
+    \item 參數選用：\\為草圖中的幾何元素添加尺寸約束和幾何約束，以確保草圖的正確性和穩定性。
+     \item 長出特徵：\\完成草圖後，使用 Extrude（拉伸）、Revolve（旋轉）、Sweep（掃掠）等工具將草圖長出為三維特徵。
+      \item 編輯特徵：\\隨時可以通過編輯草圖或特徵來修改模型。雙擊草圖或特徵，然後進行相應的修改。
+
+\end{enumerate}
+
+
+\subsection{學習如何完成零件組立}
+
+\large \textbf{在 Siemens NX 1872中進行零件組立的步驟： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 新建組立文件：\\選擇 File > New，然後選擇“Assembly”模板。
+    \item 添加零件：\\在組立環境中，選擇 Assemblies > Add Component，瀏覽並選擇要添加的零件。
+    \item 定位零件：\\使用 Assembly Constraints（組立約束）工具來定位和約束零件。常用的約束包括 Mate（貼合）、Align（對齊）、Insert（插入）等。
+    \item 調整組立：\\根據需要調整零件的位置和約束，以確保組立正確且滿足設計需求。
+檢查干涉：使用 Examine Geometry > Check Interference 工具檢查組立中的零件是否有干涉。
+      
+\end{enumerate}
+
+
+\subsection{了解零組件轉檔相關知識（如選用零組件座標系統、STL格式及尺寸比例）}
+
+\large \textbf{零組件轉檔的相關知識和步驟： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 選用零組件座標系統：\\在轉檔之前，確保零組件的座標系統設置正確。可以在 Modeling > Coordinate System 中設置或編輯座標系。
+   \item STL 格式轉檔
+    \item 導出 STL 文件：\\選擇 File > Export > STL，然後選擇要導出的零件或組立。
+     \item 設置參數：\\在導出對話框中設置 STL 文件的參數，如文件名、存儲位置、單位和精度等。確保選擇合適的單位和尺寸比例，以保證導出的模型正確。
+     \item 尺寸比例：\\在導出或轉檔時，確保設置的單位和比例與實際需求一致。如果需要更改比例，可以在 Scale 工具中進行調整。
+      \item 其他格式轉檔：\\Siemens NX 1872支持多種文件格式的導出（如 IGES、STEP、Parasolid 等），可以根據需要選擇合適的格式進行轉檔。在 File > Export 菜單中選擇相應的格式並設置參數即可。
+\end{enumerate}
+
+
+\subsection{PID控制}
+參考
+\href{http://229.cycu.org/cd2024_ball_balancing_platform_control_ref.7z}{cd2024 ball balancing platform control ref.7z}\footnote{ 嚴家明教 授. (2024, April 25).  協同產品設計實習專案. https://mde.tw/cd2024/blog/2024-cd-midterm.html} 中的第二篇 cd2024\_A real time control system for balancing a ball on a platform with FPGA parallel implementation
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{8.png} 
+\caption{ 參考資料 1.}
+\label{fig:example1}
+\end{figure}
+在檔案中
+
+\begin{itemize}
+    \item \( R \) - 球的半徑 (0.08 m)
+    \item \( m \) - 球的質量 (0.1 kg)
+    \item \( d \) - 伺服馬達的延伸長度 (0.0090 m)
+    \item \( g \) - 自由落體的加速度 (9.81 m/s\(^2\))
+    \item \( L \) - 從平台末端到中間的距離 (0.0530 m)
+    \item \( J \) - 實心球的轉動慣量 \( J = \frac{2}{5} m R^2 = 2.56 \times 10^{-4} \, \text{kg} \cdot \text{m}^2 \)
+    \item \( r \) - 從球的中心到平台邊緣的距離
+    \item \( \Theta \) - 伺服馬達的旋轉角度
+    \item \( \theta \) - 板的旋轉角度
+\end{itemize}
+
+\section*{傳遞函數}
+實心球系統的傳遞函數 \( T(s) \) 如下：
+
+\begin{equation}
+T(s) = \frac{R(s)}{\Theta(s)} = -\frac{mg \frac{d}{L}}{\left( \frac{J}{R^2} + m \right) s^2} \left( \frac{m}{\text{rad}} \right)
+\end{equation}
+
+\section*{計算}
+\subsection*{步驟 1: 確定各個參數的值}
+\begin{align*}
+R &= 0.08 \, \text{m} \\
+m &= 0.1 \, \text{kg} \\
+d &= 0.0090 \, \text{m} \\
+g &= 9.81 \, \text{m/s}^2 \\
+L &= 0.0530 \, \text{m} \\
+J &= 2.56 \times 10^{-4} \, \text{kg} \cdot \text{m}^2
+\end{align*}
+
+\subsection*{步驟 2: 代入公式}
+\begin{equation}
+T(s) = \frac{R(s)}{\Theta(s)} = -\frac{mg \frac{d}{L}}{\left( \frac{J}{R^2} + m \right) s^2}
+\end{equation}
+
+\subsection*{步驟 3: 計算具體數值}
+\begin{align*}
+mg \frac{d}{L} &= 0.1 \times 9.81 \times \frac{0.0090}{0.0530} \approx 0.166 \\
+\frac{J}{R^2} + m &= \frac{2.56 \times 10^{-4}}{(0.08)^2} + 0.1 \approx 0.1 + 0.04 = 0.14
+\end{align*}
+
+\subsection*{步驟 4: 將數值代入公式}
+\begin{equation}
+T(s) = \frac{R(s)}{\Theta(s)} = -\frac{0.166}{0.14 s^2} \approx -\frac{1.186}{s^2}
+\end{equation}
+
+\section*{最終公式}
+\begin{equation}
+T(s) = \frac{R(s)}{\Theta(s)} = -\frac{1.186}{s^2}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage % 從新頁開始顯示正文
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\section{CoppeliaSim 與場景模擬}
+
+\subsection{了解如何轉入 CoppeliaSim，如何選擇合用的尺寸及比例}
+
+\large \textbf{轉入 CoppeliaSim 並選擇合適的尺寸及比例的步驟： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 導入模型：\\在 CoppeliaSim 中，通過菜單 File > Import >mesh 選擇所需的文件格式（例如 STL），導入模型。
+  
+    \item 設置尺寸及比例：\\使用 Assembly Constraints（組立約束）工具來定位和約束零件。常用的約束包括 Mate（貼合）、Align（對齊）、Insert（插入）等。 CoppeliaSim 場景 單位為( m )
+    
+      
+\end{enumerate}
+
+
+\subsection{了解如何進行場景組件的座標系統轉換}
+\large \textbf{進行場景組件的座標系統轉換的步驟： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 選擇組件：\\在場景中選擇需要轉換的組件。
+    
+    \item 打開座標系統轉換工具：\\使用右鍵菜單 Edit > shape reference frame > relocate to xxxx 選擇座標工具。
+    \begin{figure}[htbp]
+\centering
+\includegraphics[width=0.6\textwidth]{3.png}
+    
+\caption{  座標系統轉換工具}
+\label{fig:example1}
+\end{figure}
+
+    \item 設置新座標系：\\object    新的座標系參數（如位置、旋轉角度等），然後應用變換。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.6\textwidth]{2.png}
+    
+\caption{ 位置、旋轉角度}
+\label{fig:example1}
+\end{figure}
+      
+\end{enumerate}
+
+\subsection{了解開放式機構及封閉式機構的場景如何設置}
+
+
+\large \textbf{設置開放式機構及封閉式機構場景的步驟： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 開放式機構：\\這類機構通常是指機械臂或其他運動連接不閉合的機構。在 CoppeliaSim 中，使用 Joint 元件和 Link 來設置這些機構，並確保每個連接點的自由度設置正確。
+    
+    \item 封閉式機構：\\這類機構通常具有閉環結構。在 CoppeliaSim 中，使用 Joint 元件和 Link 來設置機構，並通過 Dynamics 模塊設置關節間的約束條件，確保運動連接閉合。
+      
+\end{enumerate}
+
+
+
+
+
+
+\subsection{認識場景存檔的三種格式（binary與XML間的轉換及應用)及應用時機}
+
+\large \textbf{CoppeliaSim 支持以下三種場景存檔格式： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item Binary 格式：\\這是 CoppeliaSim 的默認格式，文件擁有 .ttt 擴展名。適用於場景數據量大，需要高效存取的情況。
+    
+    \item XML 格式：\\文件擁有 .xml 擴展名。這種格式便於手動編輯和查看場景數據，適用於需要進行場景數據調整或與其他軟件進行數據交換的情況。
+     \item 混合格式：\\部分數據存儲為 binary，部分數據存儲為 XML。適用於需要兼顧存取效率和數據可讀性的情況。
+      
+\end{enumerate}
+
+
+
+\subsection{瞭解如何運用 Web-based 場景模擬串流}
+
+\large \textbf{運用 Web-based 場景模擬串流的方法： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 先前設置 \\打開 CoppeliaSim，確定Module > Connectivity > visualization stream and ZMQ remote API server (running)
+    \begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{4.png}
+\caption{ 先前設置}
+\label{fig:example1}
+\end{figure}
+
+\newpage
+                    確定ip位置打開 命令框 輸入 ipconfig /all 確定ip位置
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{5.png}
+\caption{ 確定ip位置}
+\label{fig:example1}
+\end{figure}
+                 
+  允許 Windows 防火牆開放 port 23000-23050 封包進出 參考
+                    \href{https://mde.tw/cd2024/downloads/allow_23000-23050.txt}{Solvespace model  2d for cd2024 w6.7z }\footnote{ 嚴家明教授.  (2024, May  09).  協同產品設計實習 W12 內容. https://mde.tw/cd2024/blog/2024-cd-w12-practice.html}
+                    
+
+
+    \item 設置 模擬的場景\\打開 CoppeliaSim，並加載您要進行模擬的場景。
+                       \\ 打開 程式 檔 更改為 ip 位置
+
+    \begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{6.png}
+\caption{ 更改為 程式 ip 位置}
+\label{fig:example1}
+\end{figure}
+    
+    
+     \item 訪問場景\\打開您的網絡瀏覽器（例如 Chrome、Firefox）。
+在地址欄中輸入 http://<您的計算機IP地址>:<端口號>，例如 http://120.113.99.64:23020
+您將看到 CoppeliaSim 的 Web 界面，並且可以在其中查看和控制場景。
+      
+\end{enumerate}
+
+
+
+\subsection{學習如何建立場景控制程式（internal Lua、Python、Remoteapi Python、IPv4 Websocket\&ZMQ vs IPv6 Websocket\&ZMQ)}
+
+
+\large \textbf{建立場景控制程式的方法： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 設Internal Lua：\\ CoppeliaSim 內置支持 Lua 腳本語言。使用內部編輯器編寫和運行 Lua 腳本來控制場景中的各種行為。
+    
+    \item Python：\\CoppeliaSim 支持通過 Python 腳本進行控制。使用外部編輯器編寫 Python 腳本，然後通過 CoppeliaSim 的 API 接口進行調用。
+
+     \item Remote API Python：\\通過 CoppeliaSim 的遠程 API 接口，使用 Python 控制場景。這種方法適合需要在 CoppeliaSim 外部進行複雜計算或集成其他軟件的情況。
+
+      \item IPv4 Websocket \& ZMQ：\\使用 IPv4 通訊協議，通過 Websocket 或 ZMQ（ZeroMQ）進行場景控制。這種方法適合需要在網絡上進行實時數據交換和場景控制的情況。
+      \item IPv6 Websocket \& ZMQ：\\使用 IPv6 通訊協議，通過 Websocket 或 ZMQ 進行場景控制。這種方法適合需要使用 IPv6 網絡進行數據交換和控制的情況。
+\end{enumerate}
+
+
+
+\newpage % 從新頁開始顯示正文
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\section{了解如何協同整理資料、編寫網誌、建立網際簡報及結案報告}
+
+\subsection{ 協同整理資料}
+
+\large \textbf{協同整理資料是團隊合作中至關重要的步驟，確保所有成員對項目的進展和資料保持一致了解。以下是一些基本方法： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 版本控制：\\使用版本控制系統如Git，或協同工具自帶的版本控制功能，跟蹤文件的變更歷史。可以利用GitHub Codespaces和Replit這類平台來協同編程和開發。
+    
+    \item 文件命名規則：\\設定統一的文件命名規則，方便搜尋和管理。
+     \item 定期同步：\\定期進行資料同步，確保所有成員手中的資料是最新的。
+      
+\end{enumerate}
+
+\subsection{編寫網誌}
+\large \textbf{網誌是分享項目進展、技術細節和心得體會的重要途徑。以下是編寫網誌的基本步驟： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 確定主題：\\選擇一個與項目相關且具有吸引力的主題。
+    
+    \item 撰寫草稿：\\組織文章結構，撰寫草稿，確保邏輯清晰、內容充實。使用Replit可以方便地協同編寫和編輯草稿。
+     \item 加入媒體：\\適當插入圖片、圖表或視頻，增加文章的可讀性和吸引力。
+       \item 校對和編輯：\\檢查語法和拼寫錯誤，優化表達方式，確保文章質量。
+         \item 發布和推廣：\\選擇合適的平台（如公司官網、技術博客等）發布網誌，並在社交媒體上進行推廣。
+      
+\end{enumerate}
+
+\subsection{建立網際簡報}
+\large \textbf{網際簡報是一種在線展示項目進展和成果的方式。以下是建立網際簡報的基本步驟： }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 選擇工具：\\選擇如Google Slides、Microsoft PowerPoint、Prezi等工具來創建簡報。
+    \item 設計模板：\\選擇或設計一個符合項目風格的簡報模板。
+     \item 組織內容：\\將簡報分成不同部分（如介紹、方法、結果、結論），確保邏輯清晰。
+       \item 添加媒體：\\加入圖片、視頻、圖表等多媒體內容，增強簡報的視覺效果和說服力。
+        \item 練習展示：\\在正式展示前，進行多次練習，確保對內容的熟悉和展示的流暢。
+\end{enumerate}
+
+\subsection{結案報告}
+\large \textbf{結案報告是總結項目過程和成果的重要文件。以下是撰寫結案報告的基本步驟：
+ }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item 封面頁：\\包含報告標題、項目名稱、日期和作者信息。
+      \item 目錄：\\列出報告的主要章節和頁碼，便於查找。
+     \item 引言：\\簡要介紹項目背景、目標和範圍。
+      \item 方法：\\詳細描述項目過程中的方法和技術細節。
+      \item 結果：\\展示項目成果，包括數據、圖表和分析結果。
+       \item 討論和結論：\\分析結果的意義，總結項目經驗，提出改進建議或未來工作方向。
+        \item 附錄：\\附上相關的附加資料，如原始數據、程式碼或其他參考資料。
+\end{enumerate}
+\large \textbf{結案報告是總結項目過程和成果的重要文件。以下是撰寫結案報告的基本步驟：
+ }  
+ \large \textbf{在撰寫技術報告時，使用LaTeX可以幫助生成專業且格式一致的文檔。以下是一些基本的LaTeX使用指南：
+ }  
+\normalsize\begin{enumerate}[label=\arabic*., itemsep=2pt, parsep=2pt] % 調整列表項的左邊距
+    \item LaTeX模板：\\選擇或設計一個符合項目需求的模板。
+      \item 基本語法：\\學習LaTeX的基本語法，如標題、段落、列表、表格、圖片等。
+     \item 數學公式：\\使用LaTeX的數學模式來編寫精確的數學公式。
+      \item 文檔編譯：\\使用如Overleaf、TeXShop等工具來編譯LaTeX文檔，生成PDF文件。
+\end{enumerate}
+
+\end{document}
