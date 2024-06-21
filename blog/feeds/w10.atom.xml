@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2A-MIDAG2協同產品設計實習 - w10</title><link href="./" rel="alternate"></link><link href="./feeds/w10.atom.xml" rel="self"></link><id>./</id><updated>2024-06-21T23:08:07+08:00</updated><entry><title>w10</title><link href="./41123105_2024-Spring-w10.html" rel="alternate"></link><published>2024-04-26T16:00:00+08:00</published><updated>2024-06-21T23:08:07+08:00</updated><author><name>41123105</name></author><id>tag:None,2024-04-26:./41123105_2024-Spring-w10.html</id><summary type="html">&lt;p&gt;w10課程&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;w10課程&lt;/p&gt;
+
+
+&lt;p&gt;(任務一)&lt;/p&gt;
+&lt;p&gt;列出個學員的資訊&lt;/p&gt;
+&lt;iframe src="https://1drv.ms/t/c/9a62b67559925288/IQOHHVTRwRoHR5SsataPTnSOAToKM19NV2KAroSHj-aaDqg" width="640" height="360" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
+&lt;p&gt;(任務二)&lt;/p&gt;
+&lt;p&gt;(各篇論文要點摘要)&lt;/p&gt;
+&lt;p&gt;文章一  : Construction and theoretical study of a ball balancing platform (構建一個球體平衡平台涉及到平台本身的物理結構建造以及用於維持球體平衡的控制算法的理論研究)
+摘要內容 : 通過實施自動控制理論穩定動態系統時的局限性, 球平衡平臺的構造和理論研究, 通過實施穩定動態系統時的局限性自動控制理論. 通過物理構造的裝置作為理論的演示者, 進一步比較從牛頓力學得出的事實物理和計算機模擬結果. 為了能夠進行比較, 有必要設計一個能夠滿足系統要求的令人滿意的控制器. 在設備和控制方面, 為在平臺上平衡球的系統引入比例積分導數控制器. 進一步允許分析以確定穩定自然不穩定或半穩定系統時的局限性. 建立球體平衡平台的理論模型, 並與實際搭建的平台進行比較. 分析理論與實際結果之間的差異, 探討控制理論與系統實施的挑戰.&lt;/p&gt;
+&lt;p&gt;文章二 : A real time control system for balancing a ball on a platform with FPGA parallel implementation (用於在平臺上平衡球的即時控制系統，具有FPGA並行實現)
+摘要內容 : 在一個FPGA晶元上開發了兩個並行PID控制器，用於獨立控制一個物件的兩個參數。確保了控制物件的PID控制器的輪廓計算的並行處理，調節器的輸出已經歸一化。通過自然類比，提高了在平台上調節球位置的精度。設計的控制器可用於即時控制具有許多受控參數的高速物體。&lt;/p&gt;
+&lt;p&gt;文章三 : Simulation and Experimental Study of Ball Position Control at Biaxial Platform using State Space Approach (基於狀態空間方法的雙軸平臺球位控制模擬與實驗研究)
+摘要內容 : 本研究詳細設計並比較了三種控制結構，用於自動穩定球在板上的位置和球的軌跡跟蹤。即PD控制器、狀態空間反饋和狀態空間觀測器。所有三種方法都經過設計並進行了實際比較。所有結構都有一個共同的特徵。它是計算控制器參數的方法。通過牛頓方法推導的板上球數學模型和直流電機位置環路控制也是本文的一部分。&lt;/p&gt;
+&lt;p&gt;文章四：Design and Implementation a Ball Balancing System for Control Theory Course（控制理論課程的球平衡系統設計與實現）
+摘要內容：開發一個球平衡系統，使用微控制器和相關控制演算法來保持球在橫樑上的平衡，以通過即時感官反饋調整橫樑的角度。在此過程中，製作了三個原型並相互比較，特別是在合理性和成本方面。通過集成一個伺服電機、一個距離感測器、一個微控制器板和一個機械平臺，可以很容易地設計整個系統。此外，他們將通過微控制器程式設計來理解和實現控制演算法。如果學生對MATLAB知之甚少。開發介面程式以在MATLAB中繪製即時位置曲線。這個簡化的系統將作為連接理論知識和實踐技能的橋樑。所提方法也適用於更複雜的系統。&lt;/p&gt;
+&lt;p&gt;文章五: Ball on the plate balancing control system (板上球平衡控制系統)
+摘要內容 : 平衡問題是一個持續的研究挑戰，適用於從教育到交通的許多興趣領域。二自由度球平衡實驗室試驗台是瞭解控制系統的重要設備。本文重點介紹了在板上平衡球的機械設計。使用電阻式觸摸屏獲取球體位置數據，使用步進電機和位置傳感器控制平台傾斜角度。 設計基於 AVR 微控制器的雙環下屬控制系統，使用 PID 控制器維持球體平衡。&lt;/p&gt;
+&lt;p&gt;文章六 : 2D Ball Balancer Control using QUARC (使用 QUARC 的 2D 球平衡器控制)
+摘要內容 : 使用 QUARC 軟體設計和實現球體在二維平台上的位置控制。 設計 PD 和 PID 控制器，並探討設定點權重和積分器抗飽和等控制技術。 使用攝像頭讀取球體位置，並進行校準和轉換。&lt;/p&gt;
+&lt;p&gt;(任務三)&lt;/p&gt;
+&lt;p&gt;將鋼球平衡台零組件的繪製
+&lt;a href="https://1drv.ms/u/c/9a62b67559925288/EW_gVP61T4NJmVD_edbKXM0Br4KTz7MlQcroerzeCX12TA?e=aLi4dp"&gt;底座&lt;/a&gt;&lt;/p&gt;</content><category term="w10"></category><category term="網誌編寫"></category></entry></feed>
